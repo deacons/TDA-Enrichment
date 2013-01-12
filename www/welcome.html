@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>TDA Enrichment App</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+
+<body>
+
+<!-- Start of first page: #welcome -->
+<div data-role="page" id="welcome">
+
+	<div data-role="header"><h1>TDA Enrichment</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content Paragraph 1 -->
+	<p>Welcome to the Thomas Deacon Academy Sports Enrichment app. This app will show you the sports enrichment timetable, including the person that is running the enrichment and the location of the enrichment activity.</p>
+
+	<br />
+
+	<!-- Timetable -->
+	<div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
+		<ul data-role="listview">
+			<li><a href="#monday"		data-transition="flow">Monday 		<span class="ui-li-count">10 activities	</span></a></li>
+			<li><a href="#tuesday"		data-transition="flow">Tuesday 		<span class="ui-li-count">10 activities	</span></a></li>
+			<li><a href="#wednesday"	data-transition="flow">Wednesday 	<span class="ui-li-count">14 activities	</span></a></li>
+			<li><a href="#thursday"		data-transition="flow">Thursday 	<span class="ui-li-count">6 activities	</span></a></li>
+			<li><a href="#friday"		data-transition="flow">Friday 		<span class="ui-li-count">8 activities	</span></a></li>
+		</ul>											 
+	</div>
+
+	</div><!-- /content -->
+
+<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<!-- Start of second page: #welcome -->
+<div data-role="page" id="welcome">
+
+	<div data-role="header"><h1>TDA Enrichment</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content Paragraph 1 -->
+	<p>Welcome to the Thomas Deacon Academy Sports Enrichment app. This app will show you the sports enrichment timetable, including the person that is running the enrichment and the location of the enrichment activity.</p>
+
+	<br />
+
+	<!-- Timetable -->
+	<div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
+		<ul data-role="listview">
+			<li><a href="#monday"		data-transition="pop">Monday 		<span class="ui-li-count">10 activities	</span></a></li>
+			<li><a href="#tuesday"		data-transition="pop">Tuesday 		<span class="ui-li-count">10 activities	</span></a></li>
+			<li><a href="#wednesday"	data-transition="pop">Wednesday 	<span class="ui-li-count">14 activities	</span></a></li>
+			<li><a href="#thursday"		data-transition="pop">Thursday 		<span class="ui-li-count">6 activities	</span></a></li>
+			<li><a href="#friday"		data-transition="pop">Friday 		<span class="ui-li-count">8 activities	</span></a></li>
+		</ul>
+	</div>
+
+	</div><!-- /content -->
+
+<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!--
+<h3>Show internal pages:</h3>
+		<p><a href="#two" data-role="button">Show page "two"</a></p>	
+		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+-->
+	
+	
+	<br />
+	
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Two</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>Two</h2>
+		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>	
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>	
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+</body>
+</html>
