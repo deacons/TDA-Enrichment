@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E9968616A3F7B3003F3875 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E9968216A3F7B3003F3875 /* libTestFlight.a */; };
+		17E9968716A3F7B3003F3875 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 17E9968316A3F7B3003F3875 /* README.md */; };
+		17E9968816A3F7B3003F3875 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 17E9968416A3F7B3003F3875 /* release_notes.md */; };
+		17E9968A16A3F8CE003F3875 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E9968916A3F8CE003F3875 /* libz.dylib */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -64,6 +68,11 @@
 
 /* Begin PBXFileReference section */
 		1711157316A070A10023A5A9 /* TDA-Enrichment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "TDA-Enrichment.entitlements"; path = "TDA-Enrichment/TDA-Enrichment.entitlements"; sourceTree = "<group>"; };
+		17E9968216A3F7B3003F3875 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		17E9968316A3F7B3003F3875 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		17E9968416A3F7B3003F3875 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		17E9968516A3F7B3003F3875 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		17E9968916A3F8CE003F3875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -112,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E9968A16A3F8CE003F3875 /* libz.dylib in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -127,6 +137,7 @@
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
+				17E9968616A3F7B3003F3875 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +156,17 @@
 			name = Classes;
 			path = "TDA-Enrichment/Classes";
 			sourceTree = SOURCE_ROOT;
+		};
+		17E9968116A3F7B3003F3875 /* TestFlightSDK1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				17E9968216A3F7B3003F3875 /* libTestFlight.a */,
+				17E9968316A3F7B3003F3875 /* README.md */,
+				17E9968416A3F7B3003F3875 /* release_notes.md */,
+				17E9968516A3F7B3003F3875 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.1;
+			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
@@ -173,6 +195,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				17E9968916A3F8CE003F3875 /* libz.dylib */,
+				17E9968116A3F7B3003F3875 /* TestFlightSDK1.1 */,
 				1711157316A070A10023A5A9 /* TDA-Enrichment.entitlements */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -383,6 +407,8 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
+				17E9968716A3F7B3003F3875 /* README.md in Resources */,
+				17E9968816A3F7B3003F3875 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +503,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "TDA-Enrichment/TDA-Enrichment-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "TDA Enrich";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -495,6 +525,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "TDA-Enrichment/TDA-Enrichment-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "TDA Enrich";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
