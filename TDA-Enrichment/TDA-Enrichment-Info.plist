@@ -13,13 +13,14 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon.png</string>
-		<string>icon@2x.png</string>
+		<string>Icon@2x.png</string>
 		<string>icon-72@2x.png</string>
 		<string>Icon@2x.png</string>
 		<string>Icon@2x.png</string>
 		<string>Icon@2x.png</string>
 		<string>Icon-iPad.png</string>
 		<string>Icon-iPad@2x.png</string>
+		<string>icon-72.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -28,13 +29,14 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>Icon.png</string>
-				<string>icon@2x.png</string>
+				<string>Icon@2x.png</string>
 				<string>icon-72@2x.png</string>
 				<string>Icon@2x.png</string>
 				<string>Icon@2x.png</string>
 				<string>Icon@2x.png</string>
 				<string>Icon-iPad.png</string>
 				<string>Icon-iPad@2x.png</string>
+				<string>icon-72.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
@@ -53,7 +55,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>30</string>
+	<string>36</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
