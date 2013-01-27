@@ -496,7 +496,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.1\"",
 					"\"$(SRCROOT)/TestFlightSDK1.2.3-beta\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
@@ -522,7 +521,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.1\"",
 					"\"$(SRCROOT)/TestFlightSDK1.2.3-beta\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
