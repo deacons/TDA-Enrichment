@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		171C1E6016B7057700976A21 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E5D16B7057700976A21 /* icon-72.png */; };
 		171C1E6116B7057700976A21 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E5E16B7057700976A21 /* Icon.png */; };
 		171C1E6216B7057700976A21 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E5F16B7057700976A21 /* Icon@2x.png */; };
 		171C1E6516B7057E00976A21 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E6316B7057E00976A21 /* Icon-iPad.png */; };
@@ -65,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		1711157316A070A10023A5A9 /* TDA-Enrichment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "TDA-Enrichment.entitlements"; path = "TDA-Enrichment/TDA-Enrichment.entitlements"; sourceTree = "<group>"; };
-		171C1E5D16B7057700976A21 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		171C1E5E16B7057700976A21 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		171C1E5F16B7057700976A21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		171C1E6316B7057E00976A21 /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		179D058116B5B46C00B2EDE5 /* iPhone Icons */ = {
 			isa = PBXGroup;
 			children = (
-				171C1E5D16B7057700976A21 /* icon-72.png */,
 				171C1E5E16B7057700976A21 /* Icon.png */,
 				171C1E5F16B7057700976A21 /* Icon@2x.png */,
 			);
@@ -430,7 +427,6 @@
 				179D057716B5B43A00B2EDE5 /* Default-568h@2x.png in Resources */,
 				179D057916B5B44700B2EDE5 /* Default@2x.png in Resources */,
 				179D057B16B5B44A00B2EDE5 /* Default.png in Resources */,
-				171C1E6016B7057700976A21 /* icon-72.png in Resources */,
 				171C1E6116B7057700976A21 /* Icon.png in Resources */,
 				171C1E6216B7057700976A21 /* Icon@2x.png in Resources */,
 				171C1E6516B7057E00976A21 /* Icon-iPad.png in Resources */,
@@ -535,7 +531,7 @@
 				);
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -560,7 +556,7 @@
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
