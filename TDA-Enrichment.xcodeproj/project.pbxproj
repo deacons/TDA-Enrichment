@@ -11,6 +11,7 @@
 		171C1E6216B7057700976A21 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E5F16B7057700976A21 /* Icon@2x.png */; };
 		171C1E6516B7057E00976A21 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E6316B7057E00976A21 /* Icon-iPad.png */; };
 		171C1E6616B7057E00976A21 /* Icon-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E6416B7057E00976A21 /* Icon-iPad@2x.png */; };
+		1761E85D16F79E4400F5217C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761E85B16F79E4400F5217C /* libTestFlight.a */; };
 		179D056916B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056816B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png */; };
 		179D056B16B5B2D900B2EDE5 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056A16B5B2D900B2EDE5 /* Default-Portrait~ipad.png */; };
 		179D056D16B5B40A00B2EDE5 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056C16B5B40A00B2EDE5 /* Default-Landscape~ipad.png */; };
@@ -18,7 +19,6 @@
 		179D057716B5B43A00B2EDE5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D057616B5B43A00B2EDE5 /* Default-568h@2x.png */; };
 		179D057916B5B44700B2EDE5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D057816B5B44700B2EDE5 /* Default@2x.png */; };
 		179D057B16B5B44A00B2EDE5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D057A16B5B44A00B2EDE5 /* Default.png */; };
-		17A61F5C16B5916500EC8AF4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A61F5516B5912100EC8AF4 /* libTestFlight.a */; };
 		17E9968A16A3F8CE003F3875 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E9968916A3F8CE003F3875 /* libz.dylib */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -68,6 +68,8 @@
 		171C1E5F16B7057700976A21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		171C1E6316B7057E00976A21 /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
 		171C1E6416B7057E00976A21 /* Icon-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad@2x.png"; sourceTree = "<group>"; };
+		1761E85B16F79E4400F5217C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		1761E85C16F79E4400F5217C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		179D056816B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		179D056A16B5B2D900B2EDE5 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		179D056C16B5B40A00B2EDE5 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -75,8 +77,6 @@
 		179D057616B5B43A00B2EDE5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		179D057816B5B44700B2EDE5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		179D057A16B5B44A00B2EDE5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		17A61F5516B5912100EC8AF4 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		17A61F5816B5912100EC8AF4 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		17E9968916A3F8CE003F3875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -116,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A61F5C16B5916500EC8AF4 /* libTestFlight.a in Frameworks */,
 				17E9968A16A3F8CE003F3875 /* libz.dylib in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -133,6 +132,7 @@
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
+				1761E85D16F79E4400F5217C /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +151,15 @@
 			name = Classes;
 			path = "TDA-Enrichment/Classes";
 			sourceTree = SOURCE_ROOT;
+		};
+		1761E85A16F79E4400F5217C /* TestFlightSDK1.2.4-beta */ = {
+			isa = PBXGroup;
+			children = (
+				1761E85B16F79E4400F5217C /* libTestFlight.a */,
+				1761E85C16F79E4400F5217C /* TestFlight.h */,
+			);
+			path = "TestFlightSDK1.2.4-beta";
+			sourceTree = "<group>";
 		};
 		179D057016B5B41100B2EDE5 /* iPad Launch Images */ = {
 			isa = PBXGroup;
@@ -209,15 +218,6 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		17A61F5416B5912100EC8AF4 /* TestFlightSDK1.2.3-beta */ = {
-			isa = PBXGroup;
-			children = (
-				17A61F5516B5912100EC8AF4 /* libTestFlight.a */,
-				17A61F5816B5912100EC8AF4 /* TestFlight.h */,
-			);
-			path = "TestFlightSDK1.2.3-beta";
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +247,7 @@
 			children = (
 				179D058316B5B47A00B2EDE5 /* Icons */,
 				179D057116B5B41A00B2EDE5 /* Launch Images */,
-				17A61F5416B5912100EC8AF4 /* TestFlightSDK1.2.3-beta */,
+				1761E85A16F79E4400F5217C /* TestFlightSDK1.2.4-beta */,
 				17E9968916A3F8CE003F3875 /* libz.dylib */,
 				1711157316A070A10023A5A9 /* TDA-Enrichment.entitlements */,
 				301BF56E109A69640062928A /* www */,
@@ -527,7 +527,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.2.3-beta\"",
+					"\"$(SRCROOT)/TestFlightSDK1.2.4-beta\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
@@ -551,7 +551,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.2.3-beta\"",
+					"\"$(SRCROOT)/TestFlightSDK1.2.4-beta\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
