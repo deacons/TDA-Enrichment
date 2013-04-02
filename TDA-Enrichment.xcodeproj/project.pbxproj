@@ -11,7 +11,7 @@
 		171C1E6216B7057700976A21 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E5F16B7057700976A21 /* Icon@2x.png */; };
 		171C1E6516B7057E00976A21 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E6316B7057E00976A21 /* Icon-iPad.png */; };
 		171C1E6616B7057E00976A21 /* Icon-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171C1E6416B7057E00976A21 /* Icon-iPad@2x.png */; };
-		1761E85D16F79E4400F5217C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761E85B16F79E4400F5217C /* libTestFlight.a */; };
+		17822C21170ADD210097D7C7 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17822C1F170ADD210097D7C7 /* libTestFlight.a */; };
 		179D056916B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056816B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png */; };
 		179D056B16B5B2D900B2EDE5 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056A16B5B2D900B2EDE5 /* Default-Portrait~ipad.png */; };
 		179D056D16B5B40A00B2EDE5 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 179D056C16B5B40A00B2EDE5 /* Default-Landscape~ipad.png */; };
@@ -68,8 +68,8 @@
 		171C1E5F16B7057700976A21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		171C1E6316B7057E00976A21 /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
 		171C1E6416B7057E00976A21 /* Icon-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad@2x.png"; sourceTree = "<group>"; };
-		1761E85B16F79E4400F5217C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		1761E85C16F79E4400F5217C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		17822C1F170ADD210097D7C7 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		17822C20170ADD210097D7C7 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		179D056816B5B2CD00B2EDE5 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		179D056A16B5B2D900B2EDE5 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		179D056C16B5B40A00B2EDE5 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
-				1761E85D16F79E4400F5217C /* libTestFlight.a in Frameworks */,
+				17822C21170ADD210097D7C7 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,13 +152,13 @@
 			path = "TDA-Enrichment/Classes";
 			sourceTree = SOURCE_ROOT;
 		};
-		1761E85A16F79E4400F5217C /* TestFlightSDK1.2.4-beta */ = {
+		17822C1E170ADD210097D7C7 /* TestFlightSDK1.3.0-beta.2 */ = {
 			isa = PBXGroup;
 			children = (
-				1761E85B16F79E4400F5217C /* libTestFlight.a */,
-				1761E85C16F79E4400F5217C /* TestFlight.h */,
+				17822C1F170ADD210097D7C7 /* libTestFlight.a */,
+				17822C20170ADD210097D7C7 /* TestFlight.h */,
 			);
-			path = "TestFlightSDK1.2.4-beta";
+			path = "TestFlightSDK1.3.0-beta.2";
 			sourceTree = "<group>";
 		};
 		179D057016B5B41100B2EDE5 /* iPad Launch Images */ = {
@@ -247,8 +247,8 @@
 			children = (
 				179D058316B5B47A00B2EDE5 /* Icons */,
 				179D057116B5B41A00B2EDE5 /* Launch Images */,
-				1761E85A16F79E4400F5217C /* TestFlightSDK1.2.4-beta */,
 				17E9968916A3F8CE003F3875 /* libz.dylib */,
+				17822C1E170ADD210097D7C7 /* TestFlightSDK1.3.0-beta.2 */,
 				1711157316A070A10023A5A9 /* TDA-Enrichment.entitlements */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -527,7 +527,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.2.4-beta\"",
+					"\"$(SRCROOT)/TestFlightSDK1.3.0-beta.2\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
@@ -551,7 +551,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.2.4-beta\"",
+					"\"$(SRCROOT)/TestFlightSDK1.3.0-beta.2\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
 				PROVISIONING_PROFILE = "";
