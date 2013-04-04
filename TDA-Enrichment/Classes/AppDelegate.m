@@ -57,7 +57,6 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     // TestFlight init
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff:@"d3bb9d36-e2ca-43f0-a499-52e8582879d3"];
     
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
