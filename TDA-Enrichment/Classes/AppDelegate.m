@@ -28,6 +28,8 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
+#import "TestFlight.h"
+
 #import <Cordova/CDVPlugin.h>
 
 @implementation AppDelegate
@@ -54,6 +56,10 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    // TestFlight init
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight takeOff:@"d3bb9d36-e2ca-43f0-a499-52e8582879d3"];
+    
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     NSString* invokeString = nil;
 

@@ -8,14 +8,12 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>icon.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.png</string>
-		<string>icon@2x.png</string>
-		<string>icon-72.png</string>
-		<string>icon-72@2x.png</string>
+		<string>Icon@2x.png</string>
+		<string>Icon.png</string>
+		<string>Icon-iPad@2x.png</string>
+		<string>Icon-iPad.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -23,10 +21,10 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon.png</string>
-				<string>icon@2x.png</string>
-				<string>icon-72.png</string>
-				<string>icon-72@2x.png</string>
+				<string>Icon@2x.png</string>
+				<string>Icon.png</string>
+				<string>Icon-iPad@2x.png</string>
+				<string>Icon-iPad.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
@@ -41,11 +39,26 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+			<key>CFBundleURLIconFile</key>
+			<string>Icon@2x</string>
+			<key>CFBundleURLName</key>
+			<string>com.georgegarside.tda-enrichment</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tdaenrich</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>26</string>
+	<string>51</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
