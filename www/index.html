@@ -10,6 +10,27 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
 	<script src="cordova-2.2.0.js"></script>
+	<script type="text/javascript">
+		var _kmq = _kmq || [];
+		var _kmk = _kmk || '04b3afa43e0e320f58b26a43fe15e2a529dcf9ed';
+		function _kms(u){
+		    setTimeout(function(){
+		    	var d = document, f = d.getElementsByTagName('script')[0],
+		    	s = d.createElement('script');
+		    	s.type = 'text/javascript'; s.async = true; s.src = u;
+		    	f.parentNode.insertBefore(s, f);
+		    	}, 1);
+		    }
+		// Include "http:" when initializing the external JS files, else it will look for a local JS file://i.kissmetrics.com/i.js
+		_kms('http://i.kissmetrics.com/i.js');
+		_kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			_kmq.push(['identify', device.uuid]);
+			_kmq.push(['alias', device.uuid, device.name])
+			_kmq.push(['record', 'used mobile application']);
+		};
+	</script>
 </head>
 
 <body>
