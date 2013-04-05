@@ -9,6 +9,28 @@
 	<link rel="stylesheet" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<script src="cordova-2.2.0.js"></script>
+	<script type="text/javascript">
+		var _kmq = _kmq || [];
+		var _kmk = _kmk || '04b3afa43e0e320f58b26a43fe15e2a529dcf9ed';
+		function _kms(u){
+		    setTimeout(function(){
+		    	var d = document, f = d.getElementsByTagName('script')[0],
+		    	s = d.createElement('script');
+		    	s.type = 'text/javascript'; s.async = true; s.src = u;
+		    	f.parentNode.insertBefore(s, f);
+		    	}, 1);
+		    }
+		// Include "http:" when initializing the external JS files, else it will look for a local JS file://i.kissmetrics.com/i.js
+		_kms('http://i.kissmetrics.com/i.js');
+		_kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			_kmq.push(['identify', device.uuid]);
+			_kmq.push(['alias', device.uuid, device.name])
+			_kmq.push(['record', 'used mobile application']);
+		};
+	</script>
 </head>
 
 <body>
@@ -16,7 +38,11 @@
 <!-- !Start of first page: #welcome -->
 <div data-role="page" id="welcome">
 
-	<div data-role="header"><h1>TDA Enrichment</h1><a href="#popupwelcome" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
+	<div data-role="header"><h1>TDA Enrichment</h1><a href="#popupwelcome" id="popupwelcome" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
+	
+	<script>
+		_kmq.push(['trackClick', 'popupwelcome', 'Opened welcome popup']);
+	</script>
 	
 	<div data-role="popup" id="popupwelcome" data-theme="a">
 		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
@@ -32,21 +58,21 @@
 
 	<ul data-role="listview" data-inset="true" data-divider-theme="b">
 		<li data-role="list-divider" data-theme="g">Big Friday</li>
-		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow">Dodgeball</a></li>
+		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow" class="bigfriday">Dodgeball</a></li>
 		<li data-role="list-divider" data-theme="b">After School</li>
-		<li><a href="#monday"		data-transition="flow">Monday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#tuesday"		data-transition="flow">Tuesday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#wednesday"	data-transition="flow">Wednesday 	<span class="ui-li-count">14 activities	</span></a></li>
-		<li><a href="#thursday"		data-transition="flow">Thursday 	<span class="ui-li-count">6 activities	</span></a></li>
-		<li><a href="#friday"		data-transition="flow">Friday 		<span class="ui-li-count">8 activities	</span></a></li>
+		<li><a href="#monday" data-transition="flow" class="timetable" id="monday">Monday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#tuesday" data-transition="flow" class="timetable" id="tuesday">Tuesday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#wednesday" data-transition="flow" class="timetable" id="wednesday">Wednesday <span class="ui-li-count">14 activities	</span></a></li>
+		<li><a href="#thursday" data-transition="flow" class="timetable" id="thursday">Thursday <span class="ui-li-count">6 activities	</span></a></li>
+		<li><a href="#friday" data-transition="flow" class="timetable" id="friday">Friday <span class="ui-li-count">8 activities	</span></a></li>
 		<li data-role="list-divider" data-theme="l">Health & Fitness</li>
-		<li><a href="#HOFF5wheels"			data-transition="flow">HOFF's 5 Wheels</a></li>
-		<li><a href="#warmupcooldown"		data-transition="flow">Warm-ups and Cool-downs</a></li>
-		<li><a href="#resistancetraining"	data-transition="flow">Resistance Training</a></li>
-		<li><a href="#aerobictraining"		data-transition="flow">Aerobic Training</a></li>
-		<li><a href="#nutrition"			data-transition="flow">Nutrition</a></li>
-		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade">Core Conditioning</a></li>
-		<li><a href="#howdoi"				data-transition="flow">How do I? <i>NEW!</i></a></li>
+		<li><a href="#HOFF5wheels" data-transition="flow" class="healthfitness" id="hoff5wheels">HOFF's 5 Wheels</a></li>
+		<li><a href="#warmupcooldown" data-transition="flow" class="healthfitness" id="hoff5wheels">Warm-ups and Cool-downs</a></li>
+		<li><a href="#resistancetraining" data-transition="flow" class="healthfitness" id="resistancetraining">Resistance Training</a></li>
+		<li><a href="#aerobictraining" data-transition="flow" class="healthfitness" id="aerobictraining">Aerobic Training</a></li>
+		<li><a href="#nutrition" data-transition="flow" class="healthfitness" id="nutrition">Nutrition</a></li>
+		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade" class="healthfitness" id="coreconditioning">Core Conditioning</a></li>
+		<li><a href="#howdoi" data-transition="flow" class="healthfitness" id="howdoi">How do I? <i>NEW!</i></a></li>
 	</ul>
 
 	<div data-role="popup" id="coreconditioningmenuselect" data-theme="c">
@@ -1379,7 +1405,10 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<div data-role="popup" id="popupGDAjpg" data-overlay-theme="a" data-theme="d" data-corners="false">
 		<a href="#nutritionfoodlabelling" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 		<img class="popphoto" src="images/GDA_545px.jpg" style="max-height:512px;" alt="GDA">
-		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank">Source</a> ⤤</p>
+		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
+		<script>
+			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
+		</script>
 	</div>
 	<p>Guideline Daily Amounts (GDAs) were developed by food manufacturers and retailers and you can find out more by visiting the IGD website. IGD is a food and grocery industry research organisation.</p>
 	<h4>Ingredients list</h4>
