@@ -1407,6 +1407,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<div data-role="popup" id="popupGDAjpg" data-overlay-theme="a" data-theme="d" data-corners="false">
 		<a href="#nutritionfoodlabelling" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 		<img class="popphoto" src="images/GDA_545px.jpg" style="max-height:512px;" alt="GDA">
+		<script type="text/javascript">
+			window.onload = function() {
+				var gdaimgsource = document.getElementById("gdaimgsource");
+				gdaimgsource.onclick = function() {
+					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					return false;
+				}
+			}
+		</script>
 		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
 		<script>
 			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
