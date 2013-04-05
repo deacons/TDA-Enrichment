@@ -38,6 +38,10 @@
 	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
+		<key>ChildBrowser</key>
+		<string>ChildBrowser.js</string>
 		<key>Device</key>
 		<string>CDVDevice</string>
 		<key>Logger</key>
