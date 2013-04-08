@@ -33,9 +33,15 @@
 		<string>*.thomasdeaconacademy.com</string>
 		<string>*.thomasdeaconacademy.peterborough.sch.uk</string>
 		<string>http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg</string>
+		<string>*.cloudfront.net</string>
+		<string>*.kissmetrics.com</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
+		<key>ChildBrowser</key>
+		<string>ChildBrowser.js</string>
 		<key>Device</key>
 		<string>CDVDevice</string>
 		<key>Logger</key>
