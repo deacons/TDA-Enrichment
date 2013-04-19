@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.m
-//  cordova-2.4.0
+//  cordova-2.5.0
 //
 //  Created by George Garside on 11/01/2013.
 //  Copyright George Garside 2012-2013. All rights reserved.
@@ -44,6 +44,11 @@
     NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
 
     [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+
+    int cacheSizeMemory = 8 * 1024 * 1024; // 8MB
+    int cacheSizeDisk = 32 * 1024 * 1024; // 32MB
+    NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"];
+    [NSURLCache setSharedURLCache:sharedCache];
 
     self = [super init];
     return self;
@@ -82,7 +87,7 @@
 }
 
 // this happens while we are running ( in the background, or from within our own app )
-// only valid if cordova-2.4.0-Info.plist specifies a protocol to handle
+// only valid if cordova-2.5.0-Info.plist specifies a protocol to handle
 - (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)url
 {
     if (!url) {
@@ -113,6 +118,11 @@
     NSUInteger supportedInterfaceOrientations = (1 << UIInterfaceOrientationPortrait) | (1 << UIInterfaceOrientationLandscapeLeft) | (1 << UIInterfaceOrientationLandscapeRight) | (1 << UIInterfaceOrientationPortraitUpsideDown);
 
     return supportedInterfaceOrientations;
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication*)application
+{
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 @end
