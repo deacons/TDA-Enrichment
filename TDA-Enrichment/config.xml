@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cordova>
+<widget>
 	<preference name="AllowInlineMediaPlayback" value="false"/>
 	<preference name="AutoHideSplashScreen" value="true"/>
 	<preference name="BackupWebStorage" value="cloud"/>
@@ -7,11 +7,13 @@
 	<preference name="EnableViewportScale" value="false"/>
 	<preference name="KeyboardDisplayRequiresUserAction" value="true"/>
 	<preference name="MediaPlaybackRequiresUserAction" value="false"/>
-	<preference name="OpenAllWhitelistURLsInWebView" value="false"/>
 	<preference name="ShowSplashScreenSpinner" value="true"/>
+	<preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="2" />
 	<preference name="SuppressesIncrementalRendering" value="false"/>
 	<preference name="TopActivityIndicator" value="gray"/>
 	<preference name="UIWebViewBounce" value="true"/>
+	<preference name="KeyboardDisplayRequiresUserAction" value="true" />
 	<content src="index.html" />
 	<plugins>
 		<plugin name="Accelerometer" value="CDVAccelerometer"/>
@@ -43,4 +45,4 @@
 	<access origin="*.thomasdeaconacademy.com"/>
 	<access origin="*.thomasdeaconacademy.peterborough.sch.uk"/>
 	<access origin="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg"/>
-</cordova>
+</widget>
