@@ -28,7 +28,6 @@
 		document.addEventListener("deviceready", onDeviceReady, false);
 		function onDeviceReady() {
 			_kmq.push(['identify', device.uuid]);
-			_kmq.push(['alias', device.uuid, device.name])
 			_kmq.push(['record', 'used mobile application']);
 		};
 	</script>
