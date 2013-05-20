@@ -4,15 +4,17 @@
 	<preference name="AutoHideSplashScreen" value="true"/>
 	<preference name="BackupWebStorage" value="cloud"/>
 	<preference name="EnableLocation" value="false"/>
+	<preference name="DisallowOverscroll" value="false" />
 	<preference name="EnableViewportScale" value="false"/>
 	<preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+	<preference name="KeyboardShrinksView" value="false" />
 	<preference name="MediaPlaybackRequiresUserAction" value="false"/>
 	<preference name="ShowSplashScreenSpinner" value="true"/>
 	<preference name="FadeSplashScreen" value="true" />
     <preference name="FadeSplashScreenDuration" value="2" />
+	<preference name="HideKeyboardFormAccessoryBar" value="false" />
 	<preference name="SuppressesIncrementalRendering" value="false"/>
 	<preference name="TopActivityIndicator" value="gray"/>
-	<preference name="UIWebViewBounce" value="true"/>
 	<preference name="KeyboardDisplayRequiresUserAction" value="true" />
 	<content src="index.html" />
 	<plugins>
