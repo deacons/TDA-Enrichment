@@ -25,7 +25,6 @@
 		<plugin name="ChildBrowserCommand" value="ChildBrowserCommand"/>
 		<plugin name="Compass" value="CDVLocation"/>
 		<plugin name="Contacts" value="CDVContacts"/>
-		<plugin name="Debug Console" value="CDVDebugConsole"/>
 		<plugin name="Device" value="CDVDevice"/>
 		<plugin name="Echo" value="CDVEcho"/>
 		<plugin name="File" value="CDVFile"/>
