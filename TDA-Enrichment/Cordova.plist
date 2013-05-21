@@ -29,6 +29,9 @@
 	<key>ExternalHosts</key>
 	<array>
 		<string>*.testflightapp.com</string>
+		<string>*.georgegarside.x10.bz</string>
+		<string>*.thomasdeaconacademy.com</string>
+		<string>*.thomasdeaconacademy.peterborough.sch.uk</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
