@@ -5,9 +5,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TDA Enrichment App</title>
+	<link rel="stylesheet" href="css/GeorgeCustom.min.css" />
 	<link rel="stylesheet" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<script src="cordova-2.7.0.js"></script>
+<!--
+	<script type="text/javascript">
+		var _kmq = _kmq || [];
+		var _kmk = _kmk || 'e2f2cd8be75c9f6d65886f18646bc5445d06b38c';
+		function _kms(u){
+		    setTimeout(function(){
+		    	var d = document, f = d.getElementsByTagName('script')[0],
+		    	s = d.createElement('script');
+		    	s.type = 'text/javascript'; s.async = true; s.src = u;
+		    	f.parentNode.insertBefore(s, f);
+		    	}, 1);
+		    }
+		// Include "http:" when initializing the external JS files, else it will look for a local JS file://i.kissmetrics.com/i.js
+		_kms('http://i.kissmetrics.com/i.js');
+		_kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			_kmq.push(['identify', device.uuid]);
+			_kmq.push(['record', 'opened app']);
+		};
+	</script>
+-->
 </head>
 
 <body>
@@ -15,31 +39,55 @@
 <!-- !Start of first page: #welcome -->
 <div data-role="page" id="welcome">
 
-	<div data-role="header"><h1>TDA Enrichment</h1></div>
+	<div data-role="header"><h1>TDA Enrichment</h1><a href="#popupwelcome" id="welcomeinfobutton" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
+	
+	<script>
+		_kmq.push(['trackClick', 'welcomeinfobutton', 'View Welcome Popup']);
+	</script>
+	
+	<div data-role="popup" id="popupwelcome" data-theme="a">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+		<div style="padding:10px 20px;">
+			<h3>Welcome</h3>
+			<p>Welcome to Thomas Deacon Academy's Sports Enrichment app! This app contains the full timetable for the after school sports enrichment as well as the Big Friday events. The app also contains details on attending inter-college enrichment as well as the results and rankings of the colleges.</p>
+		</div>
+	</div>
+
+	</div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>Welcome to Thomas Deacon Academy's Sports Enrichment app! This app contains the full timetable for the after school sports enrichment as well as the Big Friday events. The app also contains details on attending inter-college enrichment as well as the results and rankings of the colleges.</p>
-	
-	<ul data-role="listview" data-inset="true" data-divider-theme="d">
-		<li data-role="list-divider">Big Friday</li>
-		<li><a href="#2013-bigfriday-dodgeball"		data-transition="flow">Dodgeball</a></li>
-		<li data-role="list-divider">After School</li>
-		<li><a href="#monday"		data-transition="flow">Monday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#tuesday"		data-transition="flow">Tuesday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#wednesday"	data-transition="flow">Wednesday 	<span class="ui-li-count">14 activities	</span></a></li>
-		<li><a href="#thursday"		data-transition="flow">Thursday 	<span class="ui-li-count">6 activities	</span></a></li>
-		<li><a href="#friday"		data-transition="flow">Friday 		<span class="ui-li-count">8 activities	</span></a></li>
-		<li data-role="list-divider">Health & Fitness</li>
-		<li><a href="#HOFF5wheels"			data-transition="flow">HOFF's 5 Wheels</a></li>
-		<li><a href="#warmupcooldown"		data-transition="flow">Warm-ups and Cool-downs</a></li>
-		<li><a href="#resistancetraining"	data-transition="flow">Resistance Training</a></li>
-		<li><a href="#aerobictraining"		data-transition="flow">Aerobic Training</a></li>
-		<li><a href="#nutrition"			data-transition="flow">Nutrition</a></li>
-		<li><a href="#coreconditioning"		data-transition="flow">Core Conditioning</a></li>
-		<li><a href="#howdoi"				data-transition="flow">How do I? <i>NEW!</i></a></li>
+	<ul data-role="listview" data-inset="true" data-divider-theme="b">
+		<li data-role="list-divider" data-theme="k"><h1>Activities & Clubs</h1></li>
+		<li data-role="list-divider" data-theme="l">Big Friday</li>
+		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow" class="bigfriday">Dodgeball</a></li>
+		<li data-role="list-divider" data-theme="b">After School</li>
+		<li><a href="#monday" data-transition="flow" class="timetable" id="mondaybutton">Monday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#tuesday" data-transition="flow" class="timetable" id="tuesdaybutton">Tuesday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#wednesday" data-transition="flow" class="timetable" id="wednesdaybutton">Wednesday <span class="ui-li-count">14 activities	</span></a></li>
+		<li><a href="#thursday" data-transition="flow" class="timetable" id="thursdaybutton">Thursday <span class="ui-li-count">6 activities	</span></a></li>
+		<li><a href="#friday" data-transition="flow" class="timetable" id="fridaybutton">Friday <span class="ui-li-count">8 activities	</span></a></li>
 	</ul>
+
+	<ul data-role="listview" data-inset="true" data-divider-theme="b">
+		<li data-role="list-divider" data-theme="k"><h1>Health & Fitness</h1></li>
+		<li><a href="#HOFF5wheels" data-transition="flow" class="healthfitness" id="hoff5wheelsbutton">HOFF's 5 Wheels</a></li>
+		<li><a href="#warmupcooldown" data-transition="flow" class="healthfitness" id="warmupcooldownbutton">Warm-ups and Cool-downs</a></li>
+		<li><a href="#resistancetraining" data-transition="flow" class="healthfitness" id="resistancetrainingbutton">Resistance Training</a></li>
+		<li><a href="#aerobictraining" data-transition="flow" class="healthfitness" id="aerobictrainingbutton">Aerobic Training</a></li>
+		<li><a href="#nutrition" data-transition="flow" class="healthfitness" id="nutritionbutton">Nutrition</a></li>
+		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade" class="healthfitness" id="coreconditioningbutton">Core Conditioning</a></li>
+		<li><a href="#howdoi" data-transition="flow" class="healthfitness" id="howdoibutton">How do I…?</a></li>
+	</ul>
+
+	<div data-role="popup" id="coreconditioningmenuselect" data-theme="c">
+		<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
+			<li data-role="divider" data-theme="l">Select a section</li>
+			<li><a href="#coreconditioningcorestability" data-transition="flow">Core Stability</a></li>
+			<li><a href="#coreconditioningexercises" data-transition="flow">Exercises</a></li>
+			<li><a href="#coreconditioningstaticdynamiccore" data-transition="flow">Static & Dynamic Core</a></li>
+		</ul>
+	</div>
 
 	<br />
 
@@ -58,7 +106,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -66,7 +114,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -74,7 +122,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -82,7 +130,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Girls Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
@@ -90,7 +138,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Gold DOE</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Gold DOE</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -98,7 +146,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> LT1 / T01</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 5:30 - 6:30pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
@@ -120,7 +168,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
@@ -128,7 +176,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7, 8 & 9</strong></p>
@@ -140,8 +188,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page two -->
 
@@ -153,7 +201,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -161,7 +209,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8 & 9</strong></p>
@@ -169,7 +217,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -177,7 +225,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -185,7 +233,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:15pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Indoor Athletics</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Athletics</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -193,7 +241,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Boys Indoor Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Boys Indoor Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -208,7 +256,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:50 - 1:40pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -223,7 +271,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Table Tennis</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Table Tennis</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -235,8 +283,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page three -->
 
@@ -248,7 +296,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">A-Level Pract</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">A-Level Pract</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>A-Level</strong></p>
@@ -256,7 +304,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Athletics (Joggers)</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Athletics (Joggers)</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -264,7 +312,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">CCF</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">CCF</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9, 10, 11 and 6th Form</strong></p>
@@ -272,7 +320,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> CCF HQ</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong></strong></p>
@@ -280,7 +328,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -288,7 +336,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Football</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Football</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -296,7 +344,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Girls Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -304,7 +352,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Indoor</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Indoor Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10 & 11</strong></p>
@@ -312,7 +360,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -341,7 +389,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10, 11, 12 & 13</strong></p>
@@ -349,7 +397,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Swimming</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Swimming</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -361,8 +409,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page four -->
 
@@ -374,7 +422,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -382,7 +430,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Basketball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Basketball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -390,7 +438,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -412,7 +460,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -424,8 +472,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page five -->
 
@@ -437,7 +485,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -445,7 +493,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -453,7 +501,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -482,7 +530,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -490,7 +538,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:20 - 1:30pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Trampoline</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Trampoline</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -502,8 +550,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page six -->
 
@@ -514,13 +562,12 @@
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-Now Tug of War has finished, it's time to get your Dodgeball teams ready!
-Your college’s PE teachers will be coming round to get your team sheets filled in - get your name down if you want to play.
-See below for when your competition is:</p>
+	<!-- Content 1 -->
+	<p>Now Tug of War has finished, it's time to get your Dodgeball teams ready!</p>
+	<p>Your college’s PE teachers will be coming round to get your team sheets filled in - get your name down if you want to play.</p>
+	<p>See below for when your competition is:</p>
 
-	<div data-role="collapsible" data-content-theme="d">
+	<div data-role="collapsible" data-theme="g" data-content-theme="d">
 		<h3>Timetable</h3>
 		
 	<table data-role="table" id="2013-bigfriday-dodgeball-table" data-mode="reflow" class="ui-responsive table-stroke">
@@ -578,72 +625,640 @@ See below for when your competition is:</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page seven -->
 
 <!-- !Start of eighth page: #HOFF5wheels -->
 <div data-role="page" id="HOFF5wheels" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F HOFF's 5 Wheels</h1></div>
+	<div data-role="header"><h1>H&amp;F HOFF's 5 Wheels</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
+		<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+			<div data-role="collapsible">
+				<h3>1<sup>st</sup>: Aerobic Training</h3>
+				<p>This is the wheel that those desperate to lose weight fast always drive on first. Even though it's not the answer to helping you obtain that celebrity-perfect look by itself, aerobic exercise is still a valuable wheel.</p>
+				<h4>The Facts</h4>
+				<p>Without aerobic training, you'll lack the adequate stamina to push your muscles beyond what they're capable of doing so they will become stronger and shape up faster. Without aerobic training you'll have to watch calories religiously, your body wont be as efficient at flushing out the toxins that resistance training leaves behind, such as lactic acid. Add the fact that aerobic training improves the quality of your sleep and its pretty easy to see how it fits into the bigger picture.</p>
+				<h4>Foundation</h4>
+				<p>The term aerobic means with oxygen. Aerobic activity is any physical activity done for an extended period of time that forces your cardiovascular system (heart, lungs and blood vessels) to increase the amount of oxygen and blood circulating through your body, so that you're benefiting even at rest. Your body doesn't care how you make that happen, although choosing activities that work larger muscle groups, typically your legs, is more effective at getting that job done.</p>
+				<p>To count as aerobic exercise, any activity you choose has to keep your heart beating around sixty-five percent of your maximum heart rate for at least 20 minutes or more.</p>
+				<p>Your maximum heart rate, or MHR, is the highest number of times your heart can contract in one minute. To find yours, all you do is subtract your age from the number 220. That means if you're 35 years old, your MHR is 220 minus 35 (or 185 beats per minute). This is an important number to know, as it can help you know how hard you should be exercising.</p>
+				<p>To get the most from aerobic exercise, you need to keep your pulse between a range of 60% and 70% of your MHR to burn fat. For the 35 year old that equates to a pulse of between 111 to 130 per minute. If you increase the intensity you're working at to between 70% and 80% this will improve your aerobic fitness, the pulse rate will then be at 130 to 148 beats per minute.</p>
+				<p>Try to do some form of aerobic activity 3 times a week, for at least 20 minutes. More is better; less might be suitable if you have a favourable metabolism. If you can do more than 20 minutes, then do it: every minute past the twenty burns additional body fat as fuel. After that magic number (20 minutes), you've exhausted your body's glycogen (carbohydrate) stores, which it uses as fuel when you workout. From a fat-burning standpoint, if you can exercise beyond 20 minutes, your body has no choice but to use more of its own stored body fat for energy instead.</p>
+				<h4>Your Options</h4>
+				There are hundreds of things you could do to get an aerobic workout besides using the typical gym machines (stationary bikes, treadmills, cross-trainers and rowing machines) and the obvious outside choices (biking, jogging, running, swimming and walking). If you're not into any of these don't write off exercise, as playing a sport, dancing, ice-skating skiing, kayaking, rollerblading, even house cleaning and gardening can be aerobic if done a certain way at a certain intensity!
+				<h4>Use Everything in One Workout</h4>
+				<p>If you want a workout your body will never get used to (or forgive you for), try flip-flopping between your cardio choices at the gym (stationary bike, treadmill, step routine, jump rope, stair climber or rower) every three minutes. Make the first minute a warm-up, push yourself around 65% of your MHR for the second minute (or on a scale 1 to 10 in effort, around a 6), then go for it in the last minute (85% or level 8 effort).</p>
+				<h4>Know When Too Much Is Too Much</h4>
+				<p>Pushing yourself higher within your target heart rate zone will definitely reap more results, but you need to know when too much is too much. If you can't speak a full sentence while exercising without being winded, then you're most likely pushing yourself to the far end of your target heart rate zone. On the other hand, if you're able to carry on a full conversation, then you're probably working at a level thats below your target heart rate zone.</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>2<sup>nd</sup>: Resistance Training</h3>
+				<p>Whether you're brand new to this whole exercise experience, or fitness is old hat, you probably still know what resistance training entails, or know it by one of its many other names: strength training, weight training, pumping iron, anaerobic exercise, etc.</p>
+				<p>This is the chapter you've either been waiting for or dreading. If you're a male and breathing, you may start to get a bit fired up by now. If you're a female, and fairly new to fitness, you might have doubts, or even visions of morphing into a 300-pound monster with arms like ham hocks as soon as you start bench pressing. Relax, its not like that.</p>
+				<h4>The Facts</h4>
+				<p>Resistance training is not just about building muscle that will help you look great. Its also a prehab for preventing injuries and making sure you feel great. Resistance training also turns back the clock by reversing many factors that naturally occur in the ageing process.</p>
+				<p>Reshaping your muscles can even help you stay leaner. Aerobic exercise burns more calories per minute and gets your metabolism into overdrive faster than resistance training. However, after you've finished weight training, your body has to use extra calories throughout the day just to sustain the new, leaner body you've built for yourself. Using weights effectively will keep your metabolism turned on all day long.</p>
+				<p>So think of muscle as a fat burning friend who's with you all day long. The more muscle you have, the higher your Basal Metabolic Rate (BMR). What's a BMR, and why should you care about it? Your BMR is another important number: it is the number of calories you burn every day to keep your body functioning, your heart beating, your lungs breathing, and so on. It's your BMR that accounts for almost 75% of all of the calories you burn daily, with the other 25% being burned from all your daily physical activities.</p>
+				<p>Building more muscle though resistance training means you'll have extra muscle fibres consuming more energy. Even when you're just sitting there looking good but not doing a thing. In fact, every pound of muscle you add to your frame burns an additional 30 to 50 calories per day. Substitute 5 pounds of muscle for 5 pounds of fat and not only will you naturally be more aesthetically in shape, but you'll burn and extra 150-250 calories a day doing absolutely nothing at all.</p>
+				<h4>Foundation</h4>
+				<p>You already know that Aerobic activity is any activity that increases your pulse for an extended period of time, causing your heart and lungs to work harder to get more oxygen to your muscles. Resistance training, Anaerobic exercise is any activity done in short, intense bursts that works your body without requiring much oxygen.</p>
+				<p>Resistance training means working one muscle (or a group of muscles) against some form of resistance so that your muscles have no choice but to break down from fatigue and stress. Do it the right way, and those beaten-down muscles have no choice but to rebuild themselves so they're stronger for the next time you decide to put them through the paces.</p>
+				<p>No matter what tool you use to stress your muscles  barbells, dumbbells, weight machines, stretch cords, medicine balls, your own body weight  if you provide enough resistance to fatigue your muscles by making them repeat a movement for a given number of repetitions, you'll achieve the same goal.</p>
+				<p>Heres how it works: Lifting the weight one time is called a repetition (rep). A group of repetitions performed without stopping is called a set. The number of reps you should do to fatigue your muscles depends on your goals. Most experts stick with using a weight you can lift, raise, or pull 8 to 15 times. If you're looking to noticeably strengthen your muscles, then using a heavier weight that allows you do to between 6 and 10 reps is better. If improving muscle tone is your goal then 10 to 15 reps is more suited and lastly muscle endurance 15 to 20 reps.</p>
+				<h4>Your Options</h4>
+				<p>The choices you have with resistance training are virtually limitless  there are literally hundreds of exercises that will prevent your muscles (or you) from being bored.</p>
+				<p>The best resistance training workout leaves no stone unturned. It's a program that targets every major muscle group in your body, not just the ones you're concerned with. These 13 exercises are for overall muscle-development. There are countless spin-off movements from these core exercises. Learn these, master them effectively, and then variations can be added.</p>
+				<ul>
+				    <li>For your legs and butt → The squat and the lunge</li>
+				    <li>For your chest → The chest press and the chest fly</li>
+				    <li>For your back → The pulldown and the row</li>
+				    <li>For your shoulders → The shoulder press and the raise</li>
+				    <li>For your triceps → The pressdown and the extension</li>
+				    <li>For your biceps → The curl</li>
+				    <li>For your abs → The crunch and the reverse crunch</li>
+				</ul>
+				<h4>Focus</h4>
+				<p>If resistance training has never worked for you and you use perfect form (perfect technique during an exercise), Id say that you're using weights that are too light for you. If you're not using a weight heavy enough to fully fatigue during each set, you'll never push them enough to make them want, and need, to improve themselves. For example, if an exercise asks you do 12-15 repetitions, you need to select a weight that you can complete only 12-15 reps with while keeping good form. If you could have easily eked out three more reps before quitting, your muscles were never really challenged enough to improve themselves, making the entire set less effective than it should and certainly could have been. Once you can do more than the required number of reps, then its time to raise the weight slightly.</p>
+				<h4>Frequently asked questions</h4>
+				<h5>Wont weights make me big?</h5>
+				<p>If you're a guy, you can probably skip over this question! If you're a woman  You wont get big! As a rule, thats because most women are simply not genetically capable of ballooning up from strength training alone. Your body has 10% of the testosterone that the average male has  and look at how hard it is for a man to add muscle. Even they cant do it without lifting heavy weights, eating steak for breakfast, milkshakes all day, and doing sets of 4 to 6 reps! I think you get my point!</p>
+				<p>If you're worried about adding a pound of muscle, it's estimated that the space of a pound of muscle is about 22% less than a pound of fat. That means adding 5 pounds of muscle and losing 5 pounds of fat would actually make you look smaller. I'd say thats a fair trade off. Finally, muscle isn't created by weights. It's created by food  proteins to be more precise. You have to eat quality and a quantity of food above and beyond what you burn, and break the muscle down in the gym so they need to repair, plus eat every 3 to 4 hours, and get adequate rest so that they recover... Do you see what I mean? Besides, it's not an overnight process, so you could always back off or even stop.</p>
+				<h5>Can I burn fat from a specific area by doing specific exercise?</h5>
+				<p>Welcome to the biggest con in fitness and exercise. It may be the quick fix you're wishing for, but spot reduction (the popular term for it) is one of the biggest exercise lies out there. It's impossible to lose weight in one particular area by lifting weights or doing exercises that target only that area. You body burns fat in a genetically predetermined patter over which you have no control. But there's good news: As you start driving on all four wheels, you'll begin to burn fat gradually from all over your body, including your specific wish list of areas. Typically the last place you store fat is the first area you'll see a noticeable difference. Unfortunately, that also means the first place you started storing fat is usually the last area to get lean: men around the waist; women around the hips/butt.</p>
+				<p>Until you reduce the body fat above or around your muscles through cardiovascular exercise, resistance training, eating right, and adequate rest you'll never make those muscles or perfect set of abs visible.</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>3<sup>rd</sup>: Nutrition</h3>
+				<p>Eating right isn't really all that complicated. It's a choice, and a conscious, daily choice at that. Making the right choice on a regular basis, and sticking with your choice over time, will get you there.</p>
+				<h4>The Facts</h4>
+				<p>Choose to eat the right way and you won't just improve every possible aspect of your health, but you'll make the job of reshaping yourself through exercising that much easier. The time-starved amongst us are at the mercy of convenience eating. You are your own food-police deciding the type of foods you eat; I can't monitor that all the time because I'm only with you for 1 hour at the gym. The other 23 hours are your responsibility.</p>
+				<p>Ingest the wrong foods and you can easily prevent your system from operating at its most efficient level especially if you're active. Eat less than enough to counterbalance the extra nutritional requirements your body needs to maintain itself and you'll store the same excess fat you're trying to get rid of because your body thinks it's going to starve, and so it hold onto every calorie in anticipation of not getting any more.</p>
+				<p>Regardless of what your goals are from exercise, following a few basic nutrition rules of the thumb will make this 3<sup>rd</sup> wheel worth a lot more to your body than you ever thought it could be.</p>
+				<h4>Foundation</h4>
+				<p>If you're trying to lose weight, calories may represent a guilty pleasure or a great evil to your brain. But to your body, calories are just energy units to be used as fuel.</p> 
+				<p>You wouldn't give your car more fuel than it really needed, would you? If you did, all the fuel would just overflow and make a mess, right? That's exactly what happens with your body: when you eat more calories than it needs, the result is overflow to every place your body holds excess calories (i.e. fat). It doesn't know you don't want to gain weight, it just sees all those extra calories and assumes you want to store them as energy for later on.</p> 
+				<p>Stand up and jump an inch or two off the ground. Anything move? For every pound of stored body fat you felt jiggle, all you're really looking at is roughly 3500 calories. Just 3500 units of fuel your body thinks it needs to hold onto because you haven't given it any reason to think otherwise. But don't worry. Now that you know why you're storing calories, it's going to be easier to convince your body to use them up and stop storing then unnecessarily.</p> 
+				<p>Eating a low-fat, high-fibre diet along with doing aerobic exercise to burn calories (and resistance training to maintain lean mass and to naturally boost your metabolism) is the most effective way to lose fat without holding you back from building muscle tissue. Try not to use the word diet because it makes people feel like they're walking a tightrope: one tiny misstep (doughnut!) and they assume that all their hopes and dreams will come crashing down. Diets are usually temporary by nature, leading to eventual failure, whereas an on-going healthy nutritional intake that is a lifestyle will last a lifetime.</p> 
+				<h4>Calories</h4>
+				<p>How many calories you really need to eat every day depends on who you are. Some people can maintain their bodyweight on 1400 calories a day, whereas others have metabolisms like a hummingbird: eat suet at every meal and never put on an ounce of fat. It all depends on everything from your metabolism and level of activity to your age, heritage, gender,  what you're putting in your mouth, and when you're putting it in your mouth.</p> 
+				<p>As a starting point the most common method used by dieticians and other health-care professionals is the Harris-Benedict formula.</p> 
+				<p>Men: 66 + (6.3 x wt in lbs) + (12.9 x height in inches) - (6.8 x age in years)</p> 
+				<p>Women: 655 + (4.3 x wt in lbs) + (4.7 x height in inches) - (4.7 x age in years)</p> 
+				<p>The number you are left with is your estimated basal metabolic rate expenditure (or BMR): the minimum number of calories your body needs just to keep you going. Getting to school, typing up that report, racing around trying to find a decent place to eat  these are all extra actions that increase your BMR by around 20%. For example a 35 year old woman who weighs 140lbs and stands 5 feet 6 inches would have a BMR of approx. 1402 calories a day. Multiply this by 120% and all she really needs to eat every day is 1683 calories. If your goal is to trim down, its just a matter of eating less and/or burning extra calories through exercise to lose weight.</p> 
+				<h4>Carbohydrates, Proteins, and fats</h4>
+				<p>No matter how many calories you need each day, its important to make sure they don't all come from the same place. Carbohydrates, proteins, and fats are all broken down at different speeds in the body to create a continual flow of caloric energy.</p>
+				<p>Most nutritionists recommend dividing up your daily Carbohydrates, proteins, and fats using a ratio of 5:3:2 (respectively). This translates into getting 50% of your daily calories from carbs, 30% from protein, and 20% from fat. Using the example above, the woman that requires 1683 calories to maintain her weight would have a nutritional profile as follows to maintain her weight:</p> 
+				<ul>
+					<li>Carbohydrate	841.5 cal. (50%)</li>
+					<li>Protein			504.9 cal. (30%)</li>
+					<li>Fat				336.6 cal. (20%)</li>
+				</ul>
+				<p>To make this number crunching easier to calculate for everyday living we can equate these numbers further into grams and workout how much to allow for each meal.</p>
+				<ul>
+					<li>Carbohydrate	210g (4 cal/g)</li>
+					<li>Protein			126g (4 cal/g)</li>
+					<li>Fat				37g (9 cal/g)</li>
+				</ul>
+				<p>Its healthier to eat all day long, breaking-up your caloric intake into smaller increments (5 to 6 meals) instead of the standard 3, you also help curb binges, and also keep blood sugar levels even throughout the day. Larger meals raise your blood sugar, which can trigger an increase in the release of insulin within the bloodstream. Remember, little and often. The easiest way to accomplish 5 or even 6 meals per day is to moderate the traditional 3 meals in size and snack in between. One snack mid-morning and one mid-afternoon.</p> 
+				<p>For the example above based on 1683 calories, each of the 5 meals would average 336 calories, carbs 42 grams, protein 25 grams, fats 7 grams. It would be unrealistic to expect an exact equality between meals but use these figures as a guide.</p>
+				<p>There is so much good information on nutrition: what's good, what's not, nutrition plans, when to eat, when to stop, etc. I'll leave that for you to decide whats a wise choice and what's an unwise choice (cue another 30 minutes cycling!).</p>
+				<p>These are my nutritional guidelines:</p>
+				<ul>
+					<li>Most caloric meal - breakfast; the least - dinner. Drink 4-pints of water a day. Chicken, tuna (packed in water), eggs, wholemeal bread and rice. Plenty of fruit and veg. Protein shakes are convenient as are smoothies for snacks.</li>
+					<li>Read all labels, avoid sugar and salt. After 4pm drop pasta, rice, potato and bread. Obtain carbs from veg and salads for evening meal.</li>
+					<li>Protein sources  Lean mince beef, chicken, fish, soya, eggs</li>
+					<li>Carbs  Wholemeal bread and rice, porridge. Plenty of fruit (such as apples, bananas, oranges, satsumas, grapes, pears, strawberries, peaches, apricots) and vegetables (carrots, broccoli, spinach, beans)</li> 
+					<li>Healthy fats: vegetable oils, oily fish, nuts, omega 3 enriched eggs, olive oil olives, seeds.</li>
+				</ul>
+			</div>
+			<div data-role="collapsible">
+				<h3>4<sup>th</sup>: Rest and Recovery</h3>
+				<p>It sounds like the easiest wheel of the five to drive on, but it's actually the one that most frequently gets either too much or too little use. Give your body too much rest and it'll look like it. Give it too little and you increase your odds of not only injuring yourself, but never seeing the body-shaping results you're shooting for.</p>
+				<h4>The facts</h4>
+				<p>Whether you hate or love exercise, your body interprets all that time you've spent pulling, pushing, and sweating on gym equipment as on thing: stress. Thats why the time you give your muscles to rest and recover in between each workout can make a huge difference in the kind of results you end up seeing for all of your hard work.</p> 
+				<p>Rest is also important between sets at the gym, 30 to 180 seconds ideally, depending on the intensity of the exercise and the routine. This downtime gives your body time to drain the muscles of any leftover lactic acid (a by-product of exercise that gives that fun, burning sensation towards the end of a set!).</p> 
+				<p>Resting between workouts or lack of it is one of the biggest mistakes most overzealous exercisers make. Lifting weight causes microscopic breaks or tears inside your muscle fibres, breaks that trick your body into thinking its about go to war. These fibres react by rebuilding their legions to be stronger and firmer for the next battle, that is, if you give them an armistice to start recruiting. After exhausting a muscle with resistance training, it needs at least 48-72 hours of recovery time in order to heal from all that microscopic damage. If you work out before that time you risk injury, you wont be able to lift as much weight which will hold you back from using enough resistance to make your muscles stronger. Muscle strength is directly relative to muscle size. Increase your strength and the muscles have to respond by increasing in volume.</p> 
+				<p>A decent nights sleep. Most healthy adults need an average of 7 to 9 hours of sleep a night. Whatever your cycle is, find it, stick with it.</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>5<sup>th</sup>: Mental Conditioning</h3>
+				<p>What makes one person lie on a sofa eating pizza, chips and cake, while another may be up at 6am pounding the streets trying to beat a personal best? Why are some people more motivated than others? Not just at sport, exercise or at work, but in life?</p>
+				<p>Each of us has motivations, goals and inspirational figures that shape what we do, what we think, how we react. Some of these goals are verbalised, debated and shared, some are deep rooted and personal. It all starts in the mind.</p> 
+				<p>Life is a mind game. All your aspirations are played out in your head. All your relationships are shaped in your head. Your mind dictates whether you fulfil your potential or live your life dreaming.  It's about attitude. The good thing in life is that you can choose your attitude, you cant always choose or change the circumstances in your arena, but you can always choose or change your attitude.</p> 
+				<p>Sport and exercise provide a framework for personal development. It appeals to people because it meets a basic, instinctive need to want to take on challenges and succeed, and encourages people to develop skills along the way.</p> 
+				<p>It's inappropriate to talk about a healthy lifestyle, fitness regime or weight training program as a sacrifice. What top performers do is make choices. We all have choices to make, its all about attitude.</p> 
+				<p>If you want to lose weight or gain some definition in your arms you can visualise how you want to look after you've succeeded. So many people on diets (temporary punishment!) don't actually see themselves how they want to be, getting into certain clothes. If you visualise the result in advance it'll help on days when you lose your motivation. But what is visualisation? It's the process of seeing yourself doing what it is you need to do  whether running a winning race, throwing a record breaking javelin distance or lifting your heaviest weight. What the mind imagines usually creates a capacity for the body to do it.</p> 
+				<p>What a person believes can determine the outcome. There is no doubt that in sport as in many other areas of life, there is such a thing as the self-fulfilling prophecy. If you limit your beliefs, you limit your potential to achieve.</p>
+			</div>
+		</div>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eight -->
 
 <!-- !Start of ninth page: #warmupcooldown -->
 <div data-role="page" id="warmupcooldown" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Warm-ups & Cool-downs</h1></div>
+	<div data-role="header"><h1>H&amp;F Warm-ups & Cool-downs</h1></div>
 
 	<div data-role="content">
 
 	<!-- Content Paragraph 1 -->
 	<p>
-
+There is no doubt that time spent on warming up and cooling down will improve an athlete's level of performance and accelerate the recovery process needed before and after training or competition. As a result, the coach must encourage the athlete to regard the warm up and cool down as an essential part of both the training session and competition itself.
 	</p>
+
+	<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+		<div data-role="collapsible">
+			<h3>Warm-up</h3>
+			<p>Muscle stiffness is thought to be directly related to muscle injury and therefore the warm up should be aimed at reducing muscle stiffness.</p>
+			<h4>Warming up should at least consist of the following:</h4>
+			<ul>
+				<li>5 to 10 minutes jogging to increase body temperature</li>
+				<li>10 to 15 minutes dynamic stretching exercises to reduce muscle stiffness</li>
+				<li>10 to 15 minutes general and event specific drills to prepare for the session or competition: e.g. for a runner:
+					<ul>
+						<li>Lower leg drills</li>
+						<li>Leg drills</li>
+						<li>Technique drills</li>
+					</ul>
+				</li>
+				<li>4 to 8 easy run outs over 30 to 60 metres - focus on correct running technique (Tall, Relaxed, Smooth and Drive)</li>
+			</ul>
+			<p>Dynamic stretches are more appropriate to the warm up as they help reduce muscle stiffness. Static stretching exercises do not reduce muscle stiffness.</p>
+			<h4>What are the benefits of a warm up?</h4>
+			<p>Performance may be improved, as an appropriate warm up will result in an:</p>
+			<ul>
+				<li>Increased speed of contraction and relaxation of warmed muscles</li>
+				<li>Dynamic exercises reduce muscle stiffness</li>
+				<li>Greater economy of movement because of lowered viscous resistance within warmed muscles</li>
+				<li>Facilitated oxygen utilisation by warmed muscles because haemoglobin releases oxygen more readily at higher muscle temperatures</li>
+				<li>Facilitated nerve transmission and muscle metabolism at higher temperatures; a specific warm up can facilitate motor unit recruitment required in subsequent all out activity</li>
+				<li>Increased blood flow through active tissues as local vascular beds dilate, increasing metabolism and muscle temperatures</li>
+				<li>Allows the heart rate get to a workable rate for beginning exercise</li>
+				<li>Mentally focused on the training or competition</li>
+			</ul>
+		</div>
+		<div data-role="collapsible">
+			<h3>Cool-down</h3>
+			<p>Cooling down should consist of the following:</p>
+			<ul>
+				<li>5 to 10 minutes jogging/walking - decrease body temperature and remove waste products from the working muscles</li>
+				<li>5 to 10 minutes static stretching exercises</li>
+			</ul>
+			<p>Static stretches are more appropriate to the cool down as they help muscles to relax, realign muscle fibres and re-establish their normal range of movement. These stretches should be held for approximately 10 seconds.</p>
+			<h4>What are the benefits of a cool down?</h4>
+			<p>An appropriate cool down will:</p>
+			<ul>
+				<li>aid in the dissipation of waste products, including lactic acid</li>
+				<li>reduce the potential for DOMS</li>
+				<li>reduce the chances of dizziness or fainting caused by the pooling of venous blood at the extremities</li>
+				<li>reduce the level of adrenaline in the blood</li>
+				<li>allows the heart rate to return to its resting rate</li>
+			</ul>
+		</div>
+	</div>
+
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page nine -->
 
 <!-- !Start of tenth page: #resistancetraining -->
 <div data-role="page" id="resistancetraining" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Resistance Training</h1></div>
+	<div data-role="header"><h1>H&amp;F Resistance Training</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
+	<!-- Content 1 -->
+	<p>Resistance training is not just about building muscle that will help you look great. Its also a prehab for preventing injuries and making sure you feel great. Resistance training also turns back the clock by reversing many factors that naturally occur in the ageing process.</p>
+	<p>Reshaping your muscles can even help you stay leaner. Aerobic exercise burns more calories per minute and gets your metabolism into overdrive faster than resistance training. However, after you've finished weight training, your body has to use extra calories throughout the day just to sustain the new, leaner body you've built for yourself. Using weights effectively will keep your metabolism going all day long.</p>
+	<h4>The Facts</h4>  
+	<p>Resistance training means working one muscle (or a group of muscles) against some form of resistance so that your muscles have no choice but to break down from fatigue and stress. Do it the right way, and those beaten-down muscles have no choice but to rebuild themselves so they're stronger for the next time you decide to put them through the paces.</p>
+	<p>No matter what tool you use to stress your muscles  barbells, dumbbells, weight machines, stretch cords, medicine balls, your own body weight  if you provide enough resistance to fatigue your muscles by making them repeat a movement for a given number of repetitions, you'll achieve the same goal.</p>
+	<p>Heres how it works: Lifting the weight one time is called a repetition (rep). A group of repetitions performed without stopping is called a set.</p> 
+	<p>The number of reps you should do to fatigue your muscles depends on your goals. Most experts stick with using a weight you can lift, raise, or pull 8 to 15 times.</p>
+	<ul>
+		<li>For Strength - 6 to 10 reps</li>
+		<li>For Toning - 10 to 15 reps</li>
+		<li>For Endurance - 15 to 20 reps</li>
+	</ul>
+	<p>…but remember, whatever amount of reps you are doing the weight needs to be heavy enough to make your muscles work. There is no point in doing a weight that's too easy, as your muscles won't be overloaded and forced to react or grow.</p>
 
-	</p>
+	<h4>Training Frequency</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#resistancetrainingfrequencyone" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="f">Once a week</a>
+		<a href="#resistancetrainingfrequencytwo" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Twice a week</a>
+		<a href="#resistancetrainingfrequencythree" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Three times a week</a>
+	</div>
+
+	<h4>Training Age</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#resistancetrainingage78" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 7 & 8</a>
+		<a href="#resistancetrainingage91" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 9 & 10</a>
+		<a href="#resistancetrainingage111213" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 11, 12 & 13</a>
+	</div>
+
+	<h4>Muscle Group Training</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#resistancetrainingmuscleglegs" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Legs</a>
+		<a href="#resistancetrainingmusclegback" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Back</a>
+		<a href="#resistancetrainingmusclegchest" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Chest</a>
+		<a href="#resistancetrainingmusclegshoulders" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Shoulders</a>
+		<a href="#resistancetrainingmusclegarms" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Arms</a>
+	</div>
+
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page ten -->
+
+<!-- !Start of subpage 1: #resistancetrainingfrequencyone (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingfrequencyone">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 1/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+	
+	<h4>LEGS</h4>
+	<p>Squat 2 sets (12, 10)</p>
+	<p>Lunges 2 sets (12,10)</p>
+	<p>Deadlift 2 sets (12,10)</p>
+	<h4>BACK</h4>
+	<p>Chin-ups 2 sets (10,10) – either with assistance machine or using own bodyweight</p>
+	<p>Lat pull down to chest, medium grip, 2 sets (12,10)</p>
+	<p>Seated Row, narrow handle, 2 sets (12,10)</p>
+	<h4>CHEST</h4>
+	<p>Flat Dumbbell bench press 2 sets (12,10)</p>
+	<p>Incline Dumbbell Flys 2 sets (12,10)</p>
+	<p>Chest press machine 2 sets (12,10)</p>
+	<p>Optional;</p>
+	<p>Dips, wide grip position, 2 sets of 10 or 12.</p>
+	<h4>SHOULDERS</h4>
+	<p>Seated dumbbell press 2 sets (12,10)</p>
+	<p>Upright Row 2 sets (12,10)</p>
+	<p>Lateral Raise 2 sets (12,10)</p>
+	<h4>TRICEPS</h4>
+	<p>Lying Triceps extension 2 sets (12,10)</p>
+	<p>Triceps press down 2 sets (12,10)</p>
+	<h4>BICEPS</h4>
+	<p>Standing barbell curls 2 sets (12,10)</p>
+	<p>Seated Dumbbell curls 2 sets (,12,10)</p>
+	
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 1 -->
+
+<!-- !Start of subpage 2: #resistancetrainingfrequencytwo (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingfrequencytwo">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 2/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<ul>
+	<li>Mon: Workout 1</li>
+	<li>Tuesday: rest or cardio</li>
+	<li>Wed: rest or cardio</li>
+	<li>Thur: rest or cardio</li>
+	<li>Fri: Workout 2</li>
+	</ul>
+	<h4>Workout 1 – Chest, Shoulders, Triceps</h4>
+	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout…</p>
+	<p>CHEST</p>
+	<p>Flat Dumbbell bench press 3 sets (15,12,10)</p>
+	<p>Incline Dumbbell Flys 3 sets (12,12,10)</p>
+	<p>Chest press machine 3 sets (15,12,10)</p>
+	<p>Optional;</p>
+	<p>Dips, wide grip position, 3 sets of 10 or 12.</p>
+	<p>SHOULDERS</p>
+	<p>Seated dumbbell press 3 sets (15,12,10)</p>
+	<p>Upright Row 3 sets (15,12,10)</p>
+	<p>Lateral Raise 3 sets (15,12,10)</p>
+	<p>TRICEPS</p>
+	<p>Lying Triceps extension 3 sets (15,12,10)</p>
+	<p>Triceps press down 3 sets (12,12,10)</p>
+	<h4>Workout 2 – Legs, Back, Biceps</h4>
+	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
+	<p>LEGS</p>
+	<p>Squat 3 sets (10, 10, 10)</p>
+	<p>Lunges 3 sets (12,12,10)</p>
+	<p>Deadlift 3 sets (15,12,10)</p>
+	<p>BACK</p>
+	<p>Chin-ups 3 sets (10,10,10) – either with assistance machine or using own  bodyweight</p>
+	<p>Lat pull down to chest, medium grip, 3 sets (15,12,10)</p>
+	<p>Seated Row, narrow handle, 3 sets (15,12,10)</p>
+	<p>BICEPS</p>
+	<p>Standing barbell curls 3 sets (15,12,10)</p>
+	<p>Seated Dumbbell curls 3 sets (12,12,10)</p>	
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 2 -->
+
+<!-- !Start of subpage 3: #resistancetrainingfrequencythree (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingfrequencythree">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 3/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<ul>	
+	<li><b>Mon</b>: Workout 1</li>
+	<li>Tue: rest or cardio</li>
+	<li>Wed: Workout 2</li>
+	<li>Thur: rest or cardio</li>
+	<li>Fri: Workout 1</li>
+	<li>Sat: rest or cardio</li>
+	<li>Sun: rest or cardio</li>
+	<li><b>Mon</b>: Workout 2</li>
+	<li>Tue: rest or cardio</li>
+	<li>Wed: Workout 1</li>
+	<li>Thur: rest or cardio</li>
+	<li>Fri: Workout 2</li>
+	</ul>
+	<h4>Workout 1 – Chest, Shoulders, Triceps</h4>
+	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
+	<p>CHEST</p>
+	<p>Flat Dumbbell bench press 3 sets (15,12,10)</p>
+	<p>Incline Dumbbell Flys 3 sets (12,12,10)</p>
+	<p>Chest press machine 3 sets (15,12,10)</p>
+	<p>Optional;</p>
+	<p>Dips, wide grip position, 3 sets of 10 or 12.</p>
+	<p>SHOULDERS</p>
+	<p>Seated dumbbell press 3 sets (15,12,10)</p>
+	<p>Upright Row 3 sets (15,12,10)</p>
+	<p>Lateral Raise 3 sets (15,12,10)</p>
+	<p>TRICEPS</p>
+	<p>Lying Triceps extension 3 sets (15,12,10)</p>
+	<p>Triceps press down 3 sets (12,12,10)</p>
+	<h4>Workout 2 – Legs, Back, Biceps</h4>
+	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
+	<p>LEGS</p>
+	<p>Squat 3 sets (10, 10, 10)</p>
+	<p>Lunges 3 sets (12,12,10)</p>
+	<p>Deadlift 3 sets (15,12,10)</p>
+	<p>BACK</p>
+	<p>Chin-ups 3 sets (10,10,10) – either with assistance machine or using own  bodyweight</p>
+	<p>Lat pull down to chest, medium grip, 3 sets (15,12,10)</p>
+	<p>Seated Row, narrow handle, 3 sets (15,12,10)</p>
+	<p>BICEPS</p>
+	<p>Standing barbell curls 3 sets (15,12,10)</p>
+	<p>Seated Dumbbell curls 3 sets (12,12,10)</p>
+	
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 3 -->
+
+<!-- !Start of subpage 4: #resistancetrainingage78 (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingage78">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y7&amp;8</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+	
+	<p>Training for years 7 & 8 should be based around aerobic activity, however there are some exercises that can be undertaken using bodyweight as resistance.</p>
+	<p>As a minimum you should be doing at least 30 minutes of Aerobic activity as a starter (bike, row, run, cross-train, power walk!). Try doing between 5 and 10 minutes on each, which makes the time go faster. You should get into the habit of recording what you do in those 5-10 minutes: how far you went, what the resistance was set on, how many calories you burned, etc. It'll give you a target each time you do your workout.</p>
+	<h4>The exercises</h4>
+	<p>These can done as a circuit, repeat the circuit 3 times.</p>
+	<ul>
+		<li>Bodyweight squats or swiss ball squats, 12 reps</li>
+		<li>Lunges, 12 reps</li>
+		<li>Step-ups onto a reebok step, 20 reps</li>
+		<li>Push-ups, 12 reps</li>
+		<li>Bench dips, 12 reps</li>
+		<li>Crunches, 12 reps</li>
+	</ul>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 4 -->
+
+<!-- !Start of subpage 5: #resistancetrainingage91 (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingage91">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+	
+	<p>Whole Body Workout – Legs, Back, Chest, Shoulders, Triceps, Biceps</p>
+	<p>Warm up first, then go into the workout…</p>
+	<p>Do this at lease twice a week, along with some cardio training or in game situations.</p>
+	<p>LEGS</p>
+	<p>Squat 2 sets (12,10)</p>
+	<p>Lunges 2 sets (12,10)</p>
+	<p>Deadlift 2 sets (12,10)</p>
+	<p>BACK</p>
+	<p>Chin-ups 2 sets (10,10) – either with assistance machine or using own  bodyweight</p>
+	<p>Lat pull down to chest, medium grip, 2 sets (12,10)</p>
+	<p>Seated Row, narrow handle, 2 sets (12,10)</p>
+	<p>CHEST</p>
+	<p>Flat Dumbbell bench press 2 sets (12,10)</p>
+	<p>Incline Dumbbell Flys 2 sets (12,10)</p>
+	<p>Chest press machine 2 sets (12,10)</p>
+	<p>Optional:</p>
+	<p>Dips, wide grip position, 2 sets of 10 or 12.</p>
+	<p>SHOULDERS</p>
+	<p>Seated dumbbell press 2 sets (12,10)</p>
+	<p>Upright Row 2 sets (12,10)</p>
+	<p>Lateral Raise 2 sets (12,10)</p>
+	<p>TRICEPS</p>
+	<p>Lying Triceps extension 2 sets (12,10)</p>
+	<p>Triceps press down 2 sets (12,10)</p>
+	<p>BICEPS</p>
+	<p>Standing barbell curls 2 sets (12,10)</p>
+	<p>Seated Dumbbell curls 2 sets (12,10)</p>
+
+	</div>
+
+</div><!-- /subpage 5 -->
+
+<!-- !Start of subpage 6: #resistancetrainingage111213 (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingage111213">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y11,12&amp;13</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Workout 1 (Monday) - Upper body</h4>
+	<p>Flat Dumbbell (DB) Bench press 3x6 (this means 3 sets of 6 reps)</p>
+	<p>Barbell Row 3x6</p>
+	<p>Incline Barbell (BB) bench press 2x10</p>
+	<p>Lat Pull down 2x10</p>
+	<p>Seated DB shoulder press 2x10</p>
+	<p>Barbell curl 2x10</p>
+	<h4>Workout 2 (Tuesday) - Lower body</h4>
+	<p>Squat 3x6</p>
+	<p>Good morning 3x6</p>
+	<p>Leg extension 2x10</p>
+	<p>Seated calf raise 3x6</p>
+	<h4>Workout 3 (Thursday) - Upper body</h4>
+	<p>Incline DB press 3x6</p>
+	<p>Pull up 3x6</p>
+	<p>Flat BB bench 2x10</p>
+	<p>Cable row 2x10</p>
+	<p>Seated shoulder press 2x10</p>
+	<p>Barbell curl 2x10</p>
+	<p>Close grip bench press 2x10</p>
+	<h4>Workout 4 (Friday or Saturday) - Lower body</h4>
+	<p>Dead lift 3x6</p>
+	<p>Lunges 3x6</p>
+	<p>Leg curl 2x10</p>
+	<p>Standing calf raise 3x10</p>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 6 -->
+
+<!-- !Start of subpage 7: #resistancetrainingmuscleglegs (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingmuscleglegs">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Legs</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Basic Leg workout</h4>
+	<ul>
+		<li>Warm-up: Stationary bike 3-5 minutes</li>
+		<li>Squat 3 sets - 15, 12, 10 increasing weight with each set</li>
+		<li>Leg Extension 3 sets - 15, 12, 10 increasing weight with each set</li>
+		<li>Lunges holding Dumbbells 2 sets - 12, 10 increasing weight each set</li>
+		<li>Leg Curl machine 3 sets - 15, 12, 10 increasing weight with each</li>
+		<li>Deadlift 3 sets - 15, 12, 10 increasing weight with each set</li>
+		<li>Step-ups holding dumbbells 3 sets - 10, 10, 10</li>
+	</ul>
+	<h4>Super-set Leg workout</h4>
+	<ul>
+		<li>Warm-up: Stationary bike 3-5 minutes, then 2 sets of bodyweight squats, 15-20 reps</li>
+		<li>Leg Extension, 12 reps, then Squat, 12 reps, with no rest in between sets</li>
+		<li>Repeat three times, set number 2 increase weight and perform 10 reps, same for set number 3.</li>
+		<li>Leg Curl, 12 reps, then Deadlift, 12 reps, with no rest in between sets</li>
+		<li>Repeat three times, set number 2 increase weight and perform 10 reps, same for set number 3.</li>
+	</ul>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 7 -->
+
+<!-- !Start of subpage 8: #resistancetrainingmusclegback (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingmusclegback">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Back</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Basic Back Workout</h4>
+	<p>Warm-up: Rower 3-5 minutes</p>
+	<p>Chin-ups 3 sets - 10, 10, 10 reverse grip. Change to overhand grip and wider hand position to increase difficulty.</p>
+	<p>Seated Rows 3 sets - 15, 12, 10 increasing weight with each set</p>
+	<p>Lat Pull-downs 3 sets - 15, 12, 10 increasing weight each set</p>
+	<p>Dumbbell pullovers 3 sets - 15, 12, 10 increasing weight with each</p>
+	<p>Back extensions using Swiss Ball 3 sets - 10, 10, 10 increasing weight with each set</p>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 8 -->
+
+<!-- !Start of subpage 9: #resistancetrainingmusclegchest (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingmusclegchest">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Basic Chest Workout</h4>
+	<p>Warm-up : Rower 3-5 minutes</p>
+	<p>Chest Press machine 3 sets (15,12,10). Increase weight with each set.</p>
+	<p>Dumbbell Bench press (flat or incline) 3 sets. (15,12,10). Increase weight with each set.</p>
+	<p>Parallel Bar Dips 3 sets (10,10,10)</p>
+	<p>Flys (flat or incline) 3 sets (15, 12, 10). Increase weight with each set.</p>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 9 -->
+
+<!-- !Start of subpage 10: #resistancetrainingmusclegshoulders (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingmusclegshoulders">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Basic Shoulder Workout</h4>
+	<p>Warm-up : Rower 3-5 minutes</p>
+	<p>Standing Barbell Shoulder Press 3 sets (15,12,10). Increase weight with each set.</p>
+	<p>Seated Dumbbell Shoulder press 3 sets. (15,12,10). Increase weight with each set.</p>
+	<p>Lateral Raise 3 sets (10,10,10)</p>
+	<p>Upright Row 3 sets (15, 12, 10). Increase weight with each set.</p>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 10 -->
+
+<!-- !Start of subpage 11: #resistancetrainingmusclegarms (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingmusclegarms">
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+	<h4>Basic Arm Routine</h4>
+	<p>Warm-up : 3-5 minutes on Rower</p>
+	<p><b>Triceps</b></p>
+	<p>Parallel Bar Triceps Dips 3 sets (10,10,10).</p>
+	<p>Lying Dumbbell Triceps Extension 3 sets (15,12,10). Increase weight with each set.</p>
+	<p>Close grip machine Bench Press 3 sets (15,12,10). Increase weight with each set.</p>
+	<p><b>Biceps</b></p>
+	<p>Standing Barbell Curls 3 sets (15,12,10). Increase weight with each set.</p>
+	<p>Seated Dumbbell Curls 3 sets (15,12,10). Increase weight with each set.</p>
+	<p>Chin-ups 3 sets (10,10,10).</p>
+
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 11 -->
 
 <!-- !Start of eleventh page: #aerobictraining -->
 <div data-role="page" id="aerobictraining" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Aerobic Training</h1></div>
+	<div data-role="header"><h1>H&amp;F Aerobic Training</h1></div>
 
 	<div data-role="content">
 
@@ -683,110 +1298,317 @@ See below for when your competition is:</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eleven -->
 
 <!-- !Start of twelth page: #nutrition -->
 <div data-role="page" id="nutrition" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Nutrition</h1></div>
+	<div data-role="header"><h1>H&amp;F Nutrition</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
+	<!-- Content 1 -->
+	<h4>Introduction</h4>
+	<p>There's SO much information on nutrition that I could fill this app with it! Here's what I'll do:</p>
+	<ol>
+		<li>Cover the basics here, and</li>
+		<li>Provide the links for you to do some research for yourself.</li>
+	</ol>
+	<p>What YOU eat will literally shape your future. It won't be someone else putting food into your mouth. You won't be force fed food you don't want. It will be YOU eating, YOU making choices about what you eat, when you eat, how much you eat. What you eat is what you are. End of story. No myths, no fads, just YOUR choices.</p>
+	<p>teenweightwise.com</p>
+	<p>eatwell.gov.uk/agesandstages/teens</p>
+	<p>The basics…</p>
+	<p>If you want to get the balance of your diet right, use the eatwell plate. The eatwell plate makes healthy eating easier to understand by showing the types and proportions of foods we need to have a healthy and well balanced diet. The eatwell plate shows how much of what you eat should come from each food group. This includes everything you eat during the day, including snacks.</p>
+	<p>So, try to eat:</p> 
+	<ul>
+		<li>Plenty of fruit and vegetables</li>
+		<li>Plenty of bread, rice, potatoes, pasta and other starchy foods – choose wholegrain varieties whenever you can</li>
+		<li>Some milk and dairy foods</li>
+		<li>Some meat, fish, eggs, beans and other non-dairy sources of protein</li>
+		<li>Just a small amount of foods and drinks high in fat and/or sugar</li>
+		<li>Look at the eatwell plate to see how much of your food should come from each food group. You don’t need to get the balance right at every meal. But try to get it right over time such as a whole day or week.</li>
+	</ul>
+	<p>Try to choose options that are lower in fat, salt and sugar when you can.</p>
+	<p>The eatwell plate is consistent with the Government’s Eight tips for eating well, published in October 2005, which are:</p>
+	<ol>
+		<li>Base your meals on starchy foods</li>
+		<li>Eat lots of fruit and veg</li>
+		<li>Eat more fish</li>
+		<li>Cut down on saturated fat and sugar</li>
+		<li>Try to eat less salt – no more than 6g a day</li>
+		<li>Get active and try to be a healthy weight</li>
+		<li>Drink plenty of water</li>
+		<li>Don’t skip breakfast</li>
+	</ol>
+	
+	<a href="#nutritionfoodlabelling" data-role="button" data-theme="f" data-transition="flow">Food Labelling Information</a>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page twelve -->
 
-<!-- !Start of thirteenth page: #coreconditioning -->
-<div data-role="page" id="coreconditioning" data-add-back-btn="true">
+<!-- !Start of subpage 1: #nutritionfoodlabelling -->
+<div data-role="page" id="nutritionfoodlabelling" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Core Conditioning</h1></div>
+	<div data-role="header"><h1>H&amp;F Nutrition Food Labelling</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
+	<!-- Content 1 -->
+	<p>You're standing in a supermarket aisle looking at two similar products, trying to decide which to choose. You want to make the healthier choice but, as usual, you're in a hurry. Well, help is at hand.</p>
+	<p>A growing number of supermarkets and food manufacturers are using traffic light colours on the labels of some products to help you make your choice.</p>
+	<h4>What do the traffic light colours mean?</h4>
+	<p>If we want to eat a healthy diet, one of the key things we should be doing is trying to cut down on fat (especially saturated fat), salt and added sugars.</p>
+	<p>Food products with traffic light labels on the front of the pack show you at-a-glance if the food you are thinking about buying has high, medium or low amounts of fat, saturated fat, sugars and salt, helping you get a better balance.</p>
+	<p>In addition to traffic light colours you will also see the number of grams of fat, saturated fat, sugars and salt in what the manufacturer or retailer suggests as a 'serving' of the food.</p>
+	<p>So, if you see a red light on the front of the pack, you know the food is high in something we should be trying to cut down on. It's fine to have the food occasionally, or as a treat, but try to keep an eye on how often you choose these foods, or try eating them in smaller amounts.</p>
+	<p>If you see amber, you know the food isn't high or low in the nutrient, so this is an ok choice most of the time, but you might want to go for green for that nutrient some of the time.</p>
+	<p>Green means the food is low in that nutrient. The more green lights, the healthier the choice.</p>
+	<p>Many of the foods with traffic light colours that you see in the shops will have a mixture of red, amber and greens. So, when you're choosing between similar products, try to go for more greens and ambers, and fewer reds, if you want to make the healthier choice.</p>
+	<p>The traffic light colours will make it easier for you to compare products at-a-glance. The label also tells you how much of each nutrient is in a portion, so if two labels have similar colours you can compare these figures, and choose the one that is lower to make a healthier choice.</p>
+	<p>But remember, it's all about getting the overall balance of our diet right.</p>
+	<h4>How do traffic light colours fit into a healthy diet?</h4>
+	<p>If you want to choose a healthy diet, you should:</p>
+	<ul>
+		<li>base your meals on starchy foods such as wholegrain bread, pasta and rice</li>
+		<li>eat lots of fruit and vegetables, which means try to go for at least five portions of a variety every day</li>
+		<li>have some protein-rich foods such as meat, fish, pulses, milk and dairy foods</li>
+		<li>keep foods (and drinks) high in fat, especially saturated fat, sugars or salt to a minimum</li>
+	</ul>
+	<p>Traffic light colours can help you get the balance right by helping you to choose between products and keep a check on the amount of foods high in fat, sugars and salt that you are eating. You can use the signpost labelling to help put you in control, so keep a look out for the colours on the front of food packs.</p>
+	<p>Making the healthy choice isn't always easy – sometimes there seems to be so much to remember. But with traffic light colours you just need to go for as many greens as you can and avoid choosing too many reds. This way you'll know you'll be making a healthier choice.</p>
+	<p>You should also try to remember that although some products may contain a lot of sugars, they can be healthier choices if they contain lots of fruit. You can tell this by checking the ingredients list; the higher up the ingredients list the more fruit there is.</p>
+	<h4>Check it out</h4>
+	<p>Some products you might have thought were healthy choices could qualify for red lights.</p>
+	<p>Try comparing the fat and salt content of your favourite sandwich with other sandwiches. For example, a Waitrose poached salmon and cucumber sandwich qualifies for three green lights. Does your sandwich?</p>
+	<h4>What do the different traffic lights look like?</h4>
+	<p>Although the traffic light label designs may look different, you can still compare these foods because the companies are all using the Food Standards Agency guidelines. So when, for example, you are deciding between two pizzas, check out the colours to make a healthier choice.</p>
+	<h4>Which foods have traffic light colours on them?</h4>
+	<p>All of the manufacturers and retailers shown above are using traffic light labelling on some or all of their products, and the Agency is also in discussions with other companies that are considering using it.</p>
+	<p>Awareness of traffic light labelling is also on the increase in the service sector, with train companies such as GNER and Virgin, Roadchef motorway service stations, and shoppers websites such as Mysupermarket.com all using the Agency's recommended approach.</p>
+	<p>The Agency recommends that traffic light colours are used on processed convenience foods such as ready meals, pizzas, sausages, burgers, pies, sandwiches and breakfast cereals.</p>
+	<p>This is because people have told us that they find it difficult to understand the nutritional content of these sorts of foods.</p>
+	<h4>When will the traffic light colours be in other supermarkets and in my local shop?</h4>
+	<p>The FSA is continuing to encourage as many supermarkets, manufacturers and service providers as possible to use this approach.</p>
+	<p>If you'd like to see them in your supermarket, or on your favourite products, why not contact the supermarket or manufacturer yourself?</p>
+	<p>Please let us know what you think of traffic light labelling by completing our feedback form available at the link below.</p>
+	<h4>How can I get more nutritional information?</h4>
+	<p>The traffic light colours on the front of food packs are a quick and easy guide, but when you have time, and if you are particularly interested in finding out more, you can still check the back of packs for more information.</p>
+	<p>On the back of some food packs, you will find the nutrition panel, Guideline Daily Amounts information and the ingredients list.</p>
+	<h4>Nutrition panel</h4>
+	<p>You often see this panel on the back of food packs. It gives the nutritional breakdown of the food.</p>
+	<p>This is the sort of information you might see: the amount of energy, protein, carbohydrates, sugars, fat, dietary fibre and sodium.</p>
+	<p>You can use this information to help you make healthier choices.</p>
+	<h4>Guideline Daily Amounts</h4>
+	<a href="#popupGDAjpg" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/GDA_545px.jpg" alt="GDA"  style="width:100%;"></a>
+	<div data-role="popup" id="popupGDAjpg" data-overlay-theme="a" data-theme="d" data-corners="false">
+		<a href="#nutritionfoodlabelling" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		<img class="popphoto" src="images/GDA_545px.jpg" style="max-height:512px;" alt="GDA">
+		<script type="text/javascript">
+			window.onload = function() {
+				var gdaimgsource = document.getElementById("gdaimgsource");
+				gdaimgsource.onclick = function() {
+					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					return false;
+				}
+			}
+		</script>
+		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
+		<script>
+			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
+		</script>
+	</div>
+	<p>Guideline Daily Amounts (GDAs) were developed by food manufacturers and retailers and you can find out more by visiting the IGD website. IGD is a food and grocery industry research organisation.</p>
+	<h4>Ingredients list</h4>
+	<p>To get a feel for whether a product is high in a certain ingredient such as fat, salt or added sugars, you might need to look at the ingredients list.</p>
+	<p>Ingredients lists always start with the biggest ingredient first and are listed in descending order of weight at the time they were used to make the food</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
+
+<!-- !Start of thirteenth page: #coreconditioningcorestability -->
+<div data-role="page" id="coreconditioningcorestability" data-add-back-btn="true">
+
+	<div data-role="header"><h1>H&amp;F CC Core Stability</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content 1 -->
+	<h4>Core Stability</h4>  
+	<p>The aim of core stability training is to effectively recruit the trunk musculature and then learn to control the position of the lumbar spine during dynamic movements. The information presented on this page is based on an article written by Raphael Brandon that was first published in Peak Performance.</p>
+	<h4>The Muscles</h4>
+	<p>The deep trunk muscles, Transversus Abdominis (TA), multifidus (MF), Internal Oblique (IO), paraspinal, pelvic floor, are key to the active support of the lumbar spine. The co-contraction of these muscles produce forces via the "theracolumbar fascia" (TLF) and the "intra-abdominal pressure" (IAP) mechanism which stabilise the lumbar spine, and the paraspinal and MF muscles act directly to resist the forces acting on the lumbar spine.</p>
+	<p>It is not just the recruitment of these deep-trunk muscles, but how they are recruited that is important. Hodges and Richardson (1996) showed that the co-contraction of the TA and MF muscles occurred prior to any movement of the limbs. This suggests that these muscles anticipate dynamic forces that may act on the lumbar spine and stabilise the area prior to any movement. Hodges and Richardson showed that the timing of co-ordination of these muscles was very significant.</p>
+	<h4>Training</h4>
+	<p>Having identified the key muscles and how they act, the next step is to establish how best to train these muscles. As with any type of strength and conditioning training, the training protocol for improving the function of the deep-trunk muscles must be specific to the task required. This specificity of training must take into account the type of contraction, the muscle fibre type and the anatomical position required. By definition, the deep-trunk muscles act as "stabilisers" and are not involved in producing movements, but instead involve static, or isometric, contractions. Furthermore, they must act as stabilisers continuously throughout everyday activities as well as fitness and sport activities, and so require very good endurance of low-level forces. These muscles do not need to be very strong, but they must be correctly coordinated and capable of working continuously. In addition, we want these stabiliser muscles to act by holding the lumbar spine in the neutral position, which is the correct alignment of the pelvis that allows for the natural 'S' curve of the spine. These characteristics underpin the following deep-trunk muscle training program.</p>
+	<h4>The basics</h4>
+	<p>Core-stability training begins with learning to co-contract the TA and MF muscles effectively as this has been identified as key to the lumbar-support mechanism. To perform the TA and MF co-contraction, you must perform the "abdominal hollowing" technique with the spine in the neutral position.</p>
+	<p>To do this use the following guidelines:</p>
+	<ul>
+		<li>Start by lying on your back with knees bent</li>
+		<li>Your lumbar spine should be neither arched up nor flattened against the floor, but aligned normally with a small gap between the floor and your back. This is the "neutral" lumbar position you should learn to achieve</li>
+		<li>Breathe in deeply and relax all your stomach muscles</li>
+		<li>Breathe out and, as you do so, draw your lower abdomen inwards as if your belly button is going back towards the floor. Pilates teachers describe this as "zipping up", as if you are fastening up a tight pair of jeans</li>
+		<li>Hold the contraction for 10 seconds and stay relaxed, allowing yourself to breathe in and out as you hold the tension in your lower stomach area</li>
+		<li>Repeat 5-10 times</li>
+	</ul>
+	<p>It is vital that you perform this abdominal hollowing exercise correctly otherwise you will not recruit the TA and MF effectively. Bear in mind the following points:</p>
+	<ul>
+		<li>Visualise the deep abdominal muscles as a corset that wraps round the abdomen</li>
+		<li>Place one hand above the umbilicus (belly button) and one below</li>
+		<li>Slowly draw in the lower abdomen, below the umbilicus, without drawing in the upper abdomen</li>
+		<li>Hold the contraction whilst breathing normally</li>
+		<li>Aim for a 10 second contraction, repeating it 10 times</li>
+		<li>Do not let the whole stomach tense up or your upper abdominals bulge outwards, as this means you have cheated by using the large rectus abdominus muscle (the six-pack) instead of TA</li>
+		<li>Do not brace your TA muscle too hard; just a gentle contraction is enough. Remember it's endurance not max strength your are trying to improve</li>
+		<li>Do not tilt your pelvis nor flatten your back, as this means you have lost the neutral position you are trying to learn to stabilise</li>
+		<li>Do not hold your breath, as this means you are not relaxed. You must learn to breathe normally and maintain the co-contraction of TA and MF</li>
+		<li>Use your fingers for biofeedback on either side of your lower abdomen (below the umbilicus) to feel the tension in the TA muscle</li>
+	</ul>
+	<p>Once you have mastered the abdominal hollowing lying on your back, practice it lying on your front, four-point kneeling, sitting and standing. In each position, get your lumbar spine into neutral before you perform the hollowing movement.</p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page thirteen -->
+
+<!-- !Start of thirteenth.2 page: #coreconditioningexercises -->
+<div data-role="page" id="coreconditioningexercises" data-add-back-btn="true">
+
+	<div data-role="header"><h1>H&amp;F CC Exercises</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content 1 -->
+	<h4>The next step</h4>
+	<p>Having learned to recruit the TA and MF muscles correctly in various positions, which can take anything from one session to one month or more, it is time to move onto simple core stability exercises. These exercises may also involve the oblique muscles, other lumbar muscles and gluteals to assist the TA and MF in maintaining the lumbar spine in a stable neutral position.</p>
+	<p>Lying leg lift stabilisation</p>
+	<ul>
+		<li>Lying on your back with your knees bent</li>
+		<li>Ensure your back is in neutral</li>
+		<li>Place your hands on your hips for biofeedback</li>
+		<li>Breathe in and relax</li>
+		<li>Breathe out and, as you do so, perform the abdominal hollowing or zipping-up action</li>
+		<li>Once you have established some TA tension, slowly slide your left leg out along the floor until it is straight and then slide it back</li>
+		<li>Your back should not have moved, and your pelvis should not have tilted as you performed this action</li>
+		<li>If your back or pelvis moved, you did not achieve the correct stability</li>
+		<li>Repeat for the other side 10 times each leg</li>
+		<li>Variations include the same exercise with knee lifts up and knee drops out to the side. Again, the aim is to retain a stable lumbar spine in the neutral position as the legs move.</li>
+		<li>he waiter's bow</li>
+		<li>Stand up with good posture, knees soft, lumbar spine in neutral, head up and shoulders back and relaxed</li>
+		<li>Breathe in and relax</li>
+		<li>Breathe out and as you do so perform the abdominal hollowing action</li>
+		<li>Keeping the tension, slowly lean forward from the hips 20° and stop, like a waiter's bow, keeping your back completely straight and long as you lean</li>
+		<li>Hold the lean position for 10 seconds - you will feel your TA and MF supporting you if you hold the correct position</li>
+		<li>Keeping the tension and the alignment, slowly return to your start position</li>
+		<li>Repeat 10 times</li>
+	</ul>
+	<p>These exercises are two examples of learning how to keep the spine in neutral, using slow and controlled static contractions of the trunk stabiliser muscles. Notice how technique is vital and the aim is to build up the time you are able to maintain good stability.</p>
+	<h4>Getting functional</h4>
+	<p>The ultimate aim of core stability training is to ensure the deep trunk muscles are working correctly to control the lumbar spine during dynamic movements, e.g. lifting a heavy box or running. Therefore, it is important that once you have achieved proficiency of the simple core exercises, you must progress on to achieving stability during more functional movements. Try the following two exercises.</p>
+	<h4>The lunge</h4>
+	<ul>
+		<li>Stand with feet hip width apart in front of a mirror</li>
+		<li>Ensure your lumbar spine is in neutral and your back is tall with your shoulders back and head up</li>
+		<li>Lunge forward and bend your knee only halfway down</li>
+		<li>Ensure that your front knee is in line with your toes and your back has remained upright with your lumbar spine in neutral and your hips level</li>
+		<li>Push back up, initiating the movement by pushing down into the floor with your front foot</li>
+		<li>The force from your legs should bring you back up quickly and easily to your start position</li>
+		<li>Your back should have remained totally still and your hips level as you performed the push back</li>
+	</ul>
+	<p>Many people wrongly initiate the up movement by pulling their heads and shoulders back first. This extends the lumbar spine, losing the neutral position. Others have problems keeping their pelvis level while performing the lunge. You must learn to use your deep trunk and gluteal muscles to hold your lumbar spine in neutral and pelvis level as you perform the movement up and down. The movement should only come from the leg muscles.</p>
+	<h4>The Press-up</h4>
+	<ul>
+		<li>Start from your knees, even if this means it is easy for your upper body, to learn the correct technique</li>
+		<li>Your hands should be slightly wider than your shoulders and your head must be in front of your hands</li>
+		<li>Lift your hips so that there is a straight line from your knees through your pelvis and lower back, through your shoulders and all the way to your head</li>
+		<li>Ensure your lumbar spine is in neutral, using a mirror or a partner/trainer to help you</li>
+		<li>To maintain a neutral spine and a straight back during the exercise, the trunk muscles must provide active support</li>
+		<li>Slowly lower down, bending your arms all the way to the floor. Keep your head still with your neck straight relative to your back</li>
+		<li>Push up, initiating the movement by pressing down into the floor with your hands</li>
+		<li>Your back should remain straight and your lumbar spine in neutral throughout the exercise.</li>
+	</ul>
+	<p>These two exercises enable you to learn core stability while performing dynamic movements. By reducing the resistance i.e. doing only half lunges and knee press ups, your are able to focus on the trunk stabilisers and achieving perfect technique rather than working the major muscle groups. The whole essence of core stability training is quality of movement and relaxation. The more you practice, the easier it becomes until you can control your lumbar stability at all times and during complex movements.</p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page thirteen.2 -->
+
+<!-- !Start of thirteenth.3 page: #coreconditioningstaticdynamiccore -->
+<div data-role="page" id="coreconditioningstaticdynamiccore" data-add-back-btn="true">
+
+	<div data-role="header"><h1>H&amp;F CC Static & Dynamic Core</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content 1 -->
+	<h4>Static Floor Exercises</h4>
+	<b>Plank</b>
+	<p>Hold a straight body position, supported on elbows and toes. Brace the abdominals and maintain a straight body line through feet, hips and head.</p>
+	<b>Side plank</b>
+	<p>Lie on one side, ensuring the top hip is above the bottom hip. Push up until there is a straight body line through feet, hips and head. Keep the elbow under the shoulder. Lower under control and repeat on opposite side.</p>
+	<b>Bridge</b>
+	<p>Lie on the floor with your knees bent and feet flat on the floor. Squeeze your gluteals and then push your hips up until there is a straight line through knee and hip to upper body and shoulders remain on the floor.</p>
+	<b>Superman</b>
+	<p>Kneel on the floor and place your hands below your shoulders and knees below your hips. Extend right leg back and the left arm forward. Maintain a straight body line through extended leg, body and extended arm. Repeat with opposite limbs</p>
+	<h4>Dynamic Floor Exercises</h4>
+	<b>Side lying hip abduction</b>
+	<p>Lie on your side with your top hip above the lower hip. Brace the abdominals and lift the top leg slowly up and down.</p>
+	<b>Oblique crunch</b>
+	<p>Lie on your back with your right ankle resting on your left knee. Right arm is placed on the floor out to the side. Keeping the right shoulder down, curl the left shoulder up to the right knee. Repeat with opposite limbs.</p>
+	<b>Straight leg raise</b>
+	<p>Lie on your back with knees bent. Brace your abdominals and lift your legs up straight in the air to an angle of 45 degrees keeping you back on the ground. Keeping one leg in the air, slowly lower the other down to the floor. Only go as far as you can until you feel the lumbar spine start to move. Keep bracing the abdominals and then lift the leg slowly back up. Repeat with the other leg.</p>
+	<b>Lying windscreen wipers</b>
+	<p>Lie on your back with arms out to the sides. Lift your legs straight up in the air until the hips are at 90 degrees. Keeping your legs straight and maintaining the hip angle, rotate the legs to one side. Go as far as you can keeping your upper back and shoulders on the floor. Bring the legs to a halt, pull them back up to the start position and then over to the other side.</p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page thirteen.3 -->
 
 <!-- !Start of fourteenth page: #howdoi -->
 <div data-role="page" id="howdoi" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F How do I?</h1></div>
+	<div data-role="header"><h1>H&amp;F How do I?</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
+	<!-- Content 1 -->
+	<h4>I want to burn calories quickly…</h4>
+	<p><i>Answer: Interval training.</i> It doesn’t matter what you do, run, row, or jog on the spot. If you do these exercises at FULL pace (after a warm up) for 20 seconds, then have a 40 second rest, repeating this for up to 5 minutes, it will burn a huge amount of calories. The good thing about this type of training is that your metabolism is given a jump-start so it keeps burning calories for hours after you have finished.</p>
+	<h4>I want a fast fitness workout…</h4>
+	<p><i>Answer: Crossfit training.</i> This type of training focuses on strength and endurance training and is scalable to your own fitness and ability level. It also burns lots of calories. For example, a favourite of mine is to do 5 pull-ups, 10 push-ups then 15 bodyweight squats, one after the other, no rest. Each time you complete this its one rep. The idea is that you do as many reps as you can in 10 minutes. If you can’t do the pull-ups then swap them for something like bench-dips or anything you can do.</p>
+	<h4>How do I lose weight?</h4>
+	<p><i>Answer: Eat sensibly, increase your activity.</i> We all know when the food we eat is a ‘treat’ or something that’s ‘clean’. The difference between the two is our own motivation. If we have a goal or a beach holiday coming up its much easier to be strict with what we eat. The way I look at it is this; its MUCH easier to stay in shape than to GET in shape. Maintenance is the key to a healthy weight, once you get there. Fast answer; walk briskly when you walk, jog up the stairs, bike instead of getting a lift, say no to the second helping, and yes just once a week to treats… you get the picture.</p>
+	<p>So try crossfit and interval training as faster ways to increase your activity. If this is too intense then start with 10 minutes on the cross-trainer or bike. Get into the habit of doing this and you will see a difference in your health.</p>
+	<h4>How do I get bigger?</h4>
+	<p><i>Answer: Just wait a few months.</i> If you train regularly and eat well you will grow stronger and as a result, bigger. Steer clear of eating junk and sugary foods, they will slow you down and lower your performance generally, compared to a balanced diet.</p>
+	<h4>How do I tone my legs?</h4>
+	<p><i>Answer: Squats, lunges, running, rowing and eating less fatty foods.</i> Your tone/muscles will show up if the fat under your skin is low enough. The training will promote muscle development and the correct nutrition will create the definition that results in toned legs, or arms, shoulders and stomach. Toning your upper body can be achieved by doing push-ups and stomach crunches as a starting point.</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page fourteen -->
-
-<!-- !Start of fifteenth page: #blank -->
-<div data-role="page" id="blank" data-add-back-btn="true">
-
-	<div data-role="header"><h1>blank</h1></div>
-
-	<div data-role="content">
-
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
-
-	</div><!-- /content -->
-
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
-	</div><!-- /footer -->
-</div><!-- /page fifteen -->
-
-<!--
-<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
-
-	
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="e">
-		<h1>Dialog</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="d">
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>© George Garside</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
-
-
 
 </body>
 </html>
