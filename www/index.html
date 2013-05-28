@@ -1300,6 +1300,8 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	
 	<div data-role="controlgroup" data-type="vertical">
 		<a href="#aerobictrainingtrainingzonespopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Training Zones</a>
+		<a href="#aerobictrainingfitnesstestingpopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Fitness Testing</a>
+		<a href="#aerobictrainingadditionalinfopopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Additional Information</a>
 	</div>
 	
 	<div data-role="popup" id="aerobictrainingtrainingzonespopup" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
@@ -1309,6 +1311,28 @@ There is no doubt that time spent on warming up and cooling down will improve an
 			<div class="ui-grid-a">
 				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
 				<div class="ui-block-b"><a href="#aerobictrainingtrainingzones" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Open</a></div>
+			</div>
+		</div>
+	</div>
+	<div data-role="popup" id="aerobictrainingfitnesstestingpopup" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Are you sure you want to open this resource?</h3>
+			<p>This action can use data, and may not work on some Android devices.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><a href="#aerobictrainingfitnesstesting" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Open</a></div>
+			</div>
+		</div>
+	</div>
+	<div data-role="popup" id="aerobictrainingadditionalinfopopup" data-overlay-theme="a" data-theme="e" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Disabled</h3>
+			<!-- <h3 class="ui-title">Are you sure you want to open this resource?</h3> -->
+			<p>This external resource has been removed since it no longer exists. This button, along with this message, will be completely removed in a future update. Sorry for the inconvenience.</p>
+			<!-- <p>This action can use data, and may not work on some Android devices.</p> -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><!-- <a href="http://www.weightlossresources.co.uk/exercise/aerobic_exercise.htm" target="_blank" data-role="button" data-rel="dialog" data-theme="b">Open</a> --><a href="#" target="_blank" data-role="button" data-rel="dialog" data-theme="b" class="ui-disabled">Open</a></div>
 			</div>
 		</div>
 	</div>
