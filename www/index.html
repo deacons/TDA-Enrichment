@@ -5,9 +5,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TDA Enrichment App</title>
+	<link rel="stylesheet" href="css/GeorgeCustom.min.css" />
 	<link rel="stylesheet" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<script src="cordova-2.7.0.js"></script>
+<!--
+	<script type="text/javascript">
+		var _kmq = _kmq || [];
+		var _kmk = _kmk || 'e2f2cd8be75c9f6d65886f18646bc5445d06b38c';
+		function _kms(u){
+		    setTimeout(function(){
+		    	var d = document, f = d.getElementsByTagName('script')[0],
+		    	s = d.createElement('script');
+		    	s.type = 'text/javascript'; s.async = true; s.src = u;
+		    	f.parentNode.insertBefore(s, f);
+		    	}, 1);
+		    }
+		// Include "http:" when initializing the external JS files, else it will look for a local JS file://i.kissmetrics.com/i.js
+		_kms('http://i.kissmetrics.com/i.js');
+		_kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			_kmq.push(['identify', device.uuid]);
+			_kmq.push(['record', 'opened app']);
+		};
+	</script>
+-->
 </head>
 
 <body>
@@ -15,30 +39,45 @@
 <!-- !Start of first page: #welcome -->
 <div data-role="page" id="welcome">
 
-	<div data-role="header"><h1>TDA Enrichment</h1></div>
+	<div data-role="header"><h1>TDA Enrichment</h1><a href="#popupwelcome" id="welcomeinfobutton" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
+	
+	<script>
+		_kmq.push(['trackClick', 'welcomeinfobutton', 'View Welcome Popup']);
+	</script>
+	
+	<div data-role="popup" id="popupwelcome" data-theme="a">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+		<div style="padding:10px 20px;">
+			<h3>Welcome</h3>
+			<p>Welcome to Thomas Deacon Academy's Sports Enrichment app! This app contains the full timetable for the after school sports enrichment as well as the Big Friday events. The app also contains details on attending inter-college enrichment as well as the results and rankings of the colleges.</p>
+		</div>
+	</div>
+
+	</div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>Welcome to Thomas Deacon Academy's Sports Enrichment app! This app contains the full timetable for the after school sports enrichment as well as the Big Friday events. The app also contains details on attending inter-college enrichment as well as the results and rankings of the colleges.</p>
-	
-	<ul data-role="listview" data-inset="true" data-divider-theme="d">
-		<li data-role="list-divider">Big Friday</li>
-		<li><a href="#2013-bigfriday-dodgeball"		data-transition="flow">Dodgeball</a></li>
-		<li data-role="list-divider">After School</li>
-		<li><a href="#monday"		data-transition="flow">Monday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#tuesday"		data-transition="flow">Tuesday 		<span class="ui-li-count">10 activities	</span></a></li>
-		<li><a href="#wednesday"	data-transition="flow">Wednesday 	<span class="ui-li-count">14 activities	</span></a></li>
-		<li><a href="#thursday"		data-transition="flow">Thursday 	<span class="ui-li-count">6 activities	</span></a></li>
-		<li><a href="#friday"		data-transition="flow">Friday 		<span class="ui-li-count">8 activities	</span></a></li>
-		<li data-role="list-divider" data-theme="l">Health & Fitness</li>
-		<li><a href="#HOFF5wheels"			data-transition="flow">HOFF's 5 Wheels</a></li>
-		<li><a href="#warmupcooldown"		data-transition="flow">Warm-ups and Cool-downs</a></li>
-		<li><a href="#resistancetraining"	data-transition="flow">Resistance Training</a></li>
-		<li><a href="#aerobictraining"		data-transition="flow">Aerobic Training</a></li>
-		<li><a href="#nutrition"			data-transition="flow">Nutrition</a></li>
-		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade">Core Conditioning</a></li>
-		<li><a href="#howdoi"				data-transition="flow">How do I? <i>NEW!</i></a></li>
+	<ul data-role="listview" data-inset="true" data-divider-theme="b">
+		<li data-role="list-divider" data-theme="k"><h1>Activities & Clubs</h1></li>
+		<li data-role="list-divider" data-theme="l">Big Friday</li>
+		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow" class="bigfriday">Dodgeball</a></li>
+		<li data-role="list-divider" data-theme="b">After School</li>
+		<li><a href="#monday" data-transition="flow" class="timetable" id="mondaybutton">Monday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#tuesday" data-transition="flow" class="timetable" id="tuesdaybutton">Tuesday <span class="ui-li-count">10 activities	</span></a></li>
+		<li><a href="#wednesday" data-transition="flow" class="timetable" id="wednesdaybutton">Wednesday <span class="ui-li-count">14 activities	</span></a></li>
+		<li><a href="#thursday" data-transition="flow" class="timetable" id="thursdaybutton">Thursday <span class="ui-li-count">6 activities	</span></a></li>
+		<li><a href="#friday" data-transition="flow" class="timetable" id="fridaybutton">Friday <span class="ui-li-count">8 activities	</span></a></li>
+	</ul>
+
+	<ul data-role="listview" data-inset="true" data-divider-theme="b">
+		<li data-role="list-divider" data-theme="k"><h1>Health & Fitness</h1></li>
+		<li><a href="#HOFF5wheels" data-transition="flow" class="healthfitness" id="hoff5wheelsbutton">HOFF's 5 Wheels</a></li>
+		<li><a href="#warmupcooldown" data-transition="flow" class="healthfitness" id="warmupcooldownbutton">Warm-ups and Cool-downs</a></li>
+		<li><a href="#resistancetraining" data-transition="flow" class="healthfitness" id="resistancetrainingbutton">Resistance Training</a></li>
+		<li><a href="#aerobictraining" data-transition="flow" class="healthfitness" id="aerobictrainingbutton">Aerobic Training</a></li>
+		<li><a href="#nutrition" data-transition="flow" class="healthfitness" id="nutritionbutton">Nutrition</a></li>
+		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade" class="healthfitness" id="coreconditioningbutton">Core Conditioning</a></li>
+		<li><a href="#howdoi" data-transition="flow" class="healthfitness" id="howdoibutton">How do I…?</a></li>
 	</ul>
 
 	<div data-role="popup" id="coreconditioningmenuselect" data-theme="c">
@@ -67,7 +106,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -75,7 +114,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -83,7 +122,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -91,7 +130,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Girls Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
@@ -99,7 +138,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Gold DOE</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Gold DOE</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -107,7 +146,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> LT1 / T01</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 5:30 - 6:30pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
@@ -129,7 +168,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
@@ -137,7 +176,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7, 8 & 9</strong></p>
@@ -149,8 +188,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page two -->
 
@@ -162,7 +201,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -170,7 +209,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 8 & 9</strong></p>
@@ -178,7 +217,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -186,7 +225,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -194,7 +233,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:15pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Indoor Athletics</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Athletics</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -202,7 +241,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Boys Indoor Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Boys Indoor Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -217,7 +256,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:50 - 1:40pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -232,7 +271,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Table Tennis</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Table Tennis</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -244,8 +283,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page three -->
 
@@ -257,7 +296,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">A-Level Pract</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">A-Level Pract</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>A-Level</strong></p>
@@ -265,7 +304,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Athletics (Joggers)</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Athletics (Joggers)</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -273,7 +312,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">CCF</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">CCF</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9, 10, 11 and 6th Form</strong></p>
@@ -281,7 +320,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> CCF HQ</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong></strong></p>
@@ -289,7 +328,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -297,7 +336,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Football</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Football</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -305,7 +344,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Girls Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -313,7 +352,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Indoor</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Indoor Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10 & 11</strong></p>
@@ -321,7 +360,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -350,7 +389,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 10, 11, 12 & 13</strong></p>
@@ -358,7 +397,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Swimming</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Swimming</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -370,8 +409,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page four -->
 
@@ -383,7 +422,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -391,7 +430,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Basketball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Basketball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
@@ -399,7 +438,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -421,7 +460,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
@@ -433,8 +472,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page five -->
 
@@ -446,7 +485,7 @@
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -454,7 +493,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -462,7 +501,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -491,7 +530,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Netball</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
@@ -499,7 +538,7 @@
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:20 - 1:30pm</p>
 			</li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Trampoline</li>
+			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Trampoline</li>
 			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A & B</strong></p>
 				<br />
 				<p class="ui-li-desc"><strong>All Years</strong></p>
@@ -511,8 +550,8 @@
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page six -->
 
@@ -523,13 +562,12 @@
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-Now Tug of War has finished, it's time to get your Dodgeball teams ready!
-Your college’s PE teachers will be coming round to get your team sheets filled in - get your name down if you want to play.
-See below for when your competition is:</p>
+	<!-- Content 1 -->
+	<p>Now Tug of War has finished, it's time to get your Dodgeball teams ready!</p>
+	<p>Your college’s PE teachers will be coming round to get your team sheets filled in - get your name down if you want to play.</p>
+	<p>See below for when your competition is:</p>
 
-	<div data-role="collapsible" data-content-theme="d">
+	<div data-role="collapsible" data-theme="g" data-content-theme="d">
 		<h3>Timetable</h3>
 		
 	<table data-role="table" id="2013-bigfriday-dodgeball-table" data-mode="reflow" class="ui-responsive table-stroke">
@@ -587,21 +625,21 @@ See below for when your competition is:</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page seven -->
 
 <!-- !Start of eighth page: #HOFF5wheels -->
 <div data-role="page" id="HOFF5wheels" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F HOFF's 5 Wheels</h1></div>
+	<div data-role="header"><h1>H&amp;F HOFF's 5 Wheels</h1></div>
 
 	<div data-role="content">
 
 		<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
 			<div data-role="collapsible">
-				<h3>The First Wheel: Aerobic Training</h3>
+				<h3>1<sup>st</sup>: Aerobic Training</h3>
 				<p>This is the wheel that those desperate to lose weight fast always drive on first. Even though it's not the answer to helping you obtain that celebrity-perfect look by itself, aerobic exercise is still a valuable wheel.</p>
 				<h4>The Facts</h4>
 				<p>Without aerobic training, you'll lack the adequate stamina to push your muscles beyond what they're capable of doing so they will become stronger and shape up faster. Without aerobic training you'll have to watch calories religiously, your body wont be as efficient at flushing out the toxins that resistance training leaves behind, such as lactic acid. Add the fact that aerobic training improves the quality of your sleep and its pretty easy to see how it fits into the bigger picture.</p>
@@ -619,7 +657,7 @@ See below for when your competition is:</p>
 				<p>Pushing yourself higher within your target heart rate zone will definitely reap more results, but you need to know when too much is too much. If you can't speak a full sentence while exercising without being winded, then you're most likely pushing yourself to the far end of your target heart rate zone. On the other hand, if you're able to carry on a full conversation, then you're probably working at a level thats below your target heart rate zone.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Second Wheel: Resistance Training</h3>
+				<h3>2<sup>nd</sup>: Resistance Training</h3>
 				<p>Whether you're brand new to this whole exercise experience, or fitness is old hat, you probably still know what resistance training entails, or know it by one of its many other names: strength training, weight training, pumping iron, anaerobic exercise, etc.</p>
 				<p>This is the chapter you've either been waiting for or dreading. If you're a male and breathing, you may start to get a bit fired up by now. If you're a female, and fairly new to fitness, you might have doubts, or even visions of morphing into a 300-pound monster with arms like ham hocks as soon as you start bench pressing. Relax, its not like that.</p>
 				<h4>The Facts</h4>
@@ -655,7 +693,7 @@ See below for when your competition is:</p>
 				<p>Until you reduce the body fat above or around your muscles through cardiovascular exercise, resistance training, eating right, and adequate rest you'll never make those muscles or perfect set of abs visible.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Third Wheel: Nutrition</h3>
+				<h3>3<sup>rd</sup>: Nutrition</h3>
 				<p>Eating right isn't really all that complicated. It's a choice, and a conscious, daily choice at that. Making the right choice on a regular basis, and sticking with your choice over time, will get you there.</p>
 				<h4>The Facts</h4>
 				<p>Choose to eat the right way and you won't just improve every possible aspect of your health, but you'll make the job of reshaping yourself through exercising that much easier. The time-starved amongst us are at the mercy of convenience eating. You are your own food-police deciding the type of foods you eat; I can't monitor that all the time because I'm only with you for 1 hour at the gym. The other 23 hours are your responsibility.</p>
@@ -699,7 +737,7 @@ See below for when your competition is:</p>
 				</ul>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Fourth Wheel: Rest and Recovery</h3>
+				<h3>4<sup>th</sup>: Rest and Recovery</h3>
 				<p>It sounds like the easiest wheel of the five to drive on, but it's actually the one that most frequently gets either too much or too little use. Give your body too much rest and it'll look like it. Give it too little and you increase your odds of not only injuring yourself, but never seeing the body-shaping results you're shooting for.</p>
 				<h4>The facts</h4>
 				<p>Whether you hate or love exercise, your body interprets all that time you've spent pulling, pushing, and sweating on gym equipment as on thing: stress. Thats why the time you give your muscles to rest and recover in between each workout can make a huge difference in the kind of results you end up seeing for all of your hard work.</p> 
@@ -708,7 +746,7 @@ See below for when your competition is:</p>
 				<p>A decent nights sleep. Most healthy adults need an average of 7 to 9 hours of sleep a night. Whatever your cycle is, find it, stick with it.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Steering Wheel: Mental Conditioning</h3>
+				<h3>5<sup>th</sup>: Mental Conditioning</h3>
 				<p>What makes one person lie on a sofa eating pizza, chips and cake, while another may be up at 6am pounding the streets trying to beat a personal best? Why are some people more motivated than others? Not just at sport, exercise or at work, but in life?</p>
 				<p>Each of us has motivations, goals and inspirational figures that shape what we do, what we think, how we react. Some of these goals are verbalised, debated and shared, some are deep rooted and personal. It all starts in the mind.</p> 
 				<p>Life is a mind game. All your aspirations are played out in your head. All your relationships are shaped in your head. Your mind dictates whether you fulfil your potential or live your life dreaming.  It's about attitude. The good thing in life is that you can choose your attitude, you cant always choose or change the circumstances in your arena, but you can always choose or change your attitude.</p> 
@@ -721,15 +759,15 @@ See below for when your competition is:</p>
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eight -->
 
 <!-- !Start of ninth page: #warmupcooldown -->
 <div data-role="page" id="warmupcooldown" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Warm-ups & Cool-downs</h1></div>
+	<div data-role="header"><h1>H&amp;F Warm-ups & Cool-downs</h1></div>
 
 	<div data-role="content">
 
@@ -792,15 +830,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page nine -->
 
 <!-- !Start of tenth page: #resistancetraining -->
 <div data-role="page" id="resistancetraining" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Resistance Training</h1></div>
+	<div data-role="header"><h1>H&amp;F Resistance Training</h1></div>
 
 	<div data-role="content">
 
@@ -822,41 +860,41 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<h4>Training Frequency</h4>
 	
 	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingfrequencyone" data-role="button" data-rel="dialog" data-transition="slideup">Once a week</a>
-		<a href="#resistancetrainingfrequencytwo" data-role="button" data-rel="dialog" data-transition="slideup">Twice a week</a>
-		<a href="#resistancetrainingfrequencythree" data-role="button" data-rel="dialog" data-transition="slideup">Three times a week</a>
+		<a href="#resistancetrainingfrequencyone" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="f">Once a week</a>
+		<a href="#resistancetrainingfrequencytwo" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Twice a week</a>
+		<a href="#resistancetrainingfrequencythree" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Three times a week</a>
 	</div>
 
 	<h4>Training Age</h4>
 	
 	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingage78" data-role="button" data-rel="dialog" data-transition="slideup">Year 7 & 8</a>
-		<a href="#resistancetrainingage91" data-role="button" data-rel="dialog" data-transition="slideup">Year 9 & 10</a>
-		<a href="#resistancetrainingage111213" data-role="button" data-rel="dialog" data-transition="slideup">Year 11, 12 & 13</a>
+		<a href="#resistancetrainingage78" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 7 & 8</a>
+		<a href="#resistancetrainingage91" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 9 & 10</a>
+		<a href="#resistancetrainingage111213" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 11, 12 & 13</a>
 	</div>
 
 	<h4>Muscle Group Training</h4>
 	
 	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingmuscleglegs" data-role="button" data-rel="dialog" data-transition="slideup">Legs</a>
-		<a href="#resistancetrainingmusclegback" data-role="button" data-rel="dialog" data-transition="slideup">Back</a>
-		<a href="#resistancetrainingmusclegchest" data-role="button" data-rel="dialog" data-transition="slideup">Chest</a>
-		<a href="#resistancetrainingmusclegshoulders" data-role="button" data-rel="dialog" data-transition="slideup">Shoulders</a>
-		<a href="#resistancetrainingmusclegarms" data-role="button" data-rel="dialog" data-transition="slideup">Arms</a>
+		<a href="#resistancetrainingmuscleglegs" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Legs</a>
+		<a href="#resistancetrainingmusclegback" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Back</a>
+		<a href="#resistancetrainingmusclegchest" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Chest</a>
+		<a href="#resistancetrainingmusclegshoulders" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Shoulders</a>
+		<a href="#resistancetrainingmusclegarms" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Arms</a>
 	</div>
 
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page ten -->
 
 <!-- !Start of subpage 1: #resistancetrainingfrequencyone (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencyone">
 
-	<div data-role="header" data-theme="e"><h1>H&F RTF 1/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 1/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -894,7 +932,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 2: #resistancetrainingfrequencytwo (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencytwo">
 
-	<div data-role="header" data-theme="e"><h1>H&F RTF 2/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 2/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -943,7 +981,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 3: #resistancetrainingfrequencythree (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencythree">
 
-	<div data-role="header" data-theme="e"><h1>H&F RTF 3/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 3/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -961,7 +999,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<li>Thur: rest or cardio</li>
 	<li>Fri: Workout 2</li>
 	</ul>
-	<b4>Workout 1 – Chest, Shoulders, Triceps</b4>
+	<h4>Workout 1 – Chest, Shoulders, Triceps</h4>
 	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
 	<p>CHEST</p>
 	<p>Flat Dumbbell bench press 3 sets (15,12,10)</p>
@@ -976,7 +1014,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<p>TRICEPS</p>
 	<p>Lying Triceps extension 3 sets (15,12,10)</p>
 	<p>Triceps press down 3 sets (12,12,10)</p>
-	<b4>Workout 2 – Legs, Back, Biceps</b4>
+	<h4>Workout 2 – Legs, Back, Biceps</h4>
 	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
 	<p>LEGS</p>
 	<p>Squat 3 sets (10, 10, 10)</p>
@@ -999,7 +1037,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 4: #resistancetrainingage78 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage78">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y7&8</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y7&amp;8</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -1025,7 +1063,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 5: #resistancetrainingage91 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage91">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y9&10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -1064,7 +1102,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 6: #resistancetrainingage111213 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage111213">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y11,12&13</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y11,12&amp;13</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1103,7 +1141,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 7: #resistancetrainingmuscleglegs (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmuscleglegs">
 
-	<div data-role="header" data-theme="e"><h1>H&F MGT Legs</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Legs</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1135,7 +1173,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 8: #resistancetrainingmusclegback (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegback">
 
-	<div data-role="header" data-theme="e"><h1>H&F MGT Back</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Back</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1156,7 +1194,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 9: #resistancetrainingmusclegchest (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegchest">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y9&10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1176,7 +1214,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 10: #resistancetrainingmusclegshoulders (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegshoulders">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y9&10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1196,7 +1234,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 11: #resistancetrainingmusclegarms (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegarms">
 
-	<div data-role="header" data-theme="e"><h1>H&F Y9&10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1220,7 +1258,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of eleventh page: #aerobictraining -->
 <div data-role="page" id="aerobictraining" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Aerobic Training</h1></div>
+	<div data-role="header"><h1>H&amp;F Aerobic Training</h1></div>
 
 	<div data-role="content">
 
@@ -1260,15 +1298,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eleven -->
 
 <!-- !Start of twelth page: #nutrition -->
 <div data-role="page" id="nutrition" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Nutrition</h1></div>
+	<div data-role="header"><h1>H&amp;F Nutrition</h1></div>
 
 	<div data-role="content">
 
@@ -1310,15 +1348,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page twelve -->
 
 <!-- !Start of subpage 1: #nutritionfoodlabelling -->
 <div data-role="page" id="nutritionfoodlabelling" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F Nutrition Food Labelling</h1></div>
+	<div data-role="header"><h1>H&amp;F Nutrition Food Labelling</h1></div>
 
 	<div data-role="content">
 
@@ -1372,7 +1410,19 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<div data-role="popup" id="popupGDAjpg" data-overlay-theme="a" data-theme="d" data-corners="false">
 		<a href="#nutritionfoodlabelling" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 		<img class="popphoto" src="images/GDA_545px.jpg" style="max-height:512px;" alt="GDA">
-		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank">Source</a> ⤤</p>
+		<script type="text/javascript">
+			window.onload = function() {
+				var gdaimgsource = document.getElementById("gdaimgsource");
+				gdaimgsource.onclick = function() {
+					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					return false;
+				}
+			}
+		</script>
+		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
+		<script>
+			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
+		</script>
 	</div>
 	<p>Guideline Daily Amounts (GDAs) were developed by food manufacturers and retailers and you can find out more by visiting the IGD website. IGD is a food and grocery industry research organisation.</p>
 	<h4>Ingredients list</h4>
@@ -1381,15 +1431,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
 
 <!-- !Start of thirteenth page: #coreconditioningcorestability -->
 <div data-role="page" id="coreconditioningcorestability" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F CC Core Stability</h1></div>
+	<div data-role="header"><h1>H&amp;F CC Core Stability</h1></div>
 
 	<div data-role="content">
 
@@ -1429,15 +1479,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
 
 <!-- !Start of thirteenth.2 page: #coreconditioningexercises -->
 <div data-role="page" id="coreconditioningexercises" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F CC Exercises</h1></div>
+	<div data-role="header"><h1>H&amp;F CC Exercises</h1></div>
 
 	<div data-role="content">
 
@@ -1494,15 +1544,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen.2 -->
 
 <!-- !Start of thirteenth.3 page: #coreconditioningstaticdynamiccore -->
 <div data-role="page" id="coreconditioningstaticdynamiccore" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F CC Static & Dynamic Core</h1></div>
+	<div data-role="header"><h1>H&amp;F CC Static & Dynamic Core</h1></div>
 
 	<div data-role="content">
 
@@ -1528,15 +1578,15 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen.3 -->
 
 <!-- !Start of fourteenth page: #howdoi -->
 <div data-role="page" id="howdoi" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&F How do I?</h1></div>
+	<div data-role="header"><h1>H&amp;F How do I?</h1></div>
 
 	<div data-role="content">
 
@@ -1555,53 +1605,10 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 	</div><!-- /content -->
 
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page fourteen -->
-
-<!-- !Start of fifteenth page: #blank -->
-<div data-role="page" id="blank" data-add-back-btn="true">
-
-	<div data-role="header"><h1>blank</h1></div>
-
-	<div data-role="content">
-
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
-
-	</div><!-- /content -->
-
-<div data-role="footer" data-theme="d">
-		<h4>© George Garside</h4>
-	</div><!-- /footer -->
-</div><!-- /page fifteen -->
-
-<!--
-<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
-
-	
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="e">
-		<h1>Dialog</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="d">
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>© George Garside</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
-
-
 
 </body>
 </html>
