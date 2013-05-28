@@ -1490,8 +1490,13 @@ There is no doubt that time spent on warming up and cooling down will improve an
 		<li>Don’t skip breakfast</li>
 	</ol>
 	
-	<a href="#nutritionfoodlabelling" data-role="button" data-theme="f" data-transition="flow">Food Labelling Information</a>
-
+	<h4>Resources</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#nutritionclassification" data-role="button" data-theme="f" data-transition="flow" data-icon="bars">Classification</a>
+		<a href="#nutritionfoodlabelling" data-role="button" data-theme="f" data-transition="flow" data-icon="bars">Food Labelling</a>
+	</div>
+	
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
@@ -1502,7 +1507,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 1: #nutritionfoodlabelling -->
 <div data-role="page" id="nutritionfoodlabelling" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&amp;F Nutrition Food Labelling</h1></div>
+	<div data-role="header"><h1>Nutrition Food Labelling</h1></div>
 
 	<div data-role="content">
 
@@ -1560,14 +1565,14 @@ There is no doubt that time spent on warming up and cooling down will improve an
 			window.onload = function() {
 				var gdaimgsource = document.getElementById("gdaimgsource");
 				gdaimgsource.onclick = function() {
-					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					window.open('http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg', '_blank', 'location=yes');
 					return false;
 				}
 			}
 		</script>
 		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
 		<script>
-			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
+			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Loaded external: GDA image source link']);
 		</script>
 	</div>
 	<p>Guideline Daily Amounts (GDAs) were developed by food manufacturers and retailers and you can find out more by visiting the IGD website. IGD is a food and grocery industry research organisation.</p>
@@ -1581,6 +1586,91 @@ There is no doubt that time spent on warming up and cooling down will improve an
 		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
+
+<!-- !Start of subpage 2: #nutritionclassification -->
+<div data-role="page" id="nutritionclassification" data-add-back-btn="true">
+
+	<div data-role="header"><h1>Nutrition Classification</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content 1 -->
+	<table data-role="table" id="nutritionclassificationtable" data-mode="reflow" class="ui-responsive table-stroke">
+		<thead>
+			<tr>
+				<th data-priority="1"></th>
+				<th data-priority="2"></th>
+				<th data-priority="3"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Carbohydrates</th>
+				<td>Energy can be stored in the body in the form of carbohydrates and this is particularly important for endurance performers, who may not be able to restock their energy stores adequately while they are competing. Carbohydrates are high in glucose and enter the blood. Excess glucose is stored as glycogen in the liver and muscles. Extra glucose is not wasted, but converted into glycogen or fat and stored.</td>
+				<td>Cereals, All wholegrain foods, Potato, Rice, Vegetables, Fruits, Beans, Pasta.</td>
+			</tr>
+			<tr>
+				<th>Proteins</th>
+				<td>It contributes to the development and growth of hormones and haemoglobin in the blood, both of which are essential for those involved in sport or regular physical activity. Protein is necessary for the growth and repair of body tissues. It is also a relatively minor source of energy (10%).</td>
+				<td>Meat, Fish, Eggs, Milk, Cheese, Cereals, Nuts.</td>
+			</tr>
+			<tr>
+				<th>Fats</th>
+				<td>There are many forms of fat in the body and it supplies around 70% of our energy requirements. Fat supplies energy (calories) that can either be used immediately or stored for future use. Although fat is the body’s preferred energy source, it also uses energy in the form of stored carbohydrate (glycogen) for intensive burst of energy. If we consume an excessive amount of fat, it is stored in the body tissues and causes us to become overweight. In order to avoid this, dieticians recommend that we should not consume more than ⅓<sup>rd</sup> of our daily nutritional needs in the form of fat.</td>
+				<td><p>Saturated – meat, burgers, sausages, butter, cheese.</p>
+				<p><b>Hydrogenated</b> – margarine, biscuits, cakes, puddings, chocolate.</p>
+				<p><b>Polyunsaturated / Omega 6</b> – vegetable oils, nuts, seeds</p>
+				<p><b>Omega 3</b> – Oily fish, walnuts, soya beans, sweet potatoes</p>
+				<p><b>Monounsaturated</b> – Olive oil, olives, avocados, nuts, seeds, rapeseed oil</p></td>
+			</tr>
+			<tr>
+				<th>Fibre</th>
+				<td>Dietary fibre comprises the edible parts of plants that are not broken down and absorbed in the small intestine. It does not contain any nutrients. It therefore adds bulk to our food without adding extra kilojoules. Fibre regulates the digestive system.</td>
+				<td>Whole-grain and high-fibre breakfast cereals and bread, fruit and vegetables.</td>
+			</tr>
+			<tr>
+				<th>Minerals</th>
+				<td>Minerals are required by the body for a variety of functions including the formation of bones & teeth, as essential constituents of body fluids & tissues, components of enzyme systems, and nerve function.</td>
+				<td><p><b>Calcium for bones and teeth</b> – milk, cheese, dairy products.</p>
+				<p><b>Magnesium for energy metabolism</b> – dark green leafy vegetables, grains and nuts.</p>
+				<p><b>Sodium for regulating body fluids</b> - salted foods, crisps, canned foods.</p>
+				<p><b>Potassium for water and electrolyte balance</b> – dried fruits, bananas, berries, veg, milk.</p>
+				<p><b>Iron for formation of haemoglobin/oxygen transport</b> – spinach, dark green veg, liver, red meat, nuts, peas</p>
+				<p><b>Iodine for hormone formation</b> – salt water fish, milk.</p></td>
+			</tr>
+			<tr>
+				<th>Vitamins</th>
+				<td><p>Vitamins are chemical compounds found in the food we eat. Our bodies cannot make vitamins so must take them from our food. Vitamins perform the following functions: aiding growth, increasing resistance to infection, regulating some body functions such as good vision, and helping the metabolism of certain foods.</p> 
+				<p>There are two main groups of Vitamins:</p>
+				<ol>
+					<li><b>FAT Soluble Vitamins</b> – Vitamins A, D, & K, they can be stored in our body.</li>
+					<li><b>WATER Soluble Vitamins</b> – Vitamins C & B, They cannot be stored in the body.</li>
+				</ol></td>
+				<td><p>Vitamin A – Liver, whole milk, cheese, butter, carrots, leafy veg.</p>
+				<p><b>Vitamin D</b> – Oily fish, eggs, butter, and meat.</p>
+				<p><b>Vitamin K</b> – most plant and animal sources, also made by bacteria in the gut.</p>
+				<p><b>Vitamin C</b> – plant sources, fresh milk, liver.</p>
+				<p><b>Vitamin B1</b> – Whole grains, nuts, meat.</p>
+				<p><b>Vitamin B2</b> – milk, eggs, breakfast cereals, liver, green veg.</p>
+				<p><b>Niacin</b> – meat.</p>
+				<p><b>Vitamin B6</b> – beef, fish, poultry, eggs, whole grains, some veg.</p>
+				<p><b>Vitamin B12</b> – milk, meat, eggs.</p></td>
+			</tr>
+			<tr>
+				<th>Water</th>
+				<td>Water makes up 70% of the human body. It is essential for the correct functioning of virtually all living cells. Water has many functions: it provides the medium in which most reactions in the body occur, it acts as a lubricant for joints and eyes, and it helps regulate body temperature. The amount of water we drink varies from person to person, depending on age, time of year, climatic conditions, diet, the amount of physical activity we do.  Dehydration is common amongst athletes, especially in hot climates, or at altitude. As little as a 2% loss of bodyweight can result in impaired responses and performance. Water replacement is essential before, during and after exercise.</td>
+				<td><p>Tap water is suitable for replacing lost fluid following mild or moderate exercise.</p>
+				<p>Isotonic drinks are more suitable after vigorous or prolonged exercise.</p></td>
+			</tr>
+		</tbody>
+	</table>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page 2 -->
 
 <!-- !Start of thirteenth page: #coreconditioningcorestability -->
 <div data-role="page" id="coreconditioningcorestability" data-add-back-btn="true">
