@@ -1419,7 +1419,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 			window.onload = function() {
 				var gdaimgsource = document.getElementById("gdaimgsource");
 				gdaimgsource.onclick = function() {
-					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					window.open('http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg', '_blank', 'location=yes');
 					return false;
 				}
 			}
