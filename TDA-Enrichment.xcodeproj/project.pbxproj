@@ -572,8 +572,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: N GARSIDE";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDA-Enrichment/TDA-Enrichment-Prefix.pch";
@@ -586,8 +585,7 @@
 					"\"$(SRCROOT)/TestFlightSDK1.3.0-beta.2\"",
 				);
 				PRODUCT_NAME = "TDA Enrich";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "02664A51-45C1-4EAB-8ADF-808C1B5ED2D5";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
