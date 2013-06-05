@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.m
-//  cordova-2.5.0
+//  cordova-2.7.0
 //
 //  Created by George Garside on 11/01/2013.
 //  Copyright George Garside 2012-2013. All rights reserved.
@@ -47,7 +47,11 @@
 
     int cacheSizeMemory = 8 * 1024 * 1024; // 8MB
     int cacheSizeDisk = 32 * 1024 * 1024; // 32MB
-    NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"];
+#if __has_feature(objc_arc)
+        NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"];
+#else
+        NSURLCache* sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"] autorelease];
+#endif
     [NSURLCache setSharedURLCache:sharedCache];
 
     self = [super init];
@@ -66,10 +70,19 @@
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
 
-    self.window = [[[UIWindow alloc] initWithFrame:screenBounds] autorelease];
+#if __has_feature(objc_arc)
+        self.window = [[UIWindow alloc] initWithFrame:screenBounds];
+#else
+        self.window = [[[UIWindow alloc] initWithFrame:screenBounds] autorelease];
+#endif
     self.window.autoresizesSubviews = YES;
 
-    self.viewController = [[[MainViewController alloc] init] autorelease];
+#if __has_feature(objc_arc)
+        self.viewController = [[MainViewController alloc] init];
+#else
+        self.viewController = [[[MainViewController alloc] init] autorelease];
+#endif
+    self.viewController.useSplashScreen = YES;
 
     // Set your app's start page by setting the <content src='foo.html' /> tag in config.xml.
     // If necessary, uncomment the line below to override it.
@@ -85,7 +98,7 @@
 }
 
 // this happens while we are running ( in the background, or from within our own app )
-// only valid if cordova-2.5.0-Info.plist specifies a protocol to handle
+// only valid if cordova-2.7.0-Info.plist specifies a protocol to handle
 - (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)url
 {
     if (!url) {
@@ -103,8 +116,8 @@
 }
 
 // repost the localnotification using the default NSNotificationCenter so multiple plugins may respond
-- (void)           application:(UIApplication*)application
-   didReceiveLocalNotification:(UILocalNotification*)notification
+- (void)            application:(UIApplication*)application
+    didReceiveLocalNotification:(UILocalNotification*)notification
 {
     // re-post ( broadcast )
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVLocalNotification object:notification];
