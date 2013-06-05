@@ -7,9 +7,14 @@
 	<title>TDA Enrichment App</title>
 	<link rel="stylesheet" href="css/GeorgeCustom.min.css" />
 	<link rel="stylesheet" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
+	<style>
+		/* Enable multi-line buttons */
+		.ui-btn-inner {white-space: normal !important;}
+	</style>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
-	<script src="cordova-2.5.0.js"></script>
+	<script src="cordova-2.7.0.js"></script>
+<!--
 	<script type="text/javascript">
 		var _kmq = _kmq || [];
 		var _kmk = _kmk || 'e2f2cd8be75c9f6d65886f18646bc5445d06b38c';
@@ -30,6 +35,7 @@
 			_kmq.push(['record', 'opened app']);
 		};
 	</script>
+-->
 </head>
 
 <body>
@@ -56,7 +62,8 @@
 	<div data-role="content">
 
 	<ul data-role="listview" data-inset="true" data-divider-theme="b">
-		<li data-role="list-divider" data-theme="g">Big Friday</li>
+		<li data-role="list-divider" data-theme="k"><h1>Activities & Clubs</h1></li>
+		<li data-role="list-divider" data-theme="l">Big Friday</li>
 		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow" class="bigfriday">Dodgeball</a></li>
 		<li data-role="list-divider" data-theme="b">After School</li>
 		<li><a href="#monday" data-transition="flow" class="timetable" id="mondaybutton">Monday <span class="ui-li-count">10 activities	</span></a></li>
@@ -64,14 +71,18 @@
 		<li><a href="#wednesday" data-transition="flow" class="timetable" id="wednesdaybutton">Wednesday <span class="ui-li-count">14 activities	</span></a></li>
 		<li><a href="#thursday" data-transition="flow" class="timetable" id="thursdaybutton">Thursday <span class="ui-li-count">6 activities	</span></a></li>
 		<li><a href="#friday" data-transition="flow" class="timetable" id="fridaybutton">Friday <span class="ui-li-count">8 activities	</span></a></li>
-		<li data-role="list-divider" data-theme="l">Health & Fitness</li>
+	</ul>
+
+	<ul data-role="listview" data-inset="true" data-divider-theme="b">
+		<li data-role="list-divider" data-theme="k"><h1>Health & Fitness</h1></li>
+		<li><a href="#hfinformation" data-transition="flow" class="healthfitness" id="hfinformationbutton">Introduction</a></li>
 		<li><a href="#HOFF5wheels" data-transition="flow" class="healthfitness" id="hoff5wheelsbutton">HOFF's 5 Wheels</a></li>
 		<li><a href="#warmupcooldown" data-transition="flow" class="healthfitness" id="warmupcooldownbutton">Warm-ups and Cool-downs</a></li>
 		<li><a href="#resistancetraining" data-transition="flow" class="healthfitness" id="resistancetrainingbutton">Resistance Training</a></li>
 		<li><a href="#aerobictraining" data-transition="flow" class="healthfitness" id="aerobictrainingbutton">Aerobic Training</a></li>
 		<li><a href="#nutrition" data-transition="flow" class="healthfitness" id="nutritionbutton">Nutrition</a></li>
 		<li><a href="#coreconditioningmenuselect" data-rel="popup" data-transition="fade" class="healthfitness" id="coreconditioningbutton">Core Conditioning</a></li>
-		<li><a href="#howdoi" data-transition="flow" class="healthfitness" id="howdoibutton">How do I? <i>NEW!</i></a></li>
+		<li><a href="#howdoi" data-transition="flow" class="healthfitness" id="howdoibutton">How do I…?</a></li>
 	</ul>
 
 	<div data-role="popup" id="coreconditioningmenuselect" data-theme="c">
@@ -183,7 +194,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page two -->
 
@@ -278,7 +289,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page three -->
 
@@ -404,7 +415,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page four -->
 
@@ -467,7 +478,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page five -->
 
@@ -545,7 +556,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page six -->
 
@@ -620,7 +631,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page seven -->
 
@@ -633,7 +644,7 @@
 
 		<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
 			<div data-role="collapsible">
-				<h3>The First Wheel: Aerobic Training</h3>
+				<h3>1<sup>st</sup>: Aerobic Training</h3>
 				<p>This is the wheel that those desperate to lose weight fast always drive on first. Even though it's not the answer to helping you obtain that celebrity-perfect look by itself, aerobic exercise is still a valuable wheel.</p>
 				<h4>The Facts</h4>
 				<p>Without aerobic training, you'll lack the adequate stamina to push your muscles beyond what they're capable of doing so they will become stronger and shape up faster. Without aerobic training you'll have to watch calories religiously, your body wont be as efficient at flushing out the toxins that resistance training leaves behind, such as lactic acid. Add the fact that aerobic training improves the quality of your sleep and its pretty easy to see how it fits into the bigger picture.</p>
@@ -651,7 +662,7 @@
 				<p>Pushing yourself higher within your target heart rate zone will definitely reap more results, but you need to know when too much is too much. If you can't speak a full sentence while exercising without being winded, then you're most likely pushing yourself to the far end of your target heart rate zone. On the other hand, if you're able to carry on a full conversation, then you're probably working at a level thats below your target heart rate zone.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Second Wheel: Resistance Training</h3>
+				<h3>2<sup>nd</sup>: Resistance Training</h3>
 				<p>Whether you're brand new to this whole exercise experience, or fitness is old hat, you probably still know what resistance training entails, or know it by one of its many other names: strength training, weight training, pumping iron, anaerobic exercise, etc.</p>
 				<p>This is the chapter you've either been waiting for or dreading. If you're a male and breathing, you may start to get a bit fired up by now. If you're a female, and fairly new to fitness, you might have doubts, or even visions of morphing into a 300-pound monster with arms like ham hocks as soon as you start bench pressing. Relax, its not like that.</p>
 				<h4>The Facts</h4>
@@ -687,7 +698,7 @@
 				<p>Until you reduce the body fat above or around your muscles through cardiovascular exercise, resistance training, eating right, and adequate rest you'll never make those muscles or perfect set of abs visible.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Third Wheel: Nutrition</h3>
+				<h3>3<sup>rd</sup>: Nutrition</h3>
 				<p>Eating right isn't really all that complicated. It's a choice, and a conscious, daily choice at that. Making the right choice on a regular basis, and sticking with your choice over time, will get you there.</p>
 				<h4>The Facts</h4>
 				<p>Choose to eat the right way and you won't just improve every possible aspect of your health, but you'll make the job of reshaping yourself through exercising that much easier. The time-starved amongst us are at the mercy of convenience eating. You are your own food-police deciding the type of foods you eat; I can't monitor that all the time because I'm only with you for 1 hour at the gym. The other 23 hours are your responsibility.</p>
@@ -731,7 +742,7 @@
 				</ul>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Fourth Wheel: Rest and Recovery</h3>
+				<h3>4<sup>th</sup>: Rest and Recovery</h3>
 				<p>It sounds like the easiest wheel of the five to drive on, but it's actually the one that most frequently gets either too much or too little use. Give your body too much rest and it'll look like it. Give it too little and you increase your odds of not only injuring yourself, but never seeing the body-shaping results you're shooting for.</p>
 				<h4>The facts</h4>
 				<p>Whether you hate or love exercise, your body interprets all that time you've spent pulling, pushing, and sweating on gym equipment as on thing: stress. Thats why the time you give your muscles to rest and recover in between each workout can make a huge difference in the kind of results you end up seeing for all of your hard work.</p> 
@@ -740,7 +751,7 @@
 				<p>A decent nights sleep. Most healthy adults need an average of 7 to 9 hours of sleep a night. Whatever your cycle is, find it, stick with it.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>The Steering Wheel: Mental Conditioning</h3>
+				<h3>5<sup>th</sup>: Mental Conditioning</h3>
 				<p>What makes one person lie on a sofa eating pizza, chips and cake, while another may be up at 6am pounding the streets trying to beat a personal best? Why are some people more motivated than others? Not just at sport, exercise or at work, but in life?</p>
 				<p>Each of us has motivations, goals and inspirational figures that shape what we do, what we think, how we react. Some of these goals are verbalised, debated and shared, some are deep rooted and personal. It all starts in the mind.</p> 
 				<p>Life is a mind game. All your aspirations are played out in your head. All your relationships are shaped in your head. Your mind dictates whether you fulfil your potential or live your life dreaming.  It's about attitude. The good thing in life is that you can choose your attitude, you cant always choose or change the circumstances in your arena, but you can always choose or change your attitude.</p> 
@@ -754,7 +765,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eight -->
 
@@ -825,7 +836,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page nine -->
 
@@ -854,34 +865,52 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<h4>Training Frequency</h4>
 	
 	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingfrequencyone" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="f">Once a week</a>
-		<a href="#resistancetrainingfrequencytwo" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Twice a week</a>
-		<a href="#resistancetrainingfrequencythree" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Three times a week</a>
+		<a href="#resistancetrainingfrequencyone" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Once a week</a>
+		<a href="#resistancetrainingfrequencytwo" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Twice a week</a>
+		<a href="#resistancetrainingfrequencythree" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Three times a week</a>
 	</div>
 
 	<h4>Training Age</h4>
 	
 	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingage78" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 7 & 8</a>
-		<a href="#resistancetrainingage91" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 9 & 10</a>
-		<a href="#resistancetrainingage111213" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Year 11, 12 & 13</a>
+		<a href="#resistancetrainingage78" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Year 7 & 8</a>
+		<a href="#resistancetrainingage91" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Year 9 & 10</a>
+		<a href="#resistancetrainingage111213" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Year 11, 12 & 13</a>
 	</div>
 
 	<h4>Muscle Group Training</h4>
 	
-	<div data-role="controlgroup" data-type="vertical">
-		<a href="#resistancetrainingmuscleglegs" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Legs</a>
-		<a href="#resistancetrainingmusclegback" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Back</a>
-		<a href="#resistancetrainingmusclegchest" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Chest</a>
-		<a href="#resistancetrainingmusclegshoulders" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Shoulders</a>
-		<a href="#resistancetrainingmusclegarms" data-role="button" data-rel="dialog" data-transition="slideup"  data-theme="f">Arms</a>
+	<div data-role="controlgroup" data-type="horizontal">
+		<a href="#resistancetrainingmuscleglegs" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Legs</a>
+		<a href="#resistancetrainingmusclegarms" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Arms</a>
+	</div>
+	<div data-role="controlgroup" data-type="horizontal">
+		<a href="#resistancetrainingmusclegback" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Back</a>
+		<a href="#resistancetrainingmusclegchest" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Chest</a>
+		<a href="#resistancetrainingmusclegshoulders" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Shoulders</a>
 	</div>
 
+	<h4>Resources</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#resistancetrainingsupersevenstrengthpopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Super Seven Strength</a>
+	</div>
+	
+	<div data-role="popup" id="resistancetrainingsupersevenstrengthpopup" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Are you sure you want to open this resource?</h3>
+			<p>This action can use data, and may not work on some Android devices.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#resistancetraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><a href="#resistancetrainingsupersevenstrength" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Open</a></div>
+			</div>
+		</div>
+	</div>
 
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page ten -->
 
@@ -993,7 +1022,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<li>Thur: rest or cardio</li>
 	<li>Fri: Workout 2</li>
 	</ul>
-	<b4>Workout 1 – Chest, Shoulders, Triceps</b4>
+	<h4>Workout 1 – Chest, Shoulders, Triceps</h4>
 	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
 	<p>CHEST</p>
 	<p>Flat Dumbbell bench press 3 sets (15,12,10)</p>
@@ -1008,7 +1037,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<p>TRICEPS</p>
 	<p>Lying Triceps extension 3 sets (15,12,10)</p>
 	<p>Triceps press down 3 sets (12,12,10)</p>
-	<b4>Workout 2 – Legs, Back, Biceps</b4>
+	<h4>Workout 2 – Legs, Back, Biceps</h4>
 	<p>Warm up first, then warm up specific muscle group with a couple of lighter sets, then go into the workout....</p>
 	<p>LEGS</p>
 	<p>Squat 3 sets (10, 10, 10)</p>
@@ -1249,6 +1278,32 @@ There is no doubt that time spent on warming up and cooling down will improve an
 
 </div><!-- /subpage 11 -->
 
+<!-- !Start of subpage 12: #resistancetrainingsupersevenstrength (for tenth page: #resistancetraining) -->
+<div data-role="page" id="resistancetrainingsupersevenstrength">
+
+	<div data-role="header" data-theme="e"><h1>Super Seven Strength</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+
+		<p>It’s absolutely essential you warm up <strong>first</strong>, 5/10 mins of light CV, then low weight reps until thoroughly warmed up.</p>
+		<ol>
+			<li>Squats - 4 sets (heavy one week, moderate the next). 15/12/12/10 reps (moderate week, bodyweight x 20 reps, 3 sets.)</li>
+			<li>Lunges - 3 sets. 8/8/8 reps on each leg.</li>
+			<li>Deadlifts - 3 sets. 15/12/10 reps</li>
+			<li>Pullups - 2 sets, to failure. Aim for 10, then 5.</li>
+			<li>Bent over Rows - 2 sets. 12/10.</li>
+			<li>Bench Press - 3 sets. 12/10/8</li>
+			<li>Core - 3 sets of, swiss-ball roll-outs x 12/plank 45secs/supermans x 10</li>
+		</ol>
+		<p>If you can make the reps easily then increase the weight. The last couple of reps should be difficult/almost failure. Try to do this at least twice a week (Mon &amp; Fri). Record what you do.</p>
+		<p>Forget the beach exercises (arm training!) until you've completed the above routine. Biceps and Triceps are already being used doing the above moves.</p>
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 12 -->
+
+
 <!-- !Start of eleventh page: #aerobictraining -->
 <div data-role="page" id="aerobictraining" data-add-back-btn="true">
 
@@ -1289,13 +1344,115 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<p>It is important to start slowly. If you have been inactive for some time, don’t throw on your trainers and set off on a ten mile run.</p>
 	<p>If a half an hour session feels like too much, start with 10 minute sessions for the first week then increase that to 15 or 20 minute sessions the next week and so on until you feel comfortable exercising for longer.</p>
 	<p>Make sure that you listen to your body. It’s ok for muscles to be tired, but if they or your joints start to feel sore or breathing becomes uncomfortable slow down or stop to ensure that you are in a fit state for your next session.</p>
+	
+	<h4>Resources</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#aerobictrainingtrainingzonespopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Training Zones</a>
+		<a href="#aerobictrainingfitnesstestingpopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Fitness Testing</a>
+		<a href="#aerobictrainingadditionalinfopopup" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="bars" data-theme="b">Additional Information</a>
+	</div>
+	
+	<div data-role="popup" id="aerobictrainingtrainingzonespopup" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Are you sure you want to open this resource?</h3>
+			<p>This action can use data, and may not work on some Android devices.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><a href="#aerobictrainingtrainingzones" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Open</a></div>
+			</div>
+		</div>
+	</div>
+	<div data-role="popup" id="aerobictrainingfitnesstestingpopup" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Are you sure you want to open this resource?</h3>
+			<p>This action can use data, and may not work on some Android devices.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><a href="#aerobictrainingfitnesstesting" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="b">Open</a></div>
+			</div>
+		</div>
+	</div>
+	<div data-role="popup" id="aerobictrainingadditionalinfopopup" data-overlay-theme="a" data-theme="e" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+		<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content">
+			<h3 class="ui-title">Disabled</h3>
+			<!-- <h3 class="ui-title">Are you sure you want to open this resource?</h3> -->
+			<p>This external resource has been removed since it no longer exists. This button, along with this message, will be completely removed in a future update. Sorry for the inconvenience.</p>
+			<!-- <p>This action can use data, and may not work on some Android devices.</p> -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#aerobictraining" data-role="button" data-rel="back" data-theme="c">Cancel</a></div>
+				<div class="ui-block-b"><!-- <a href="http://www.weightlossresources.co.uk/exercise/aerobic_exercise.htm" target="_blank" data-role="button" data-rel="dialog" data-theme="b">Open</a> --><a href="#" target="_blank" data-role="button" data-rel="dialog" data-theme="b" class="ui-disabled">Open</a></div>
+			</div>
+		</div>
+	</div>
 
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page eleven -->
+
+<!-- !Start of subpage 1: #aerobictrainingtrainingzones (for tenth page: #aerobictraining) -->
+<div data-role="page" id="aerobictrainingtrainingzones">
+
+	<div data-role="header" data-theme="e"><h1>Training Zones</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+		<a href="#popuptrainingzonespng" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/aerobictraining/trainingzones.png" alt="Training Zones"  style="width:100%;"></a>
+		<div data-role="popup" id="popuptrainingzonespng" data-overlay-theme="a" data-theme="d" data-corners="false">
+			<a href="#aerobictrainingtrainingzones" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<img class="popphoto" src="images/aerobictraining/trainingzones.png" style="max-height:512px;" alt="Training Zones">
+			<!-- <p>Caption. <a href="#" target="_blank">Source</a> ⤤</p> -->
+		</div>
+		
+		<p><b>The Energy Efficient zone</b> <i>60-70%</i>: Training within this zone develops basic endurance and aerobic capacity. All easy recovery running should be completed at a maximum of 70%. Another advantage to running in this zone is that while you are happily fat burning you may lose weight and you will be allowing your muscles to re-energise with glycogen, which has been expended during those faster paced workouts.</p>
+		<p><b>The Aerobic zone</b> <i>70-80%</i>: Training in this zone will develop your cardiovascular system. The body's ability to transport oxygen to, and carbon dioxide away from, the working muscles can be developed and improved. As you become fitter and stronger from training in this zone it will be possible to run some of your long weekend runs at up to 75%, so getting the benefits of some fat burning and improved aerobic capacity.</p>
+		<p><b>The Anaerobic Zone</b> <i>80-90%</i>: Training in this zone will develop your lactic acid system. In this zone, your individual anaerobic threshold (AT) is found - sometimes referred to the point of deflection (POD). During these heart rates, the amount of fat being utilised as the main source of energy is greatly reduced and glycogen stored in the muscle is predominantly used. One of the by-products of burning this glycogen is lactic acid. There is a point at which the body can no longer remove the lactic acid from the working muscles quickly enough. This is your anaerobic threshold (AT). Through the correct training, it is possible to delay the AT by being able to increase your ability to deal with the lactic acid for a longer period of time or by pushing the AT higher.</p>
+		<p><b>The Red-line Zone</b> <i>90-100%</i>: Training in this zone will only be possible for short periods. It effectively trains your fast twitch muscle fibres and helps to develop speed. This zone is reserved for interval running and only the very fit are able to train effectively within this zone.</p>
+	
+	<p><a href="#aerobictraining" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 1 -->
+
+<!-- !Start of subpage 2: #aerobictrainingfitnesstesting (for tenth page: #aerobictraining) -->
+<div data-role="page" id="aerobictrainingfitnesstesting">
+
+	<div data-role="header" data-theme="e"><h1>Fitness Testing</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+		<p>This test is designed to measure your cardiovascular endurance</p>
+		<p>Using a 12 inch high bench (or a similar sized stair in your house), step on and off for 3 minutes.</p>
+		<p>Step up with one foot and then the other. Step down with one foot followed by the other foot.</p>
+		<p>Try to maintain a steady four beat cycle. It's easy to maintain if you say "up, up, down, down".</p>
+		<p>Go at a steady and consistent pace.</p>
+		<p>At the end of 3 minutes, remain standing and immediately check your heart rate by taking your pulse…</p>
+
+		<a href="#fitnesstestingboys" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/aerobictraining/boys.png" alt="Fitness Testing Boys Table"  style="width:100%;"></a>
+		<div data-role="popup" id="fitnesstestingboys" data-overlay-theme="a" data-theme="d" data-corners="false">
+			<a href="#aerobictrainingfitnesstesting" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<img class="popphoto" src="images/aerobictraining/boys.png" style="max-height:512px;" alt="Fitness Testing Boys Table">
+			<!-- <p>Caption. <a href="#" target="_blank">Source</a> ⤤</p> -->
+		</div>
+		
+		<a href="#fitnesstestinggirls" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/aerobictraining/girls.png" alt="Fitness Testing Girls Table"  style="width:100%;"></a>
+		<div data-role="popup" id="fitnesstestinggirls" data-overlay-theme="a" data-theme="d" data-corners="false">
+			<a href="#aerobictrainingfitnesstesting" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<img class="popphoto" src="images/aerobictraining/girls.png" style="max-height:512px;" alt="Fitness Testing Girls Table">
+			<!-- <p>Caption. <a href="#" target="_blank">Source</a> ⤤</p> -->
+		</div>
+		
+		<p><b>The Aerobic zone</b> <i>70-80%</i>: Training in this zone will develop your cardiovascular system. The body's ability to transport oxygen to, and carbon dioxide away from, the working muscles can be developed and improved. As you become fitter and stronger from training in this zone it will be possible to run some of your long weekend runs at up to 75%, so getting the benefits of some fat burning and improved aerobic capacity.</p>
+		<p><b>The Anaerobic Zone</b> <i>80-90%</i>: Training in this zone will develop your lactic acid system. In this zone, your individual anaerobic threshold (AT) is found - sometimes referred to the point of deflection (POD). During these heart rates, the amount of fat being utilised as the main source of energy is greatly reduced and glycogen stored in the muscle is predominantly used. One of the by-products of burning this glycogen is lactic acid. There is a point at which the body can no longer remove the lactic acid from the working muscles quickly enough. This is your anaerobic threshold (AT). Through the correct training, it is possible to delay the AT by being able to increase your ability to deal with the lactic acid for a longer period of time or by pushing the AT higher.</p>
+		<p><b>The Red-line Zone</b> <i>90-100%</i>: Training in this zone will only be possible for short periods. It effectively trains your fast twitch muscle fibres and helps to develop speed. This zone is reserved for interval running and only the very fit are able to train effectively within this zone.</p>
+	
+	<p><a href="#aerobictraining" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 2 -->
 
 <!-- !Start of twelth page: #nutrition -->
 <div data-role="page" id="nutrition" data-add-back-btn="true">
@@ -1338,19 +1495,24 @@ There is no doubt that time spent on warming up and cooling down will improve an
 		<li>Don’t skip breakfast</li>
 	</ol>
 	
-	<a href="#nutritionfoodlabelling" data-role="button" data-theme="f" data-transition="flow">Food Labelling Information</a>
-
+	<h4>Resources</h4>
+	
+	<div data-role="controlgroup" data-type="vertical">
+		<a href="#nutritionclassification" data-role="button" data-theme="f" data-transition="flow" data-icon="bars">Classification</a>
+		<a href="#nutritionfoodlabelling" data-role="button" data-theme="f" data-transition="flow" data-icon="bars">Food Labelling</a>
+	</div>
+	
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page twelve -->
 
 <!-- !Start of subpage 1: #nutritionfoodlabelling -->
 <div data-role="page" id="nutritionfoodlabelling" data-add-back-btn="true">
 
-	<div data-role="header"><h1>H&amp;F Nutrition Food Labelling</h1></div>
+	<div data-role="header"><h1>Nutrition Food Labelling</h1></div>
 
 	<div data-role="content">
 
@@ -1408,14 +1570,14 @@ There is no doubt that time spent on warming up and cooling down will improve an
 			window.onload = function() {
 				var gdaimgsource = document.getElementById("gdaimgsource");
 				gdaimgsource.onclick = function() {
-					cordova.exec("ChildBrowserCommand.showWebPage", "http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" );
+					window.open('http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg', '_blank', 'location=yes');
 					return false;
 				}
 			}
 		</script>
 		<p>An example of a GDA. <a href="http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg" target="_blank" id="gdaimgsource">Source</a></p>
 		<script>
-			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Exited app: GDA image source link']);
+			_kmq.push(['trackClickOnOutboundLink', 'gdaphotosource', 'Loaded external: GDA image source link']);
 		</script>
 	</div>
 	<p>Guideline Daily Amounts (GDAs) were developed by food manufacturers and retailers and you can find out more by visiting the IGD website. IGD is a food and grocery industry research organisation.</p>
@@ -1426,9 +1588,94 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
+
+<!-- !Start of subpage 2: #nutritionclassification -->
+<div data-role="page" id="nutritionclassification" data-add-back-btn="true">
+
+	<div data-role="header"><h1>Nutrition Classification</h1></div>
+
+	<div data-role="content">
+
+	<!-- Content 1 -->
+	<table data-role="table" id="nutritionclassificationtable" data-mode="reflow" class="ui-responsive table-stroke">
+		<thead>
+			<tr>
+				<th data-priority="1"></th>
+				<th data-priority="2"></th>
+				<th data-priority="3"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Carbohydrates</th>
+				<td>Energy can be stored in the body in the form of carbohydrates and this is particularly important for endurance performers, who may not be able to restock their energy stores adequately while they are competing. Carbohydrates are high in glucose and enter the blood. Excess glucose is stored as glycogen in the liver and muscles. Extra glucose is not wasted, but converted into glycogen or fat and stored.</td>
+				<td>Cereals, All wholegrain foods, Potato, Rice, Vegetables, Fruits, Beans, Pasta.</td>
+			</tr>
+			<tr>
+				<th>Proteins</th>
+				<td>It contributes to the development and growth of hormones and haemoglobin in the blood, both of which are essential for those involved in sport or regular physical activity. Protein is necessary for the growth and repair of body tissues. It is also a relatively minor source of energy (10%).</td>
+				<td>Meat, Fish, Eggs, Milk, Cheese, Cereals, Nuts.</td>
+			</tr>
+			<tr>
+				<th>Fats</th>
+				<td>There are many forms of fat in the body and it supplies around 70% of our energy requirements. Fat supplies energy (calories) that can either be used immediately or stored for future use. Although fat is the body’s preferred energy source, it also uses energy in the form of stored carbohydrate (glycogen) for intensive burst of energy. If we consume an excessive amount of fat, it is stored in the body tissues and causes us to become overweight. In order to avoid this, dieticians recommend that we should not consume more than ⅓<sup>rd</sup> of our daily nutritional needs in the form of fat.</td>
+				<td><p>Saturated – meat, burgers, sausages, butter, cheese.</p>
+				<p><b>Hydrogenated</b> – margarine, biscuits, cakes, puddings, chocolate.</p>
+				<p><b>Polyunsaturated / Omega 6</b> – vegetable oils, nuts, seeds</p>
+				<p><b>Omega 3</b> – Oily fish, walnuts, soya beans, sweet potatoes</p>
+				<p><b>Monounsaturated</b> – Olive oil, olives, avocados, nuts, seeds, rapeseed oil</p></td>
+			</tr>
+			<tr>
+				<th>Fibre</th>
+				<td>Dietary fibre comprises the edible parts of plants that are not broken down and absorbed in the small intestine. It does not contain any nutrients. It therefore adds bulk to our food without adding extra kilojoules. Fibre regulates the digestive system.</td>
+				<td>Whole-grain and high-fibre breakfast cereals and bread, fruit and vegetables.</td>
+			</tr>
+			<tr>
+				<th>Minerals</th>
+				<td>Minerals are required by the body for a variety of functions including the formation of bones & teeth, as essential constituents of body fluids & tissues, components of enzyme systems, and nerve function.</td>
+				<td><p><b>Calcium for bones and teeth</b> – milk, cheese, dairy products.</p>
+				<p><b>Magnesium for energy metabolism</b> – dark green leafy vegetables, grains and nuts.</p>
+				<p><b>Sodium for regulating body fluids</b> - salted foods, crisps, canned foods.</p>
+				<p><b>Potassium for water and electrolyte balance</b> – dried fruits, bananas, berries, veg, milk.</p>
+				<p><b>Iron for formation of haemoglobin/oxygen transport</b> – spinach, dark green veg, liver, red meat, nuts, peas</p>
+				<p><b>Iodine for hormone formation</b> – salt water fish, milk.</p></td>
+			</tr>
+			<tr>
+				<th>Vitamins</th>
+				<td><p>Vitamins are chemical compounds found in the food we eat. Our bodies cannot make vitamins so must take them from our food. Vitamins perform the following functions: aiding growth, increasing resistance to infection, regulating some body functions such as good vision, and helping the metabolism of certain foods.</p> 
+				<p>There are two main groups of Vitamins:</p>
+				<ol>
+					<li><b>FAT Soluble Vitamins</b> – Vitamins A, D, & K, they can be stored in our body.</li>
+					<li><b>WATER Soluble Vitamins</b> – Vitamins C & B, They cannot be stored in the body.</li>
+				</ol></td>
+				<td><p>Vitamin A – Liver, whole milk, cheese, butter, carrots, leafy veg.</p>
+				<p><b>Vitamin D</b> – Oily fish, eggs, butter, and meat.</p>
+				<p><b>Vitamin K</b> – most plant and animal sources, also made by bacteria in the gut.</p>
+				<p><b>Vitamin C</b> – plant sources, fresh milk, liver.</p>
+				<p><b>Vitamin B1</b> – Whole grains, nuts, meat.</p>
+				<p><b>Vitamin B2</b> – milk, eggs, breakfast cereals, liver, green veg.</p>
+				<p><b>Niacin</b> – meat.</p>
+				<p><b>Vitamin B6</b> – beef, fish, poultry, eggs, whole grains, some veg.</p>
+				<p><b>Vitamin B12</b> – milk, meat, eggs.</p></td>
+			</tr>
+			<tr>
+				<th>Water</th>
+				<td>Water makes up 70% of the human body. It is essential for the correct functioning of virtually all living cells. Water has many functions: it provides the medium in which most reactions in the body occur, it acts as a lubricant for joints and eyes, and it helps regulate body temperature. The amount of water we drink varies from person to person, depending on age, time of year, climatic conditions, diet, the amount of physical activity we do.  Dehydration is common amongst athletes, especially in hot climates, or at altitude. As little as a 2% loss of bodyweight can result in impaired responses and performance. Water replacement is essential before, during and after exercise.</td>
+				<td><p>Tap water is suitable for replacing lost fluid following mild or moderate exercise.</p>
+				<p>Isotonic drinks are more suitable after vigorous or prolonged exercise.</p></td>
+			</tr>
+		</tbody>
+	</table>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" style="padding:.5em;">
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
+	</div><!-- /footer -->
+</div><!-- /subpage 2 -->
 
 <!-- !Start of thirteenth page: #coreconditioningcorestability -->
 <div data-role="page" id="coreconditioningcorestability" data-add-back-btn="true">
@@ -1474,7 +1721,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen -->
 
@@ -1539,7 +1786,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen.2 -->
 
@@ -1573,7 +1820,7 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page thirteen.3 -->
 
@@ -1589,6 +1836,10 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	<p><i>Answer: Interval training.</i> It doesn’t matter what you do, run, row, or jog on the spot. If you do these exercises at FULL pace (after a warm up) for 20 seconds, then have a 40 second rest, repeating this for up to 5 minutes, it will burn a huge amount of calories. The good thing about this type of training is that your metabolism is given a jump-start so it keeps burning calories for hours after you have finished.</p>
 	<h4>I want a fast fitness workout…</h4>
 	<p><i>Answer: Crossfit training.</i> This type of training focuses on strength and endurance training and is scalable to your own fitness and ability level. It also burns lots of calories. For example, a favourite of mine is to do 5 pull-ups, 10 push-ups then 15 bodyweight squats, one after the other, no rest. Each time you complete this its one rep. The idea is that you do as many reps as you can in 10 minutes. If you can’t do the pull-ups then swap them for something like bench-dips or anything you can do.</p>
+	<div class="ui-grid-a">
+		<div class="ui-block-a"><p>Here are a few crossfit routines:</p></div>
+		<div class="ui-block-b"><a href="#crossfitroutines" data-role="button" data-rel="dialog" data-theme="f" data-transition="slideup" data-icon="bars">Crossfit Routines</a></div>
+	</div><!-- /grid-a -->
 	<h4>How do I lose weight?</h4>
 	<p><i>Answer: Eat sensibly, increase your activity.</i> We all know when the food we eat is a ‘treat’ or something that’s ‘clean’. The difference between the two is our own motivation. If we have a goal or a beach holiday coming up its much easier to be strict with what we eat. The way I look at it is this; its MUCH easier to stay in shape than to GET in shape. Maintenance is the key to a healthy weight, once you get there. Fast answer; walk briskly when you walk, jog up the stairs, bike instead of getting a lift, say no to the second helping, and yes just once a week to treats… you get the picture.</p>
 	<p>So try crossfit and interval training as faster ways to increase your activity. If this is too intense then start with 10 minutes on the cross-trainer or bike. Get into the habit of doing this and you will see a difference in your health.</p>
@@ -1600,26 +1851,244 @@ There is no doubt that time spent on warming up and cooling down will improve an
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page fourteen -->
 
-<!-- !Start of fifteenth page: #blank -->
-<div data-role="page" id="blank" data-add-back-btn="true">
+<!-- !Start of subpage 1: #crossfitroutines (for fourteenth page: #howdoi) -->
+<div data-role="page" id="crossfitroutines">
 
-	<div data-role="header"><h1>blank</h1></div>
+	<div data-role="header" data-theme="e"><h1>Crossfit Routines</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	
+	<div data-role="content" data-theme="d">
+		
+	<table data-role="table" id="nutritionclassificationtable" data-mode="reflow" class="ui-responsive table-stroke">
+		<thead>
+			<tr>
+				<th data-priority="1"></th>
+				<th data-priority="2"></th>
+				<th data-priority="3"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Angie</th>
+				<td>
+					<ul>
+						<li>100 Pull-ups</li>
+						<li>100 Push-ups</li>
+						<li>100 Sit-ups</li>
+						<li>100 Squats</li>
+					</ul>
+				</td>
+				<td>For Time. Complete all reps of each exercise before moving to the next.</td>
+			</tr>
+			<tr>
+				<th>Barbara</th>
+				<td>
+					<ul>
+						<li>20 Pull-ups</li>
+						<li>30 Push-ups</li>
+						<li>40 Sit-ups</li>
+						<li>50 Squats</li>
+					</ul>
+					<p>Rest precisely three minutes between each round.</p>
+				</td>
+				<td>5 rounds, time each round.</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>Chelsea
+					<ul>
+						<li>5 Pull-ups</li>
+						<li>10 Push-ups</li>
+						<li>15 Squats</li>
+					</ul>
+				</td>
+				<td>Each min on the min for 30 min.</td>
+			</tr>
+			<tr>
+				<th>Cindy</th>
+				<td>
+					<ul>
+						<li>5 Pull-ups</li>
+						<li>10 Push-ups</li>
+						<li>15 Squats</li>
+					</ul>
+				</td>
+				<td>As many rounds as possible in 20 min.</td>
+			</tr>
+			<tr>
+				<th>Fran</th>
+				<td>
+					<ul>
+						<li>Thruster 95 lbs</li>
+						<li>Pull-ups</li>
+					</ul>
+				</td>
+				<td>21-15-9 reps, for time.</td>
+			</tr>
+			<tr>
+				<th>Karen</th>
+				<td>
+					<ul>
+						<li>Wall-ball 150 shots</li>
+					</ul>
+				</td>
+				<td>For time.</td>
+			</tr>
+			<tr>
+				<th>Nancy</th>
+				<td>
+					<ul>
+						<li>400 meter run</li>
+						<li>Overhead squat 95 lbs x 15</li>
+					</ul>
+				</td>
+				<td>5 rounds for time.</td>
+			</tr>
+			<tr>
+				<th>Kelly</th>
+				<td>
+					<ul>
+						<li>Run 400 meters</li>
+						<li>30 box jump, 24 inch box</li>
+						<li>30 Wall ball shots, 20 pound ball</li>
+					</ul>
+				</td>
+				<td>Five rounds for time.</td>
+			</tr>
+			<tr>
+				<th>Nicole</th>
+				<td>
+					<ul>
+						<li>Run 400 meters</li>
+						<li>Max rep Pull-ups</li>
+					</ul>
+				</td>
+				<td>As many rounds as possible in 20 minutes.</td>
+			</tr>
+			<tr>
+				<th>TDA 5</th>
+				<td>
+					<p>Five rounds of:</p>
+					<ul>
+						<li>30 push-ups</li>
+						<li>40 sit-ups</li>
+						<li>50 Air Squats</li>
+					</ul>
+				</td>
+				<td>For time.</td>
+			</tr>
+			<tr>
+				<th>Crossfit 25</th>
+				<td>
+					<ul>
+						<li>Sprint 100M</li>
+						<li>25 push-ups</li>
+						<li>Sprint 100M</li>
+						<li>25 crunches</li>
+						<li>Sprint 100M</li>
+						<li>25 air Squats</li>
+						<li>Sprint 100</li>
+						<li>25 burpees</li>
+					</ul>
+				</td>
+				<td>Three rounds for time.</td>
+			</tr>
+			<tr>
+				<th>RSP</th>
+				<td>
+					<ul>
+					<li>Run ½ mile (1 lap of back field)</li>
+					<li>100 Air Squats</li>
+					<li>50 push-ups</li>
+					<li>Run ½ mile</li>
+					</ul>
+				</td>
+				<td>For time.</td>
+			</tr>
+			<tr>
+				<th>Filthy Fifty</th>
+				<td>
+					<ul>
+						<li>50 push-up</li>
+						<li>50 squats</li>
+						<li>50 crunches</li>
+						<li>50 lunges</li>
+						<li>50 burpees</li>
+					</ul>
+				</td>
+				<td>For time.</td>
+			</tr>
+			<tr>
+				<th>Ten-minute Challenge</th>
+				<td>
+					<p><i>One</i> of the following:</p>
+					<ul>						
+						<li>Max push-ups</li>
+						<li>Max Pull-ups</li>
+						<li>Air Squats</li>
+						<li>Burpees</li>
+					</ul>
+				</td>
+				<td>Record score.</td>
+			</tr>
+			<tr>
+				<th>10-10-10</th>
+				<td>
+					<p>10 push-ups, 10-crunches, 10 air squats – 10 rounds of.</p> 
+					<p>Set 10 cones, 10M apart, do 1st round at start cone then sprint to the next cone. Repeat. Sprint back from last cone.</p>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Burpees for time</th>
+				<td>
+					<ul>
+						<li>100 burpees</li>
+					</ul>
+				</td>
+				<td>For time.</td>
+			</tr>
+
+		</tbody>
+	</table>
+	
+	<p><a href="#resistancetrainingfrequency" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	
+	</div>
+
+</div><!-- /subpage 1 -->
+
+<!-- !Start of fifteenth page: #hfinformation -->
+<div data-role="page" id="hfinformation" data-add-back-btn="true">
+
+	<div data-role="header"><h1>H&amp;F Info</h1></div>
 
 	<div data-role="content">
 
-	<!-- Content Paragraph 1 -->
-	<p>
-
-	</p>
-
+	<!-- Content 1 -->
+	<h4>Welcome</h4>
+	
+	<p>Welcome to the TDA Health & Fitness mini-site. Here you will find information on the main aspects of Health and Fitness along with other resources. If you can't find what you want on here, or require further information, please e-mail Mr Hoffmann with suggestions or ideas.</p>
+	<p>Before you start on ANY fitness training program, remember: if you have any injuries, medical conditions or are not sure about what to do, ask a member of staff or check with your doctor that it's fine for you to train.</p>
+	<p>Warm-ups. You HAVE to do them, read the WARM-UP page first and INCLUDE one with every workout, run, row, team game, individual event. Make it a HABIT and it will go along way to help you stay injury-free.</p>
+	
+	<h4>Acknowledgements</h4>
+	
+	<ul data-role="listview">
+    	<li>‘G-Force’, the ultimate guide to you best body ever – Gunnar Peterson</li>
+    	<li>‘ABSolution’ – Shawn Phillips</li>
+    	<li>‘Mind Games’ – Jeff Grout & Sarah Perrin</li>
+    </ul>
+    <br />
+    <p>Some information also provided by Mr Hoffmann.</p>
+    
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d" style="padding:.5em;">
-		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="i">Back</a>
+		<a href="#" style="margin-left:auto;margin-right:auto;width:70%;" data-rel="back" data-role="button" data-iconpos="left" data-inline="false" data-icon="arrow-l" data-theme="l">Back</a>
 	</div><!-- /footer -->
 </div><!-- /page fifteen -->
 
