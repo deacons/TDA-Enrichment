@@ -630,8 +630,9 @@
 					"-weak_framework",
 					CoreMedia,
 					"-weak-lSystem",
-					"-all_load",
-					"-Obj-C",
+					"-force_load",
+					"${TARGET_BUILD_DIR}/libCordova.a",
+					"-ObjC",
 				);
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -675,8 +676,9 @@
 					"-weak_framework",
 					CoreMedia,
 					"-weak-lSystem",
-					"-all_load",
-					"-Obj-C",
+					"-force_load",
+					"${TARGET_BUILD_DIR}/libCordova.a",
+					"-ObjC",
 				);
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
