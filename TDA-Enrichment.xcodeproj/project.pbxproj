@@ -23,6 +23,7 @@
 		17AEC081170F49F20082C85D /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AEC07B170F49F20082C85D /* ChildBrowserCommand.m */; };
 		17AEC082170F49F20082C85D /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AEC07D170F49F20082C85D /* ChildBrowserViewController.m */; };
 		17AEC083170F49F20082C85D /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AEC07E170F49F20082C85D /* ChildBrowserViewController.xib */; };
+		17D63FA41792039300070DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17D63FA31792039300070DF4 /* Images.xcassets */; };
 		17E2DE2A1721B180006E3762 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		17E2DE2C1721B1CD006E3762 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E2DE2B1721B1CD006E3762 /* AssetsLibrary.framework */; };
 		17E5C06E177CAE8E00CC3072 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E5C06D177CAE8E00CC3072 /* ImageIO.framework */; };
@@ -89,6 +90,7 @@
 		17AEC07C170F49F20082C85D /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserViewController.h; sourceTree = "<group>"; };
 		17AEC07D170F49F20082C85D /* ChildBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserViewController.m; sourceTree = "<group>"; };
 		17AEC07E170F49F20082C85D /* ChildBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildBrowserViewController.xib; sourceTree = "<group>"; };
+		17D63FA31792039300070DF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "TDA-Enrichment/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		17E2DE2B1721B1CD006E3762 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		17E5C06D177CAE8E00CC3072 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		17E9968916A3F8CE003F3875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -304,6 +306,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17D63FA31792039300070DF4 /* Images.xcassets */,
 				30A0434214DC770100060A13 /* de.lproj */,
 				30A0434514DC770100060A13 /* se.lproj */,
 				1F766FDB13BBADB100FB74C0 /* en.lproj */,
@@ -462,6 +465,7 @@
 				171C1E6116B7057700976A21 /* Icon.png in Resources */,
 				171C1E6216B7057700976A21 /* Icon@2x.png in Resources */,
 				171C1E6516B7057E00976A21 /* Icon-iPad.png in Resources */,
+				17D63FA41792039300070DF4 /* Images.xcassets in Resources */,
 				171C1E6616B7057E00976A21 /* Icon-iPad@2x.png in Resources */,
 				17AEC07F170F49F20082C85D /* ChildBrowser.bundle in Resources */,
 				17AEC083170F49F20082C85D /* ChildBrowserViewController.xib in Resources */,
@@ -550,6 +554,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nigel Garside (HES2HR66F6)";
 				COPY_PHASE_STRIP = NO;
@@ -575,6 +581,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: N GARSIDE";
 				COPY_PHASE_STRIP = YES;
