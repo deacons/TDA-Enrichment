@@ -1,66 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.georgegarside.tda-enrichment"
-        versionCode="1" 
-        version   = "1.0.0">
-
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.georgegarside.tda-enrichment" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TDA Enrichment</name>
-
     <description>
-        Enrichment app for TDA
+        Thomas Deacon Academy Sports Enrichment App
     </description>
-
-    <author href="http://georgegarside.x10.bz/" email="grg.garside@gmail.com">
-        George Garside 
+    <author email="grg.garside@gmail.com" href="http://georgegarside.x10.bz">
+        George Garside
     </author>
-    
-    <preference name="phonegap-version" value="2.2.0" />
-    
-    <preference name="orientation" value="portrait" />
-    
-    <preference name="target-device" value="handset" />
-    
-    <preference name="fullscreen" value="false" />
-    
+    <access origin="*.testflightapp.com" />
+    <access origin="*.georgegarside.x10.bz" />
+    <access origin="*.thomasdeaconacademy.com" />
+    <access origin="*.thomasdeaconacademy.peterborough.sch.uk" />
+    <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
-    
-    <preference name="prerendered-icon" value="true" />
-    
-    <preference name="ios-statusbarstyle" value="black-opaque" />
-    
-    <preference name="detect-data-types" value="true" />
-    
-    <preference name="show-splash-screen-spinner" value="true" />
-    
-    <icon src="Icon.png" />
-    
-    <icon src="Icon@2x.png" gap:platform="ios" width="114" height="114" />
-    
-    <icon src="Icon-iPad@2x.png" gap:platform="ios" width="144" height="144" />
-    
-    <icon src="Icon-iPad" gap:platform="ios" width="72" height="72" />
-    
-    <icon src="androidicons/ldpi.png" gap:platform="android" gap:density="ldpi" />
-    
-    <icon src="androidicons/mdpi.png" gap:platform="android" gap:density="mdpi" />
-    
-    <icon src="androidicons/hdpi.png" gap:platform="android" gap:density="hdpi" />
-    
-    <icon src="androidicons/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    
-    <gap:splash src="Default.png" />
-    
-    <gap:splash src="Default.png" width="320" height="480" />
-    
-    <gap:splash src="Default@2x.png" width="640" height="960" />
-    
-    <gap:splash src="Default-568h@2x.png" width="640" height="1136" />
-    
-    <preference name="permissions" value="none"/>
-    
-    <access origin="http://phonegap.com" subdomains="true" />
-    
-    <access origin="http://testflightapp.com" subdomains="true" />
-    
-    </widget>
+</widget>
