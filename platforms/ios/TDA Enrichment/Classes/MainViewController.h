@@ -21,8 +21,8 @@
 //  MainViewController.h
 //  TDA Enrichment
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+//  Created by George Garside on 05/08/2013.
+//  Copyright George Garside 2013. All rights reserved.
 //
 
 #import <Cordova/CDVViewController.h>
