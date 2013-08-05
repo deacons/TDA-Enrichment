@@ -1,0 +1,107 @@
+objc[9891]: Class AXEmojiUtilities is implemented in both /Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-08-03 17:19:29.435 TDA Enrichment[9891:80b] Cannot find executable for CFBundle 0xbb953b0 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-08-03 17:19:29.456 TDA Enrichment[9891:80b] Cannot find executable for CFBundle 0xbbd8ff0 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-08-03 17:19:29.463 TDA Enrichment[9891:80b] Cannot find executable for CFBundle 0xb6bc0c0 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-08-03 17:19:29.519 TDA Enrichment[9891:80b] Multi-tasking -> Device: YES, App: YES
+2013-08-03 17:19:29.546 TDA Enrichment[9891:80b] Fix applied for database locations?: YES
+2013-08-03 17:19:29.858 TDA Enrichment[9891:80b] Resetting plugins due to page load.
+2013-08-03 17:19:30.253 TDA Enrichment[9891:80b] Finished load of: file:///Users/grgarside/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/703E0871-B866-40A6-BF0C-A0FE4AA1D5C7/TDA%20Enrichment.app/www/index.html
+objc[15929]: Class AXEmojiUtilities is implemented in both /Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-08-05 16:17:27.235 TDA Enrichment[15929:80b] Cannot find executable for CFBundle 0xbd6d930 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-08-05 16:17:27.265 TDA Enrichment[15929:80b] Cannot find executable for CFBundle 0xbd76a60 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-08-05 16:17:27.272 TDA Enrichment[15929:80b] Cannot find executable for CFBundle 0xbb75650 </Applications/Xcode5-DP3.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-08-05 16:17:27.343 TDA Enrichment[15929:80b] Multi-tasking -> Device: YES, App: YES
+2013-08-05 16:17:27.764 TDA Enrichment[15929:80b] Resetting plugins due to page load.
+2013-08-05 16:17:28.099 TDA Enrichment[15929:80b] Finished load of: file:///Users/grgarside/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/703E0871-B866-40A6-BF0C-A0FE4AA1D5C7/TDA%20Enrichment.app/www/index.html
+2013-08-05 16:18:03.132 TDA Enrichment[15929:80b] ERROR whitelist rejection: url='http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg'
+2013-08-05 16:18:04.794 TDA Enrichment[15929:80b] ERROR whitelist rejection: url='http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg'
+2013-08-05 16:18:06.585 TDA Enrichment[15929:80b] ERROR whitelist rejection: url='http://www.danone.co.uk/SiteImages/Assets/0/GDA_545px.jpg'
+Terminating in response to SpringBoard's termination.
+objc[16635]: Class AXEmojiUtilities is implemented in both /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-08-05 16:21:19.407 TDA Enrichment[16635:80b] Cannot find executable for CFBundle 0xba46c50 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-08-05 16:21:19.417 TDA Enrichment[16635:80b] Cannot find executable for CFBundle 0xba5df30 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-08-05 16:21:19.439 TDA Enrichment[16635:80b] Cannot find executable for CFBundle 0xb93f870 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-08-05 16:21:19.487 TDA Enrichment[16635:80b] Multi-tasking -> Device: YES, App: YES
+2013-08-05 16:21:19.992 TDA Enrichment[16635:80b] Resetting plugins due to page load.
+2013-08-05 16:21:20.367 TDA Enrichment[16635:80b] Finished load of: file:///Users/grgarside/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/703E0871-B866-40A6-BF0C-A0FE4AA1D5C7/TDA%20Enrichment.app/www/index.html
+2013-08-05 16:21:20.389 TDA Enrichment[16635:80b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:21:20.390 TDA Enrichment[16635:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "Device146970",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+objc[17111]: Class AXEmojiUtilities is implemented in both /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-08-05 16:23:04.930 TDA Enrichment[17111:80b] Cannot find executable for CFBundle 0xba568b0 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-08-05 16:23:04.941 TDA Enrichment[17111:80b] Cannot find executable for CFBundle 0xb67b870 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-08-05 16:23:04.957 TDA Enrichment[17111:80b] Cannot find executable for CFBundle 0xb85eb40 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-08-05 16:23:05.037 TDA Enrichment[17111:80b] Multi-tasking -> Device: YES, App: YES
+2013-08-05 16:23:05.182 TDA Enrichment[17111:80b] Resetting plugins due to page load.
+2013-08-05 16:23:05.449 TDA Enrichment[17111:80b] Finished load of: file:///Users/grgarside/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/703E0871-B866-40A6-BF0C-A0FE4AA1D5C7/TDA%20Enrichment.app/www/index.html
+2013-08-05 16:23:05.498 TDA Enrichment[17111:80b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:23:05.498 TDA Enrichment[17111:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "Device1517099545",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2013-08-05 16:23:05.499 TDA Enrichment[17111:80b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:23:05.499 TDA Enrichment[17111:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "NetworkStatus1517099546",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+objc[18544]: Class AXEmojiUtilities is implemented in both /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-08-05 16:41:36.220 TDA Enrichment[18544:80b] Cannot find executable for CFBundle 0xb57e580 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-08-05 16:41:36.244 TDA Enrichment[18544:80b] Cannot find executable for CFBundle 0xb884190 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-08-05 16:41:36.250 TDA Enrichment[18544:80b] Cannot find executable for CFBundle 0xb48ea30 </Applications/Xcode5-DP4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-08-05 16:41:36.325 TDA Enrichment[18544:80b] Multi-tasking -> Device: YES, App: YES
+2013-08-05 16:41:36.838 TDA Enrichment[18544:80b] Resetting plugins due to page load.
+2013-08-05 16:41:37.310 TDA Enrichment[18544:80b] Finished load of: file:///Users/grgarside/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/703E0871-B866-40A6-BF0C-A0FE4AA1D5C7/TDA%20Enrichment.app/www/index.html
+2013-08-05 16:41:37.361 TDA Enrichment[18544:80b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:41:37.361 TDA Enrichment[18544:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "Device843857404",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2013-08-05 16:41:37.361 TDA Enrichment[18544:80b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:41:37.362 TDA Enrichment[18544:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "NetworkStatus843857405",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2013-08-05 16:44:31.519 TDA Enrichment[18544:80b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:44:31.519 TDA Enrichment[18544:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "InAppBrowser843857406",
+  "InAppBrowser",
+  "open",
+  [
+    "http:\/\/www.danone.co.uk\/SiteImages\/Assets\/0\/GDA_545px.jpg",
+    "_blank",
+    "location=yes"
+  ]
+]
+2013-08-05 16:44:35.389 TDA Enrichment[18544:80b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-08-05 16:44:35.390 TDA Enrichment[18544:80b] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "InAppBrowser843857407",
+  "InAppBrowser",
+  "open",
+  [
+    "http:\/\/www.danone.co.uk\/SiteImages\/Assets\/0\/GDA_545px.jpg",
+    "_blank",
+    "location=yes"
+  ]
+]
