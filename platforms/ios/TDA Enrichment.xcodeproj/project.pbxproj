@@ -14,6 +14,7 @@
 		173C010417B002D20070D4B0 /* iPhone Spotlight Non-Retina 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FC17B002D10070D4B0 /* iPhone Spotlight Non-Retina 29.png */; };
 		173C010517B002D20070D4B0 /* iPhone Spotlight Retina 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FD17B002D10070D4B0 /* iPhone Spotlight Retina 58.png */; };
 		173C010617B002D20070D4B0 /* iPhone Spotlight Retina 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FE17B002D10070D4B0 /* iPhone Spotlight Retina 80.png */; };
+		173E61C617B01F2500C4891F /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 173E61C517B01F2500C4891F /* config.xml */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -80,6 +81,7 @@
 		173C00FC17B002D10070D4B0 /* iPhone Spotlight Non-Retina 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Non-Retina 29.png"; sourceTree = "<group>"; };
 		173C00FD17B002D10070D4B0 /* iPhone Spotlight Retina 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Retina 58.png"; sourceTree = "<group>"; };
 		173C00FE17B002D10070D4B0 /* iPhone Spotlight Retina 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Retina 80.png"; sourceTree = "<group>"; };
+		173E61C517B01F2500C4891F /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		1A881C0533704F01AB519671 /* CDVFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = org.apache.cordova.core.file/CDVFile.h; sourceTree = "<group>"; };
 		1C3256E329FF4599A983F084 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.core.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +223,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				173E61C517B01F2500C4891F /* config.xml */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -438,6 +441,7 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				173C00FF17B002D20070D4B0 /* iPhone Non-Retina 57.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
+				173E61C617B01F2500C4891F /* config.xml in Resources */,
 				173C010017B002D20070D4B0 /* iPhone Retina 114.png in Resources */,
 				173C010617B002D20070D4B0 /* iPhone Spotlight Retina 80.png in Resources */,
 				173C010117B002D20070D4B0 /* iPhone Retina 120.png in Resources */,
