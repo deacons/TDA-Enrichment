@@ -1,15 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.helloCordova" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
-    <name>Hello Cordova</name>
+<widget id="com.georgegarside.tda-enrichment" version="1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TDA Enrichment</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Thomas Deacon Academy Sports Enrichment App
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="grg.garside@gmail.com" href="http://georgegarside.x10.bz">
+        George Garside
     </author>
-    <content src="index.html" />
-    <feature name="LocalStorage">
-        <param name="ios-package" value="CDVLocalStorage" />
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
     </feature>
     <access origin="*.testflightapp.com" />
     <access origin="*.georgegarside.x10.bz" />
