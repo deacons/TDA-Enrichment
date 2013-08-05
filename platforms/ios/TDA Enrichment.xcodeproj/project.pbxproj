@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00A806B350974C4B9F4421CF /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3314BFFEAB9541E0B2264A09 /* CDVSplashScreen.m */; };
+		173C00FF17B002D20070D4B0 /* iPhone Non-Retina 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00F717B002D10070D4B0 /* iPhone Non-Retina 57.png */; };
+		173C010017B002D20070D4B0 /* iPhone Retina 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00F817B002D10070D4B0 /* iPhone Retina 114.png */; };
+		173C010117B002D20070D4B0 /* iPhone Retina 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00F917B002D10070D4B0 /* iPhone Retina 120.png */; };
+		173C010417B002D20070D4B0 /* iPhone Spotlight Non-Retina 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FC17B002D10070D4B0 /* iPhone Spotlight Non-Retina 29.png */; };
+		173C010517B002D20070D4B0 /* iPhone Spotlight Retina 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FD17B002D10070D4B0 /* iPhone Spotlight Retina 58.png */; };
+		173C010617B002D20070D4B0 /* iPhone Spotlight Retina 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C00FE17B002D10070D4B0 /* iPhone Spotlight Retina 80.png */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -35,13 +41,9 @@
 		3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */; };
 		3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */; };
 		3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBC154F3926009F9C59 /* Default~iphone.png */; };
-		308D05371370CCF300D202BF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
-		308D05381370CCF300D202BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
-		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
 		30A0434814DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		52B3F0B7CB964FE5992CC371 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 25096F73CA1648F684FC80DE /* CDVFile.m */; };
 		5A7D017C165C4ABB9C0DD883 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B42E83A134848E2B4D2E841 /* CDVConnection.m */; };
 		5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
@@ -72,6 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		173C00F717B002D10070D4B0 /* iPhone Non-Retina 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Non-Retina 57.png"; sourceTree = "<group>"; };
+		173C00F817B002D10070D4B0 /* iPhone Retina 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Retina 114.png"; sourceTree = "<group>"; };
+		173C00F917B002D10070D4B0 /* iPhone Retina 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Retina 120.png"; sourceTree = "<group>"; };
+		173C00FC17B002D10070D4B0 /* iPhone Spotlight Non-Retina 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Non-Retina 29.png"; sourceTree = "<group>"; };
+		173C00FD17B002D10070D4B0 /* iPhone Spotlight Retina 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Retina 58.png"; sourceTree = "<group>"; };
+		173C00FE17B002D10070D4B0 /* iPhone Spotlight Retina 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Spotlight Retina 80.png"; sourceTree = "<group>"; };
 		1A881C0533704F01AB519671 /* CDVFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = org.apache.cordova.core.file/CDVFile.h; sourceTree = "<group>"; };
 		1C3256E329FF4599A983F084 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.core.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,13 +115,9 @@
 		3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
 		3088BBBC154F3926009F9C59 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
-		308D052E1370CCF300D202BF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
-		308D052F1370CCF300D202BF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		308D05301370CCF300D202BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		30A0434414DC770100060A13 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizable.strings; sourceTree = "<group>"; };
 		30A0434714DC770100060A13 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Localizable.strings; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TDA Enrichment-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TDA Enrichment-Prefix.pch"; sourceTree = "<group>"; };
 		3314BFFEAB9541E0B2264A09 /* CDVSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = org.apache.cordova.core.splashscreen/CDVSplashScreen.m; sourceTree = "<group>"; };
 		39268F4727FB46A5A1F1B191 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.core.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
@@ -176,6 +180,20 @@
 			path = "TDA Enrichment/Classes";
 			sourceTree = SOURCE_ROOT;
 		};
+		173C010717B002D60070D4B0 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				173C00F717B002D10070D4B0 /* iPhone Non-Retina 57.png */,
+				173C00F817B002D10070D4B0 /* iPhone Retina 114.png */,
+				173C00F917B002D10070D4B0 /* iPhone Retina 120.png */,
+				173C00FC17B002D10070D4B0 /* iPhone Spotlight Non-Retina 29.png */,
+				173C00FD17B002D10070D4B0 /* iPhone Spotlight Retina 58.png */,
+				173C00FE17B002D10070D4B0 /* iPhone Spotlight Retina 80.png */,
+			);
+			name = icons;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,11 +246,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				173C010717B002D60070D4B0 /* icons */,
 				30A0434214DC770100060A13 /* de.lproj */,
 				30A0434514DC770100060A13 /* se.lproj */,
 				1F766FDB13BBADB100FB74C0 /* en.lproj */,
 				1F766FDE13BBADB100FB74C0 /* es.lproj */,
-				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* TDA Enrichment-Info.plist */,
 			);
@@ -296,17 +314,6 @@
 			name = Plugins;
 			path = "TDA Enrichment/Plugins";
 			sourceTree = SOURCE_ROOT;
-		};
-		308D052D1370CCF300D202BF /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				30FC414816E50CA1004E6F35 /* icon-72@2x.png */,
-				308D052E1370CCF300D202BF /* icon-72.png */,
-				308D052F1370CCF300D202BF /* icon.png */,
-				308D05301370CCF300D202BF /* icon@2x.png */,
-			);
-			path = icons;
-			sourceTree = "<group>";
 		};
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
@@ -417,9 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308D05371370CCF300D202BF /* icon-72.png in Resources */,
-				308D05381370CCF300D202BF /* icon.png in Resources */,
-				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
+				173C010417B002D20070D4B0 /* iPhone Spotlight Non-Retina 29.png in Resources */,
 				1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */,
 				1F766FE213BBADB100FB74C0 /* Localizable.strings in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
@@ -427,12 +432,16 @@
 				30A0434914DC770100060A13 /* Localizable.strings in Resources */,
 				3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */,
 				3088BBBE154F3926009F9C59 /* Default-Landscape~ipad.png in Resources */,
+				173C010517B002D20070D4B0 /* iPhone Spotlight Retina 58.png in Resources */,
 				3088BBBF154F3926009F9C59 /* Default-Portrait@2x~ipad.png in Resources */,
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
+				173C00FF17B002D20070D4B0 /* iPhone Non-Retina 57.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
+				173C010017B002D20070D4B0 /* iPhone Retina 114.png in Resources */,
+				173C010617B002D20070D4B0 /* iPhone Spotlight Retina 80.png in Resources */,
+				173C010117B002D20070D4B0 /* iPhone Retina 120.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
-				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

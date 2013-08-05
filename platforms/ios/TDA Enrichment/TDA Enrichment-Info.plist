@@ -16,13 +16,17 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon.png</string>
-				<string>icon@2x.png</string>
-				<string>icon-72.png</string>
-				<string>icon-72@2x.png</string>
+				<string>iPhone Spotlight Retina 58</string>
+				<string>iPhone Spotlight Retina 80</string>
+				<string>iPhone Settings Retina 58</string>
+				<string>iPhone Spotlight Non-Retina 29</string>
+				<string>iPhone Settings Non-Retina 29</string>
+				<string>iPhone Retina 120</string>
+				<string>iPhone Retina 114</string>
+				<string>iPhone Non-Retina 57</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
