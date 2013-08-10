@@ -46,7 +46,9 @@
 <!-- !Start of first page: #welcome -->
 <div data-role="page" id="welcome">
 
-	<div data-role="header" style="padding-top:20px"><h1>TDA Enrichment</h1><a href="#popupwelcome" id="welcomeinfobutton" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>TDA Enrichment</h1><a href="#popupwelcome" id="welcomeinfobutton" class="ui-icon-alt" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="info" data-iconpos="notext" data-theme="a" data-transition="pop">Info</a>
 	
 	<script>
 		_kmq.push(['trackClick', 'welcomeinfobutton', 'View Welcome Popup']);
@@ -66,10 +68,10 @@
 	<div data-role="content">
 
 	<ul data-role="listview" data-inset="true" data-divider-theme="b">
-		<li data-role="list-divider" data-theme="k"><h1>Activities &amp; Clubs</h1></li>
-		<li data-role="list-divider" data-theme="l">Big Friday</li>
+		<li data-role="list-divider" data-theme="d"><h1>Activities &amp; Clubs</h1></li>
+		<li data-role="list-divider" data-theme="c">Big Friday</li>
 		<li><a href="#2013-bigfriday-dodgeball" data-transition="flow" class="bigfriday">Dodgeball</a></li>
-		<li data-role="list-divider" data-theme="b">After School<span class="ui-li-count">Terms 1 &amp; 2</span></li>
+		<li data-role="list-divider" data-theme="c">After School<span class="ui-li-count">Terms 1 &amp; 2</span></li>
 		<li><a href="#monday" data-transition="flow" class="timetable" id="mondaybutton">Monday<span class="ui-li-count">11 activities</span></a></li>
 		<li><a href="#tuesday" data-transition="flow" class="timetable" id="tuesdaybutton">Tuesday<span class="ui-li-count">7 activities</span></a></li>
 		<li><a href="#wednesday" data-transition="flow" class="timetable" id="wednesdaybutton">Wednesday<span class="ui-li-count">12 activities</span></a></li>
@@ -78,7 +80,7 @@
 	</ul>
 
 	<ul data-role="listview" data-inset="true" data-divider-theme="b">
-		<li data-role="list-divider" data-theme="k"><h1>Health &amp; Fitness</h1></li>
+		<li data-role="list-divider" data-theme="f"><h1>Health &amp; Fitness</h1></li>
 		<li><a href="#hfinformation" data-transition="flow" class="healthfitness" id="hfinformationbutton">Introduction</a></li>
 		<li><a href="#HOFF5wheels" data-transition="flow" class="healthfitness" id="hoff5wheelsbutton">HOFF's 5 Wheels</a></li>
 		<li><a href="#warmupcooldown" data-transition="flow" class="healthfitness" id="warmupcooldownbutton">Warm-ups and Cool-downs</a></li>
@@ -110,110 +112,99 @@
 <!-- !Start of second page: #monday -->
 <div data-role="page" id="monday" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Monday</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Monday</h1></div>
 
 	<div data-role="content">
 	
-	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+	<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider" data-theme="d">Badminton</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BCH / BHU</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Cricket<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9 &amp; 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BHU / JHI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SHOFF / CTH</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Hockey</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Girls Hockey</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> MYE / RLO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Gold DoE<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Gold DoE<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CMCC / HED</p>
 				<p class="ui-li-desc"><strong>Location:</strong> PE Classroom</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 5:00 - 6:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> ARE / KGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> EFI / MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> RLO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> PTHC</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> RLO / MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:30pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Netball</li>
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> KGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Rugby<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME / AME / CGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SCL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Silver DoE<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Silver DoE<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CMCC / HED</p>
 				<p class="ui-li-desc"><strong>Location:</strong> PE Classroom</p>
@@ -231,15 +222,16 @@
 <!-- !Start of third page: #tuesday -->
 <div data-role="page" id="tuesday" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Tuesday</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Tuesday</h1></div>
 
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Badminton</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BCH / BHU</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
@@ -247,42 +239,37 @@
 			</li>
 -->
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Cricket</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8 &amp; 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BHU / JHI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:00pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SHOFF / RBR / BHU (B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7 &amp; 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 6:00 - 9:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Athletics</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Indoor Athletics</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> EFI / CTH / VTO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
@@ -290,48 +277,42 @@
 			</li>
 -->
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Netball</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> GWI / RBRO (Week A) • RLO (Week B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> VTO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Outdoor Activities<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Outdoor Activities<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CGEL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Off-site</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Rugby<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SCL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Table Tennis<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Table Tennis<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AHO (A) • BHU (B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
@@ -349,159 +330,142 @@
 <!-- !Start of fourth page: #wednesday -->
 <div data-role="page" id="wednesday" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Wednesday</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Wednesday</h1></div>
 
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">A-Level Pract</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">A-Level Pract</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>A-Level</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> EFI / CMCC</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Athletics (Joggers)</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Athletics (Joggers)</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> OMA</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">CCF<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">CCF<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8, 9, 10, 11 &amp; 6th Form</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CTH / CGEL / GWI / CMCC</p>
 				<p class="ui-li-desc"><strong>Location:</strong> CCF HQ</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:15pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Cricket<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BHU / JHI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall (Nets)</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:15pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SCL / AHO / BHU / SWI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Football</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Football</li>
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Girls Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Girls Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> EFI / KGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Gymnastics<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Gymnastics<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> RBRO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Spiral Gyn</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Indoor Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Indoor Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9 &amp; 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> RLO / AHO / MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Perse Hockey<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Perse Hockey<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> MYE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 8:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Netball</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> KGE / KSP</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>6th Form Girls</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AHO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:00 - 12:55pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>6th Form Girls</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AHO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 1:45 - 2:45pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Rugby<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SCL / CGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME / SHO</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>1<sup>st</sup> XV</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AME</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Swimming</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Swimming</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> RBR</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Regional Pool</p>
@@ -520,74 +484,67 @@
 <!-- !Start of fifth page: #thursday -->
 <div data-role="page" id="thursday" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Thursday</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Thursday</h1></div>
 
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SHOFF / CTH / BHU (B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Badminton<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BCH / CGEL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Basketball<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Basketball<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>6th Form</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> IWH / LMA</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:30pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Hockey<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> ARE / KGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> COD / MYE (A) • EFI (B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AHO / RBR</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AHO / RBR</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:30pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Rugby<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 7</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME / AME / CGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI / SCL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
@@ -605,60 +562,55 @@
 <!-- !Start of sixth page: #friday -->
 <div data-role="page" id="friday" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Friday</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Friday</h1></div>
 
 	<div data-role="content">
 	
 	<ul data-role="listview" class="ui-listview">
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Badminton</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Badminton</li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BCH / BHU</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Cricket<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Cricket<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 8</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> BHU</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall (Nets)</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 4:00 - 5:15pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Fitness<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SHOFF / RBR</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Fitness Suite</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Hockey</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Hockey</li>
+			<li><p class="ui-li-aside"><strong>Week A</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:20 - 1:30pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 10</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> CGE</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SCL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Astro</p>
@@ -666,40 +618,35 @@
 			</li>
 -->
 <!--
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Netball</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Netball</li>
+			<li><p class="ui-li-aside"><strong>Week B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Netball Courts</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 12:20 - 1:30pm</p>
 			</li>
 -->
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Rugby<span class="ui-li-count" style="color:orange">NEW!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Rugby<span class="ui-li-count" style="color:red">NEW!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>Year 9</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> SWI / SCL</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> GWI / CTH</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>1<sup>st</sup> XV &amp; Year 11</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> JME / AME</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Field</p>
 				<p class="ui-li-desc"><strong>Time:</strong> 2:45 - 4:00pm</p>
 			</li>
-			<li data-role="list-divider" class="ui-li ui-li-divider ui-bar-b">Trampoline<span class="ui-li-count" style="color:green">UPDATED!</span></li>
-			<li class="ui-li ui-li-static ui-btn-up-c"><p class="ui-li-aside ui-li-desc"><strong>Week A &amp; B</strong></p>
-				<br />
+			<li data-role="list-divider" data-theme="d">Trampoline<span class="ui-li-count" style="color:green">UPDATED!</span></li>
+			<li><p class="ui-li-aside"><strong>Week A &amp; B</strong></p>
 				<p class="ui-li-desc"><strong>All Years</strong></p>
 				<p class="ui-li-desc"><strong>Staff:</strong> AGL / RLO (A) • CGE (B)</p>
 				<p class="ui-li-desc"><strong>Location:</strong> Sports Hall</p>
@@ -717,7 +664,9 @@
 <!-- !Start of seventh page: #2013-bigfriday-dodgeball -->
 <div data-role="page" id="2013-bigfriday-dodgeball" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Dodgeball</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Dodgeball</h1></div>
 
 	<div data-role="content">
 
@@ -792,7 +741,9 @@
 <!-- !Start of eighth page: #HOFF5wheels -->
 <div data-role="page" id="HOFF5wheels" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F HOFF's 5 Wheels</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F HOFF's 5 Wheels</h1></div>
 
 	<div data-role="content">
 
@@ -926,7 +877,9 @@
 <!-- !Start of ninth page: #warmupcooldown -->
 <div data-role="page" id="warmupcooldown" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F Warm-ups &amp; Cool-downs</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F Warm-ups &amp; Cool-downs</h1></div>
 
 	<div data-role="content">
 
@@ -997,7 +950,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of tenth page: #resistancetraining -->
 <div data-role="page" id="resistancetraining" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F Resistance Training</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F Resistance Training</h1></div>
 
 	<div data-role="content">
 
@@ -1071,7 +1026,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 1: #resistancetrainingfrequencyone (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencyone">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F RTF 1/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 1/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -1109,7 +1066,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 2: #resistancetrainingfrequencytwo (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencytwo">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F RTF 2/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 2/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1158,7 +1117,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 3: #resistancetrainingfrequencythree (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingfrequencythree">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F RTF 3/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F RTF 3/wk</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1214,7 +1175,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 4: #resistancetrainingage78 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage78">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y7&amp;8</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y7&amp;8</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -1240,7 +1203,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 5: #resistancetrainingage91 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage91">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 	
@@ -1279,7 +1244,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 6: #resistancetrainingage111213 (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingage111213">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y11,12&amp;13</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y11,12&amp;13</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1318,7 +1285,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 7: #resistancetrainingmuscleglegs (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmuscleglegs">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F MGT Legs</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Legs</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1350,7 +1319,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 8: #resistancetrainingmusclegback (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegback">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F MGT Back</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F MGT Back</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1371,7 +1342,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 9: #resistancetrainingmusclegchest (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegchest">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1391,7 +1364,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 10: #resistancetrainingmusclegshoulders (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegshoulders">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1411,7 +1386,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 11: #resistancetrainingmusclegarms (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingmusclegarms">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>H&amp;F Y9&amp;10</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1435,7 +1412,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 12: #resistancetrainingsupersevenstrength (for tenth page: #resistancetraining) -->
 <div data-role="page" id="resistancetrainingsupersevenstrength">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>Super Seven Strength</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>Super Seven Strength</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 
@@ -1461,7 +1440,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of eleventh page: #aerobictraining -->
 <div data-role="page" id="aerobictraining" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F Aerobic Training</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F Aerobic Training</h1></div>
 
 	<div data-role="content">
 
@@ -1550,7 +1531,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 1: #aerobictrainingtrainingzones (for tenth page: #aerobictraining) -->
 <div data-role="page" id="aerobictrainingtrainingzones">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>Training Zones</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>Training Zones</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 		<a href="#popuptrainingzonespng" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/aerobictraining/trainingzones.png" alt="Training Zones"  style="width:100%;"></a>
@@ -1574,7 +1557,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 2: #aerobictrainingfitnesstesting (for tenth page: #aerobictraining) -->
 <div data-role="page" id="aerobictrainingfitnesstesting">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>Fitness Testing</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>Fitness Testing</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 		<p>This test is designed to measure your cardiovascular endurance</p>
@@ -1611,7 +1596,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of twelth page: #nutrition -->
 <div data-role="page" id="nutrition" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F Nutrition</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F Nutrition</h1></div>
 
 	<div data-role="content">
 
@@ -1666,7 +1653,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 1: #nutritionfoodlabelling -->
 <div data-role="page" id="nutritionfoodlabelling" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Nutrition Food Labelling</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Nutrition Food Labelling</h1></div>
 
 	<div data-role="content">
 
@@ -1749,7 +1738,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 2: #nutritionclassification -->
 <div data-role="page" id="nutritionclassification" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>Nutrition Classification</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>Nutrition Classification</h1></div>
 
 	<div data-role="content">
 
@@ -1834,7 +1825,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of thirteenth page: #coreconditioningcorestability -->
 <div data-role="page" id="coreconditioningcorestability" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F CC Core Stability</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F CC Core Stability</h1></div>
 
 	<div data-role="content">
 
@@ -1882,7 +1875,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of thirteenth.2 page: #coreconditioningexercises -->
 <div data-role="page" id="coreconditioningexercises" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F CC Exercises</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F CC Exercises</h1></div>
 
 	<div data-role="content">
 
@@ -1947,7 +1942,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of thirteenth.3 page: #coreconditioningstaticdynamiccore -->
 <div data-role="page" id="coreconditioningstaticdynamiccore" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F CC Static &amp; Dynamic Core</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F CC Static &amp; Dynamic Core</h1></div>
 
 	<div data-role="content">
 
@@ -1981,7 +1978,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of fourteenth page: #howdoi -->
 <div data-role="page" id="howdoi" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F How do I?</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F How do I?</h1></div>
 
 	<div data-role="content">
 
@@ -2012,7 +2011,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of subpage 1: #crossfitroutines (for fourteenth page: #howdoi) -->
 <div data-role="page" id="crossfitroutines">
 
-	<div data-role="header" style="padding-top:20px" data-theme="e"><h1>Crossfit Routines</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-theme="e"><h1>Crossfit Routines</h1><!-- <a href="#" data-icon="arrow-r" data-theme="b">Next</a> --></div>
 	
 	<div data-role="content" data-theme="d">
 		
@@ -2218,7 +2219,9 @@ There is no doubt that time spent on warming up and cooling down will improve an
 <!-- !Start of fifteenth page: #hfinformation -->
 <div data-role="page" id="hfinformation" data-add-back-btn="true">
 
-	<div data-role="header" style="padding-top:20px"><h1>H&amp;F Info</h1></div>
+	<div class="ui-bar ui-bar-a" style="padding-top:20px"></div>
+
+	<div data-role="header" data-add-back-btn="true" data-theme="e"><h1>H&amp;F Info</h1></div>
 
 	<div data-role="content">
 
