@@ -13,4 +13,5 @@
     <access origin="*.thomasdeaconacademy.peterborough.sch.uk" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <content src="index.html" />
 </widget>
