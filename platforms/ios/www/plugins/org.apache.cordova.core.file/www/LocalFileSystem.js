@@ -1,4 +1,4 @@
-cordova.define("org.apache.cordova.core.file.LocalFileSystem", function(require, exports, module) {/*
+cordova.define("org.apache.cordova.core.file.LocalFileSystem", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -32,4 +32,5 @@ LocalFileSystem.TEMPORARY = 0; //temporary, with no guarantee of persistence
 LocalFileSystem.PERSISTENT = 1; //persistent
 
 module.exports = LocalFileSystem;
+
 });

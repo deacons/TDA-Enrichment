@@ -190,5 +190,17 @@ module.exports = [
             "cordova.logger"
         ]
     }
-]
+];
+module.exports.metadata = 
+// TOP OF METADATA
+{
+    "org.apache.cordova.core.device": "0.1.0",
+    "org.apache.cordova.core.network-information": "0.1.0",
+    "org.apache.cordova.core.file": "0.1.0",
+    "org.apache.cordova.core.file-transfer": "0.1.0",
+    "org.apache.cordova.core.splashscreen": "0.1.0",
+    "org.apache.cordova.core.inappbrowser": "0.1.0",
+    "org.apache.cordova.core.console": "0.1.0"
+}
+// BOTTOM OF METADATA
 });
