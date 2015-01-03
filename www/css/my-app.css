@@ -1,0 +1,18 @@
+.popover {
+    width: 270px;
+}
+
+.content-block ul {
+    padding-left: 25px;
+    list-style: square;
+}
+
+.list-block .content-block ul {
+    padding-left: 25px;
+    list-style: square;
+}
+
+.content-block-inner ul {
+    padding-left: 25px;
+    list-style: square;
+}
