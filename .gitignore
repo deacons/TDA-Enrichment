@@ -10,3 +10,4 @@ build
 xcuserdata/
 *.diff
 Other Resources
+.idea/workspace.xml
