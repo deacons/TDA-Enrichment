@@ -16,3 +16,27 @@
     padding-left: 25px;
     list-style: square;
 }
+
+.collegecolour-tech {
+    color: #c0392b;
+}
+
+.collegecolour-hums {
+    color: #f1c40f;
+}
+
+.collegecolour-science {
+    color: #8e44ad;
+}
+
+.collegecolour-maths {
+    color: #2980b9;
+}
+
+.collegecolour-arts {
+    color: #e67e22;
+}
+
+.collegecolour-comms {
+    color: #27ae60;
+}
