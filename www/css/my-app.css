@@ -21,22 +21,62 @@
     color: #c0392b;
 }
 
+.collegecolour-tech-button {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+}
+
 .collegecolour-hums {
     color: #f1c40f;
+}
+
+.collegecolour-hums-button {
+    background: #f1c40f;
+    color: #fff;
+    border: none;
 }
 
 .collegecolour-science {
     color: #8e44ad;
 }
 
+.collegecolour-science-button {
+    background: #8e44ad;
+    color: #fff;
+    border: none;
+}
+
 .collegecolour-maths {
     color: #2980b9;
+}
+
+.collegecolour-maths-button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
 }
 
 .collegecolour-arts {
     color: #e67e22;
 }
 
+.collegecolour-arts-button {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+}
+
 .collegecolour-comms {
     color: #27ae60;
+}
+
+.collegecolour-comms-button {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+}
+
+.collegebuttonsrow {
+    margin-bottom: 10px;
 }
