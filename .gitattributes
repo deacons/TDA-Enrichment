@@ -1,0 +1,8 @@
+platforms/* linguist-vendored
+www/css/font-awesome.min.css linguist-vendored
+www/css/framework7.css linguist-vendored
+www/css/framework7.min.css linguist-vendored
+www/css/framework7.rtl.css linguist-vendored
+www/css/framework7.rtl.min.css linguist-vendored
+www/css/framework7.themes.css linguist-vendored
+www/css/framework7.themes.min.css linguist-vendored
