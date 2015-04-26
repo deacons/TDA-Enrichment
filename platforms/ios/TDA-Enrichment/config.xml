@@ -19,6 +19,9 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
     <name>TDA-Enrichment</name>
     <description>
         Always have access to Thomas Deacon Academy's Sports Enrichment with the official TDA Enrichment app.
@@ -28,7 +31,4 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="UniversalAnalytics">
-        <param name="ios-package" value="UniversalAnalyticsPlugin" />
-    </feature>
 </widget>
