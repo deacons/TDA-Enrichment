@@ -16,12 +16,12 @@ function onDeviceReady() {
             banner: 'ca-app-pub-9733787518596382/1681312032',
             interstitial: 'ca-app-pub-9733787518596382/2308277237'
         };
+        if (AdMob) AdMob.createBanner ({
+            adId: admobid.banner,
+            position: AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow: true
+        });
     }
-    if (AdMob) AdMob.createBanner ({
-        adId: admobid.banner,
-        position: AdMob.AD_POSITION.BOTTOM_CENTER,
-        autoShow: true
-    });
 }
 
 // Initialize your app
