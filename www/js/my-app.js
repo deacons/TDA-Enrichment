@@ -26,7 +26,7 @@ function onDeviceReady() {
     }
     window.analytics.trackView('index');
     document.addEventListener('onAdLeaveApp', function(data){
-        window.analytics.trackEvent('AdMob', 'Ad Clicked', 'banner', 4);
+        window.analytics.trackEvent('AdMob', 'Ad Clicked', data.adType, 4);
     });
 }
 
