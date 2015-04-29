@@ -9,7 +9,6 @@ function onDeviceReady() {
     // Google Analytics
     window.analytics.debugMode();
     window.analytics.startTrackerWithId('UA-44246405-6');
-    window.analytics.trackView('index');
     // AdMob
     if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
         admobid = {
@@ -22,6 +21,10 @@ function onDeviceReady() {
             autoShow: true
         });
     }
+    window.analytics.trackView('index');
+    document.addEventListener('onAdLeaveApp', function(data){
+        window.analytics.trackEvent('AdMob', 'Ad Clicked', 'banner', 4);
+    });
 }
 
 // Initialize your app
