@@ -98,6 +98,8 @@
 {
     GADRequest *request = [GADRequest request];
     
+    request.testDevices = @[ @"fbfca999e47550139929d4b03a716bab" ];
+    
     if (self.isTesting) {
         NSString* deviceId = [self __getAdMobDeviceId];
         request.testDevices = [NSArray arrayWithObjects:deviceId, nil];
