@@ -9,8 +9,8 @@ function onDeviceReady() {
     // Google Analytics
     window.analytics.debugMode();
     window.analytics.startTrackerWithId('UA-44246405-6');
-    // AdMob
     if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+        // AdMob
         admobid = {
             banner: 'ca-app-pub-9733787518596382/1681312032',
             interstitial: 'ca-app-pub-9733787518596382/2308277237'
@@ -20,6 +20,9 @@ function onDeviceReady() {
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow: true
         });
+        // Google Analytics
+        var userid = document.location.pathname.split('/');
+        window.analytics.setUserId(userid[7]);
     }
     window.analytics.trackView('index');
     document.addEventListener('onAdLeaveApp', function(data){
