@@ -31,4 +31,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="AdMob">
+        <param name="ios-package" value="CDVAdMobPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>
