@@ -45,4 +45,5 @@ var mainView = myApp.addView('.view-main', {
 $$(document).on('pageInit', function (p) {
     var pageinfo = p.detail.page;
     console.log(pageinfo.name);
+    window.analytics.trackView(pageinfo.name);
 });
